@@ -129,6 +129,7 @@ namespace db
             cmbMBram.SelectedIndex = 0;
             cmbMBSocket.SelectedIndex = 0;
         }
+
         #endregion
         #region Утилиты
         void messageBoxSuccessAdd()
