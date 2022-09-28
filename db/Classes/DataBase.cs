@@ -2,8 +2,6 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace db.Classes
 {
@@ -14,7 +12,6 @@ namespace db.Classes
         public void dbConnect()
         {
             db = Db4oFactory.OpenFile(filename);
-            db.Ext().Configure().ObjectClass(typeof(PC)).CascadeOnActivate(true);
         }
         public void dbClose()
         {
@@ -49,6 +46,21 @@ namespace db.Classes
             found.title = mb.title;
             found.GCPUtype = mb.GCPUtype;
             db.Store(found);
+        }
+        #endregion
+        #region
+        public void AddCPU(CPU cpu)
+        {
+            db.Store(cpu);
+        }
+        public void DeleteCPU(string id)
+        {
+            var found = db.Query<CPU>(cpu => cpu.id == id);
+            db.Delete(found);
+        }
+        public List<CPU> GetCPU()
+        {
+            return db.Query<CPU>().ToList();
         }
         #endregion
     }

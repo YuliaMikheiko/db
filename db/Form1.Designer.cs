@@ -31,10 +31,38 @@
             this.components = new System.ComponentModel.Container();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.dgvMotherBoard = new System.Windows.Forms.DataGridView();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.btnMotherBoardAdd = new System.Windows.Forms.Button();
+            this.txtMBtitle = new System.Windows.Forms.TextBox();
+            this.cmbMBmonufacturer = new System.Windows.Forms.ComboBox();
+            this.cmbMBram = new System.Windows.Forms.ComboBox();
+            this.cmbMBGCPU = new System.Windows.Forms.ComboBox();
+            this.cmbMBSocket = new System.Windows.Forms.ComboBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.cbMotherBoard = new System.Windows.Forms.CheckBox();
+            this.dgvMotherBoard = new System.Windows.Forms.DataGridView();
             this.mbDelete = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.dgvCPU = new System.Windows.Forms.DataGridView();
+            this.cmbCpuMonufacturer = new System.Windows.Forms.ComboBox();
+            this.cmbCpuSocket = new System.Windows.Forms.ComboBox();
+            this.cmbCpuArchetype = new System.Windows.Forms.ComboBox();
+            this.cbCpuIsDelete = new System.Windows.Forms.CheckBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.nudCpuPower = new System.Windows.Forms.NumericUpDown();
+            this.label9 = new System.Windows.Forms.Label();
+            this.cmbCpuFrequency = new System.Windows.Forms.ComboBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.btnCpuAdd = new System.Windows.Forms.Button();
+            this.label11 = new System.Windows.Forms.Label();
+            this.cpuDelete = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.txtCpuTitle = new System.Windows.Forms.TextBox();
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.socketDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.gCPUtypeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
@@ -42,23 +70,23 @@
             this.titleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.manufacturerDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.motherBoardBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.cmbMBSocket = new System.Windows.Forms.ComboBox();
-            this.cmbMBGCPU = new System.Windows.Forms.ComboBox();
-            this.cmbMBram = new System.Windows.Forms.ComboBox();
-            this.cmbMBmonufacturer = new System.Windows.Forms.ComboBox();
-            this.txtMBtitle = new System.Windows.Forms.TextBox();
-            this.btnMotherBoardAdd = new System.Windows.Forms.Button();
+            this.idDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.frequencyDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.powerDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.socketDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.archetypeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.titleDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.manufacturerDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cPUBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvMotherBoard)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.motherBoardBindingSource)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvMotherBoard)).BeginInit();
+            this.tabPage2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCPU)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudCpuPower)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.motherBoardBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cPUBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -68,7 +96,7 @@
             this.tabControl1.Location = new System.Drawing.Point(12, 12);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(924, 417);
+            this.tabControl1.Size = new System.Drawing.Size(1241, 522);
             this.tabControl1.TabIndex = 0;
             // 
             // tabPage1
@@ -79,10 +107,133 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(916, 391);
+            this.tabPage1.Size = new System.Drawing.Size(1233, 496);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Материнская плата";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.btnMotherBoardAdd);
+            this.panel1.Controls.Add(this.txtMBtitle);
+            this.panel1.Controls.Add(this.cmbMBmonufacturer);
+            this.panel1.Controls.Add(this.cmbMBram);
+            this.panel1.Controls.Add(this.cmbMBGCPU);
+            this.panel1.Controls.Add(this.cmbMBSocket);
+            this.panel1.Controls.Add(this.label5);
+            this.panel1.Controls.Add(this.label4);
+            this.panel1.Controls.Add(this.label3);
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Location = new System.Drawing.Point(801, 73);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(233, 340);
+            this.panel1.TabIndex = 2;
+            // 
+            // btnMotherBoardAdd
+            // 
+            this.btnMotherBoardAdd.Location = new System.Drawing.Point(75, 256);
+            this.btnMotherBoardAdd.Name = "btnMotherBoardAdd";
+            this.btnMotherBoardAdd.Size = new System.Drawing.Size(85, 32);
+            this.btnMotherBoardAdd.TabIndex = 10;
+            this.btnMotherBoardAdd.Text = "Добавить";
+            this.btnMotherBoardAdd.UseVisualStyleBackColor = true;
+            this.btnMotherBoardAdd.Click += new System.EventHandler(this.btnMotherBoardAdd_Click);
+            // 
+            // txtMBtitle
+            // 
+            this.txtMBtitle.Location = new System.Drawing.Point(57, 229);
+            this.txtMBtitle.Name = "txtMBtitle";
+            this.txtMBtitle.Size = new System.Drawing.Size(121, 20);
+            this.txtMBtitle.TabIndex = 9;
+            // 
+            // cmbMBmonufacturer
+            // 
+            this.cmbMBmonufacturer.FormattingEnabled = true;
+            this.cmbMBmonufacturer.Location = new System.Drawing.Point(57, 181);
+            this.cmbMBmonufacturer.Name = "cmbMBmonufacturer";
+            this.cmbMBmonufacturer.Size = new System.Drawing.Size(121, 21);
+            this.cmbMBmonufacturer.TabIndex = 8;
+            // 
+            // cmbMBram
+            // 
+            this.cmbMBram.FormattingEnabled = true;
+            this.cmbMBram.Location = new System.Drawing.Point(57, 133);
+            this.cmbMBram.Name = "cmbMBram";
+            this.cmbMBram.Size = new System.Drawing.Size(121, 21);
+            this.cmbMBram.TabIndex = 7;
+            // 
+            // cmbMBGCPU
+            // 
+            this.cmbMBGCPU.FormattingEnabled = true;
+            this.cmbMBGCPU.Location = new System.Drawing.Point(57, 85);
+            this.cmbMBGCPU.Name = "cmbMBGCPU";
+            this.cmbMBGCPU.Size = new System.Drawing.Size(121, 21);
+            this.cmbMBGCPU.TabIndex = 6;
+            // 
+            // cmbMBSocket
+            // 
+            this.cmbMBSocket.FormattingEnabled = true;
+            this.cmbMBSocket.Location = new System.Drawing.Point(57, 37);
+            this.cmbMBSocket.Name = "cmbMBSocket";
+            this.cmbMBSocket.Size = new System.Drawing.Size(121, 21);
+            this.cmbMBSocket.TabIndex = 5;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(89, 209);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(57, 13);
+            this.label5.TabIndex = 4;
+            this.label5.Text = "Название";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(74, 161);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(86, 13);
+            this.label4.TabIndex = 3;
+            this.label4.Text = "Производитель";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(102, 113);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(30, 13);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "ОЗУ";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(84, 65);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(67, 13);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Видеокарта";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(99, 17);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(37, 13);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Сокет";
+            // 
+            // cbMotherBoard
+            // 
+            this.cbMotherBoard.AutoSize = true;
+            this.cbMotherBoard.Location = new System.Drawing.Point(846, 20);
+            this.cbMotherBoard.Name = "cbMotherBoard";
+            this.cbMotherBoard.Size = new System.Drawing.Size(161, 17);
+            this.cbMotherBoard.TabIndex = 1;
+            this.cbMotherBoard.Text = "Включить редактирование";
+            this.cbMotherBoard.UseVisualStyleBackColor = true;
+            this.cbMotherBoard.CheckedChanged += new System.EventHandler(this.cbMotherBoard_CheckedChanged);
             // 
             // dgvMotherBoard
             // 
@@ -100,33 +251,12 @@
             this.dgvMotherBoard.DataSource = this.motherBoardBindingSource;
             this.dgvMotherBoard.Location = new System.Drawing.Point(6, 6);
             this.dgvMotherBoard.Name = "dgvMotherBoard";
-            this.dgvMotherBoard.Size = new System.Drawing.Size(644, 379);
+            this.dgvMotherBoard.Size = new System.Drawing.Size(753, 471);
             this.dgvMotherBoard.TabIndex = 0;
             this.dgvMotherBoard.CellBeginEdit += new System.Windows.Forms.DataGridViewCellCancelEventHandler(this.dgvMotherBoard_CellBeginEdit);
             this.dgvMotherBoard.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvMotherBoard_CellContentClick);
             this.dgvMotherBoard.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvMotherBoard_CellEndEdit);
             this.dgvMotherBoard.CellValidating += new System.Windows.Forms.DataGridViewCellValidatingEventHandler(this.tableValidating);
-            // 
-            // tabPage2
-            // 
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(916, 391);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "tabPage2";
-            this.tabPage2.UseVisualStyleBackColor = true;
-            // 
-            // cbMotherBoard
-            // 
-            this.cbMotherBoard.AutoSize = true;
-            this.cbMotherBoard.Location = new System.Drawing.Point(712, 22);
-            this.cbMotherBoard.Name = "cbMotherBoard";
-            this.cbMotherBoard.Size = new System.Drawing.Size(161, 17);
-            this.cbMotherBoard.TabIndex = 1;
-            this.cbMotherBoard.Text = "Включить редактирование";
-            this.cbMotherBoard.UseVisualStyleBackColor = true;
-            this.cbMotherBoard.CheckedChanged += new System.EventHandler(this.cbMotherBoard_CheckedChanged);
             // 
             // mbDelete
             // 
@@ -135,6 +265,202 @@
             this.mbDelete.Text = "Удалить";
             this.mbDelete.UseColumnTextForButtonValue = true;
             this.mbDelete.Visible = false;
+            // 
+            // tabPage2
+            // 
+            this.tabPage2.Controls.Add(this.txtCpuTitle);
+            this.tabPage2.Controls.Add(this.label11);
+            this.tabPage2.Controls.Add(this.btnCpuAdd);
+            this.tabPage2.Controls.Add(this.label10);
+            this.tabPage2.Controls.Add(this.cmbCpuFrequency);
+            this.tabPage2.Controls.Add(this.label9);
+            this.tabPage2.Controls.Add(this.nudCpuPower);
+            this.tabPage2.Controls.Add(this.label8);
+            this.tabPage2.Controls.Add(this.label7);
+            this.tabPage2.Controls.Add(this.label6);
+            this.tabPage2.Controls.Add(this.cbCpuIsDelete);
+            this.tabPage2.Controls.Add(this.cmbCpuArchetype);
+            this.tabPage2.Controls.Add(this.cmbCpuSocket);
+            this.tabPage2.Controls.Add(this.cmbCpuMonufacturer);
+            this.tabPage2.Controls.Add(this.dgvCPU);
+            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(1233, 496);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "Процессор";
+            this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // dgvCPU
+            // 
+            this.dgvCPU.AllowUserToAddRows = false;
+            this.dgvCPU.AutoGenerateColumns = false;
+            this.dgvCPU.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvCPU.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idDataGridViewTextBoxColumn1,
+            this.frequencyDataGridViewTextBoxColumn,
+            this.powerDataGridViewTextBoxColumn,
+            this.socketDataGridViewTextBoxColumn1,
+            this.archetypeDataGridViewTextBoxColumn,
+            this.titleDataGridViewTextBoxColumn1,
+            this.manufacturerDataGridViewTextBoxColumn1,
+            this.cpuDelete});
+            this.dgvCPU.DataSource = this.cPUBindingSource;
+            this.dgvCPU.Location = new System.Drawing.Point(17, 6);
+            this.dgvCPU.Name = "dgvCPU";
+            this.dgvCPU.ReadOnly = true;
+            this.dgvCPU.Size = new System.Drawing.Size(839, 469);
+            this.dgvCPU.TabIndex = 0;
+            this.dgvCPU.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCPU_CellContentClick);
+            // 
+            // cmbCpuMonufacturer
+            // 
+            this.cmbCpuMonufacturer.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbCpuMonufacturer.FormattingEnabled = true;
+            this.cmbCpuMonufacturer.Location = new System.Drawing.Point(974, 79);
+            this.cmbCpuMonufacturer.Name = "cmbCpuMonufacturer";
+            this.cmbCpuMonufacturer.Size = new System.Drawing.Size(146, 21);
+            this.cmbCpuMonufacturer.TabIndex = 1;
+            // 
+            // cmbCpuSocket
+            // 
+            this.cmbCpuSocket.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbCpuSocket.FormattingEnabled = true;
+            this.cmbCpuSocket.Location = new System.Drawing.Point(974, 139);
+            this.cmbCpuSocket.Name = "cmbCpuSocket";
+            this.cmbCpuSocket.Size = new System.Drawing.Size(146, 21);
+            this.cmbCpuSocket.TabIndex = 2;
+            // 
+            // cmbCpuArchetype
+            // 
+            this.cmbCpuArchetype.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbCpuArchetype.FormattingEnabled = true;
+            this.cmbCpuArchetype.Location = new System.Drawing.Point(974, 199);
+            this.cmbCpuArchetype.Name = "cmbCpuArchetype";
+            this.cmbCpuArchetype.Size = new System.Drawing.Size(146, 21);
+            this.cmbCpuArchetype.TabIndex = 3;
+            // 
+            // cbCpuIsDelete
+            // 
+            this.cbCpuIsDelete.AutoSize = true;
+            this.cbCpuIsDelete.Location = new System.Drawing.Point(974, 20);
+            this.cbCpuIsDelete.Name = "cbCpuIsDelete";
+            this.cbCpuIsDelete.Size = new System.Drawing.Size(125, 17);
+            this.cbCpuIsDelete.TabIndex = 4;
+            this.cbCpuIsDelete.Text = "Включить удаление";
+            this.cbCpuIsDelete.UseVisualStyleBackColor = true;
+            this.cbCpuIsDelete.CheckedChanged += new System.EventHandler(this.cbCpuIsDelete_CheckedChanged);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(1004, 53);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(86, 13);
+            this.label6.TabIndex = 5;
+            this.label6.Text = "Производитель";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(1029, 113);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(37, 13);
+            this.label7.TabIndex = 6;
+            this.label7.Text = "Сокет";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(1012, 173);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(70, 13);
+            this.label8.TabIndex = 7;
+            this.label8.Text = "Архитектура";
+            // 
+            // nudCpuPower
+            // 
+            this.nudCpuPower.Location = new System.Drawing.Point(974, 259);
+            this.nudCpuPower.Maximum = new decimal(new int[] {
+            150,
+            0,
+            0,
+            0});
+            this.nudCpuPower.Minimum = new decimal(new int[] {
+            15,
+            0,
+            0,
+            0});
+            this.nudCpuPower.Name = "nudCpuPower";
+            this.nudCpuPower.Size = new System.Drawing.Size(146, 20);
+            this.nudCpuPower.TabIndex = 8;
+            this.nudCpuPower.Value = new decimal(new int[] {
+            15,
+            0,
+            0,
+            0});
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(993, 233);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(108, 13);
+            this.label9.TabIndex = 9;
+            this.label9.Text = "Энергопотребление";
+            // 
+            // cmbCpuFrequency
+            // 
+            this.cmbCpuFrequency.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbCpuFrequency.FormattingEnabled = true;
+            this.cmbCpuFrequency.Location = new System.Drawing.Point(974, 318);
+            this.cmbCpuFrequency.Name = "cmbCpuFrequency";
+            this.cmbCpuFrequency.Size = new System.Drawing.Size(146, 21);
+            this.cmbCpuFrequency.TabIndex = 10;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(999, 292);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(97, 13);
+            this.label10.TabIndex = 11;
+            this.label10.Text = "Тактовая частота";
+            // 
+            // btnCpuAdd
+            // 
+            this.btnCpuAdd.Location = new System.Drawing.Point(987, 417);
+            this.btnCpuAdd.Name = "btnCpuAdd";
+            this.btnCpuAdd.Size = new System.Drawing.Size(114, 46);
+            this.btnCpuAdd.TabIndex = 12;
+            this.btnCpuAdd.Text = "Добавить";
+            this.btnCpuAdd.UseVisualStyleBackColor = true;
+            this.btnCpuAdd.Click += new System.EventHandler(this.btnCpuAdd_Click);
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(1019, 352);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(57, 13);
+            this.label11.TabIndex = 13;
+            this.label11.Text = "Название";
+            // 
+            // cpuDelete
+            // 
+            this.cpuDelete.HeaderText = "Удаление";
+            this.cpuDelete.Name = "cpuDelete";
+            this.cpuDelete.ReadOnly = true;
+            this.cpuDelete.Text = "Удалить";
+            this.cpuDelete.UseColumnTextForButtonValue = true;
+            this.cpuDelete.Visible = false;
+            // 
+            // txtCpuTitle
+            // 
+            this.txtCpuTitle.Location = new System.Drawing.Point(974, 378);
+            this.txtCpuTitle.Name = "txtCpuTitle";
+            this.txtCpuTitle.Size = new System.Drawing.Size(146, 20);
+            this.txtCpuTitle.TabIndex = 14;
             // 
             // idDataGridViewTextBoxColumn
             // 
@@ -286,133 +612,84 @@
             // 
             this.motherBoardBindingSource.DataSource = typeof(db.Classes.MotherBoard);
             // 
-            // panel1
+            // idDataGridViewTextBoxColumn1
             // 
-            this.panel1.Controls.Add(this.btnMotherBoardAdd);
-            this.panel1.Controls.Add(this.txtMBtitle);
-            this.panel1.Controls.Add(this.cmbMBmonufacturer);
-            this.panel1.Controls.Add(this.cmbMBram);
-            this.panel1.Controls.Add(this.cmbMBGCPU);
-            this.panel1.Controls.Add(this.cmbMBSocket);
-            this.panel1.Controls.Add(this.label5);
-            this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(676, 45);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(233, 340);
-            this.panel1.TabIndex = 2;
+            this.idDataGridViewTextBoxColumn1.DataPropertyName = "id";
+            this.idDataGridViewTextBoxColumn1.HeaderText = "id";
+            this.idDataGridViewTextBoxColumn1.Name = "idDataGridViewTextBoxColumn1";
+            this.idDataGridViewTextBoxColumn1.ReadOnly = true;
             // 
-            // label1
+            // frequencyDataGridViewTextBoxColumn
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(99, 17);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(37, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Сокет";
+            this.frequencyDataGridViewTextBoxColumn.DataPropertyName = "frequency";
+            this.frequencyDataGridViewTextBoxColumn.HeaderText = "Тактовая частота";
+            this.frequencyDataGridViewTextBoxColumn.Name = "frequencyDataGridViewTextBoxColumn";
+            this.frequencyDataGridViewTextBoxColumn.ReadOnly = true;
+            this.frequencyDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             // 
-            // label2
+            // powerDataGridViewTextBoxColumn
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(84, 65);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(67, 13);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Видеокарта";
+            this.powerDataGridViewTextBoxColumn.DataPropertyName = "power";
+            this.powerDataGridViewTextBoxColumn.HeaderText = "Энергопотребление";
+            this.powerDataGridViewTextBoxColumn.Name = "powerDataGridViewTextBoxColumn";
+            this.powerDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // label3
+            // socketDataGridViewTextBoxColumn1
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(102, 113);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(30, 13);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "ОЗУ";
+            this.socketDataGridViewTextBoxColumn1.DataPropertyName = "socket";
+            this.socketDataGridViewTextBoxColumn1.HeaderText = "Сокет";
+            this.socketDataGridViewTextBoxColumn1.Name = "socketDataGridViewTextBoxColumn1";
+            this.socketDataGridViewTextBoxColumn1.ReadOnly = true;
+            this.socketDataGridViewTextBoxColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             // 
-            // label4
+            // archetypeDataGridViewTextBoxColumn
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(74, 161);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(86, 13);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "Производитель";
+            this.archetypeDataGridViewTextBoxColumn.DataPropertyName = "archetype";
+            this.archetypeDataGridViewTextBoxColumn.HeaderText = "Архитектура";
+            this.archetypeDataGridViewTextBoxColumn.Name = "archetypeDataGridViewTextBoxColumn";
+            this.archetypeDataGridViewTextBoxColumn.ReadOnly = true;
+            this.archetypeDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             // 
-            // label5
+            // titleDataGridViewTextBoxColumn1
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(89, 209);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(57, 13);
-            this.label5.TabIndex = 4;
-            this.label5.Text = "Название";
+            this.titleDataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.titleDataGridViewTextBoxColumn1.DataPropertyName = "title";
+            this.titleDataGridViewTextBoxColumn1.HeaderText = "Название";
+            this.titleDataGridViewTextBoxColumn1.Name = "titleDataGridViewTextBoxColumn1";
+            this.titleDataGridViewTextBoxColumn1.ReadOnly = true;
             // 
-            // cmbMBSocket
+            // manufacturerDataGridViewTextBoxColumn1
             // 
-            this.cmbMBSocket.FormattingEnabled = true;
-            this.cmbMBSocket.Location = new System.Drawing.Point(57, 37);
-            this.cmbMBSocket.Name = "cmbMBSocket";
-            this.cmbMBSocket.Size = new System.Drawing.Size(121, 21);
-            this.cmbMBSocket.TabIndex = 5;
+            this.manufacturerDataGridViewTextBoxColumn1.DataPropertyName = "manufacturer";
+            this.manufacturerDataGridViewTextBoxColumn1.HeaderText = "Производитель";
+            this.manufacturerDataGridViewTextBoxColumn1.Name = "manufacturerDataGridViewTextBoxColumn1";
+            this.manufacturerDataGridViewTextBoxColumn1.ReadOnly = true;
+            this.manufacturerDataGridViewTextBoxColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             // 
-            // cmbMBGCPU
+            // cPUBindingSource
             // 
-            this.cmbMBGCPU.FormattingEnabled = true;
-            this.cmbMBGCPU.Location = new System.Drawing.Point(57, 85);
-            this.cmbMBGCPU.Name = "cmbMBGCPU";
-            this.cmbMBGCPU.Size = new System.Drawing.Size(121, 21);
-            this.cmbMBGCPU.TabIndex = 6;
-            // 
-            // cmbMBram
-            // 
-            this.cmbMBram.FormattingEnabled = true;
-            this.cmbMBram.Location = new System.Drawing.Point(57, 133);
-            this.cmbMBram.Name = "cmbMBram";
-            this.cmbMBram.Size = new System.Drawing.Size(121, 21);
-            this.cmbMBram.TabIndex = 7;
-            // 
-            // cmbMBmonufacturer
-            // 
-            this.cmbMBmonufacturer.FormattingEnabled = true;
-            this.cmbMBmonufacturer.Location = new System.Drawing.Point(57, 181);
-            this.cmbMBmonufacturer.Name = "cmbMBmonufacturer";
-            this.cmbMBmonufacturer.Size = new System.Drawing.Size(121, 21);
-            this.cmbMBmonufacturer.TabIndex = 8;
-            // 
-            // txtMBtitle
-            // 
-            this.txtMBtitle.Location = new System.Drawing.Point(57, 229);
-            this.txtMBtitle.Name = "txtMBtitle";
-            this.txtMBtitle.Size = new System.Drawing.Size(121, 20);
-            this.txtMBtitle.TabIndex = 9;
-            // 
-            // btnMotherBoardAdd
-            // 
-            this.btnMotherBoardAdd.Location = new System.Drawing.Point(75, 256);
-            this.btnMotherBoardAdd.Name = "btnMotherBoardAdd";
-            this.btnMotherBoardAdd.Size = new System.Drawing.Size(85, 32);
-            this.btnMotherBoardAdd.TabIndex = 10;
-            this.btnMotherBoardAdd.Text = "Добавить";
-            this.btnMotherBoardAdd.UseVisualStyleBackColor = true;
-            this.btnMotherBoardAdd.Click += new System.EventHandler(this.btnMotherBoardAdd_Click);
+            this.cPUBindingSource.DataSource = typeof(db.Classes.CPU);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(937, 450);
+            this.ClientSize = new System.Drawing.Size(1265, 546);
             this.Controls.Add(this.tabControl1);
             this.Name = "Form1";
             this.Text = "Form1";
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvMotherBoard)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.motherBoardBindingSource)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvMotherBoard)).EndInit();
+            this.tabPage2.ResumeLayout(false);
+            this.tabPage2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCPU)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudCpuPower)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.motherBoardBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cPUBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -444,6 +721,30 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DataGridView dgvCPU;
+        private System.Windows.Forms.BindingSource cPUBindingSource;
+        private System.Windows.Forms.ComboBox cmbCpuArchetype;
+        private System.Windows.Forms.ComboBox cmbCpuSocket;
+        private System.Windows.Forms.ComboBox cmbCpuMonufacturer;
+        private System.Windows.Forms.CheckBox cbCpuIsDelete;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.ComboBox cmbCpuFrequency;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.NumericUpDown nudCpuPower;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox txtCpuTitle;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Button btnCpuAdd;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn frequencyDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn powerDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn socketDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn archetypeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn titleDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn manufacturerDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewButtonColumn cpuDelete;
     }
 }
 

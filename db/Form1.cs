@@ -20,6 +20,9 @@ namespace db
         List<String> socket = new List<string>();
         List<String> GCPU = new List<string>();
         List<String> RAMtype = new List<string>();
+        List<String> archetype = new List<string>();
+        List<String> cpuMonufacturer = new List<string>();
+        List<float> cpuFrequency = new List<float>();
 
         string chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789" + "ABCDEFGHIJKLMNOPQRSTUVWXYZ".ToLower();
 
@@ -29,13 +32,6 @@ namespace db
             ListsSet();
             dataBase = new DataBase();
             dataBase.dbConnect();
-            var motherBoard = new MotherBoard();
-            motherBoard.manufacturer = mbMonufacturers[random.Next(0, mbMonufacturers.Count)];
-            motherBoard.RAMtype = RAMtype[random.Next(0, RAMtype.Count)];
-            motherBoard.socket = socket[random.Next(0, socket.Count)];
-            motherBoard.title = "motherBoard" + random.Next(0, 1000);
-            motherBoard.GCPUtype = GCPU[random.Next(0, GCPU.Count)];
-            dataBase.addMotherBoard(motherBoard);
             setBindingSource();
             setCMB();
         }
@@ -110,12 +106,45 @@ namespace db
             {
                 RAMtype.Add($"DDR{i}");
             }
+
+            archetype.Add("Nehalem");
+            archetype.Add("Westmere");
+            archetype.Add("Sandy Bridge");
+            archetype.Add("Ivy Bridge");
+            archetype.Add("Haswell");
+            archetype.Add("Broadwell");
+            archetype.Add("Skylake");
+            archetype.Add("Kaby Lake");
+            archetype.Add("Coffee Lake");
+            archetype.Add("Coffee Lake Refresh");
+            archetype.Add("Dali");
+            archetype.Add("Zen 2");
+            archetype.Add("Zen 3");
+            archetype.Add("Raven Ridge");
+            archetype.Add("Zen");
+            archetype.Add("Bristol Ridge");
+            archetype.Add("Seattle");
+            archetype.Add("Merlin Falcon");
+            archetype.Add("Kyoto");
+            archetype.Add("Kabini");
+
+            cpuMonufacturer.Add("Intel");
+            cpuMonufacturer.Add("AMD");
+
+            for(float i = 1.0f; i <= 4.0f; i += 0.5f)
+            {
+                cpuFrequency.Add(i);
+            }
         }
         void setBindingSource()
         {
             foreach(var m in dataBase.getMotherBoard())
             {
                 motherBoardBindingSource.Add(m);
+            }
+            foreach(var c in dataBase.GetCPU())
+            {
+                cPUBindingSource.Add(c);
             }
         }
         void setCMB()
@@ -128,6 +157,15 @@ namespace db
             cmbMBmonufacturer.SelectedIndex = 0;
             cmbMBram.SelectedIndex = 0;
             cmbMBSocket.SelectedIndex = 0;
+
+            cmbCpuArchetype.DataSource = archetype;
+            cmbCpuArchetype.SelectedIndex = 0;
+            cmbCpuSocket.DataSource = socket;
+            cmbCpuSocket.SelectedIndex = 0;
+            cmbCpuMonufacturer.DataSource = cpuMonufacturer;
+            cmbCpuMonufacturer.SelectedIndex = 0;
+            cmbCpuFrequency.DataSource = cpuFrequency;
+            cmbCpuFrequency.SelectedIndex = 0;
         }
 
         #endregion
@@ -268,6 +306,54 @@ namespace db
             motherBoardBindingSource.Add(mb);
             txtMBtitle.Clear();
             messageBoxSuccessAdd();
+        }
+
+        private void cbCpuIsDelete_CheckedChanged(object sender, EventArgs e)
+        {
+            if (cbCpuIsDelete.Checked)
+            {
+                dgvCPU.Columns[7].Visible = true;
+            }
+            else
+            {
+                dgvCPU.Columns[7].Visible = false;
+            }
+        }
+
+        private void btnCpuAdd_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(txtCpuTitle.Text))
+            {
+                messageBoxError("Вы не ввели название");
+                return;
+            }
+            var cpu = new CPU();
+            cpu.title = txtCpuTitle.Text;
+            cpu.power = (int)nudCpuPower.Value;
+            cpu.manufacturer = cmbCpuMonufacturer.SelectedItem.ToString();
+            cpu.socket = cmbCpuSocket.SelectedItem.ToString();
+            cpu.archetype = cmbCpuArchetype.SelectedItem.ToString();
+            cpu.frequency = (float)cmbCpuFrequency.SelectedItem;
+            dataBase.AddCPU(cpu);
+            cPUBindingSource.Add(cpu);
+            messageBoxSuccessAdd();
+        }
+
+        private void dgvCPU_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex < 0)
+            {
+                return;
+            }
+            if (dgvCPU.Columns[e.ColumnIndex].Index == dgvCPU.Columns.Count - 1)
+            {
+                if (messageBoxClickResult("Удалить эту запись?") == DialogResult.Yes)
+                {
+                    var id = dgvCPU.Rows[e.RowIndex].Cells[0].Value.ToString();
+                    cPUBindingSource.RemoveAt(e.RowIndex);
+                    dataBase.DeleteCPU(id);
+                }
+            }
         }
     }
 }

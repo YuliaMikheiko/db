@@ -8,7 +8,7 @@
     <OutputType>WinExe</OutputType>
     <RootNamespace>db</RootNamespace>
     <AssemblyName>db</AssemblyName>
-    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
@@ -62,7 +62,6 @@
     <Compile Include="Classes\CPU.cs" />
     <Compile Include="Classes\DataBase.cs" />
     <Compile Include="Classes\MotherBoard.cs" />
-    <Compile Include="Classes\PC.cs" />
     <Compile Include="Classes\PowerBlock.cs" />
     <Compile Include="Classes\RAM.cs" />
     <Compile Include="Classes\Storage.cs" />
@@ -89,6 +88,7 @@
       <DesignTime>True</DesignTime>
     </Compile>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\db.Classes.CPU.datasource" />
     <None Include="Properties\DataSources\db.Classes.MotherBoard.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
