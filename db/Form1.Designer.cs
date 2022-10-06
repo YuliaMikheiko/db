@@ -47,22 +47,40 @@
             this.dgvMotherBoard = new System.Windows.Forms.DataGridView();
             this.mbDelete = new System.Windows.Forms.DataGridViewButtonColumn();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.dgvCPU = new System.Windows.Forms.DataGridView();
-            this.cmbCpuMonufacturer = new System.Windows.Forms.ComboBox();
-            this.cmbCpuSocket = new System.Windows.Forms.ComboBox();
-            this.cmbCpuArchetype = new System.Windows.Forms.ComboBox();
-            this.cbCpuIsDelete = new System.Windows.Forms.CheckBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.nudCpuPower = new System.Windows.Forms.NumericUpDown();
-            this.label9 = new System.Windows.Forms.Label();
-            this.cmbCpuFrequency = new System.Windows.Forms.ComboBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.btnCpuAdd = new System.Windows.Forms.Button();
-            this.label11 = new System.Windows.Forms.Label();
-            this.cpuDelete = new System.Windows.Forms.DataGridViewButtonColumn();
             this.txtCpuTitle = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.btnCpuAdd = new System.Windows.Forms.Button();
+            this.label10 = new System.Windows.Forms.Label();
+            this.cmbCpuFrequency = new System.Windows.Forms.ComboBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.nudCpuPower = new System.Windows.Forms.NumericUpDown();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.cbCpuIsDelete = new System.Windows.Forms.CheckBox();
+            this.cmbCpuArchetype = new System.Windows.Forms.ComboBox();
+            this.cmbCpuSocket = new System.Windows.Forms.ComboBox();
+            this.cmbCpuMonufacturer = new System.Windows.Forms.ComboBox();
+            this.dgvCPU = new System.Windows.Forms.DataGridView();
+            this.cpuDelete = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.dgvVideoCard = new System.Windows.Forms.DataGridView();
+            this.cmbVideoCardManufacturer = new System.Windows.Forms.ComboBox();
+            this.cmbVideoCardGCPU = new System.Windows.Forms.ComboBox();
+            this.cmbVideoCardMemory = new System.Windows.Forms.ComboBox();
+            this.cmbVideoCardFrequency = new System.Windows.Forms.ComboBox();
+            this.cmbVideoCardPower = new System.Windows.Forms.ComboBox();
+            this.cmbVideoCardVolume = new System.Windows.Forms.ComboBox();
+            this.txtVideoCardTitle = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.btnVideoCardAdd = new System.Windows.Forms.Button();
+            this.cbVideoCardDelete = new System.Windows.Forms.CheckBox();
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.socketDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.gCPUtypeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
@@ -78,21 +96,35 @@
             this.titleDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.manufacturerDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cPUBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.videoCardBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.idDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gCPUDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.volumeMemoryDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.typeMemoryDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.frequencyMemoryDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.powerDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.titleDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.manufacturerDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.vcDelete = new System.Windows.Forms.DataGridViewButtonColumn();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMotherBoard)).BeginInit();
             this.tabPage2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvCPU)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudCpuPower)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCPU)).BeginInit();
+            this.tabPage3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvVideoCard)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.motherBoardBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cPUBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.videoCardBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Location = new System.Drawing.Point(12, 12);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
@@ -291,92 +323,58 @@
             this.tabPage2.Text = "Процессор";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // dgvCPU
+            // txtCpuTitle
             // 
-            this.dgvCPU.AllowUserToAddRows = false;
-            this.dgvCPU.AutoGenerateColumns = false;
-            this.dgvCPU.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvCPU.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.idDataGridViewTextBoxColumn1,
-            this.frequencyDataGridViewTextBoxColumn,
-            this.powerDataGridViewTextBoxColumn,
-            this.socketDataGridViewTextBoxColumn1,
-            this.archetypeDataGridViewTextBoxColumn,
-            this.titleDataGridViewTextBoxColumn1,
-            this.manufacturerDataGridViewTextBoxColumn1,
-            this.cpuDelete});
-            this.dgvCPU.DataSource = this.cPUBindingSource;
-            this.dgvCPU.Location = new System.Drawing.Point(17, 6);
-            this.dgvCPU.Name = "dgvCPU";
-            this.dgvCPU.ReadOnly = true;
-            this.dgvCPU.Size = new System.Drawing.Size(839, 469);
-            this.dgvCPU.TabIndex = 0;
-            this.dgvCPU.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCPU_CellContentClick);
+            this.txtCpuTitle.Location = new System.Drawing.Point(974, 378);
+            this.txtCpuTitle.Name = "txtCpuTitle";
+            this.txtCpuTitle.Size = new System.Drawing.Size(146, 20);
+            this.txtCpuTitle.TabIndex = 14;
             // 
-            // cmbCpuMonufacturer
+            // label11
             // 
-            this.cmbCpuMonufacturer.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbCpuMonufacturer.FormattingEnabled = true;
-            this.cmbCpuMonufacturer.Location = new System.Drawing.Point(974, 79);
-            this.cmbCpuMonufacturer.Name = "cmbCpuMonufacturer";
-            this.cmbCpuMonufacturer.Size = new System.Drawing.Size(146, 21);
-            this.cmbCpuMonufacturer.TabIndex = 1;
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(1019, 352);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(57, 13);
+            this.label11.TabIndex = 13;
+            this.label11.Text = "Название";
             // 
-            // cmbCpuSocket
+            // btnCpuAdd
             // 
-            this.cmbCpuSocket.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbCpuSocket.FormattingEnabled = true;
-            this.cmbCpuSocket.Location = new System.Drawing.Point(974, 139);
-            this.cmbCpuSocket.Name = "cmbCpuSocket";
-            this.cmbCpuSocket.Size = new System.Drawing.Size(146, 21);
-            this.cmbCpuSocket.TabIndex = 2;
+            this.btnCpuAdd.Location = new System.Drawing.Point(987, 417);
+            this.btnCpuAdd.Name = "btnCpuAdd";
+            this.btnCpuAdd.Size = new System.Drawing.Size(114, 46);
+            this.btnCpuAdd.TabIndex = 12;
+            this.btnCpuAdd.Text = "Добавить";
+            this.btnCpuAdd.UseVisualStyleBackColor = true;
+            this.btnCpuAdd.Click += new System.EventHandler(this.btnCpuAdd_Click);
             // 
-            // cmbCpuArchetype
+            // label10
             // 
-            this.cmbCpuArchetype.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbCpuArchetype.FormattingEnabled = true;
-            this.cmbCpuArchetype.Location = new System.Drawing.Point(974, 199);
-            this.cmbCpuArchetype.Name = "cmbCpuArchetype";
-            this.cmbCpuArchetype.Size = new System.Drawing.Size(146, 21);
-            this.cmbCpuArchetype.TabIndex = 3;
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(999, 292);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(97, 13);
+            this.label10.TabIndex = 11;
+            this.label10.Text = "Тактовая частота";
             // 
-            // cbCpuIsDelete
+            // cmbCpuFrequency
             // 
-            this.cbCpuIsDelete.AutoSize = true;
-            this.cbCpuIsDelete.Location = new System.Drawing.Point(974, 20);
-            this.cbCpuIsDelete.Name = "cbCpuIsDelete";
-            this.cbCpuIsDelete.Size = new System.Drawing.Size(125, 17);
-            this.cbCpuIsDelete.TabIndex = 4;
-            this.cbCpuIsDelete.Text = "Включить удаление";
-            this.cbCpuIsDelete.UseVisualStyleBackColor = true;
-            this.cbCpuIsDelete.CheckedChanged += new System.EventHandler(this.cbCpuIsDelete_CheckedChanged);
+            this.cmbCpuFrequency.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbCpuFrequency.FormattingEnabled = true;
+            this.cmbCpuFrequency.Location = new System.Drawing.Point(974, 318);
+            this.cmbCpuFrequency.Name = "cmbCpuFrequency";
+            this.cmbCpuFrequency.Size = new System.Drawing.Size(146, 21);
+            this.cmbCpuFrequency.TabIndex = 10;
             // 
-            // label6
+            // label9
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(1004, 53);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(86, 13);
-            this.label6.TabIndex = 5;
-            this.label6.Text = "Производитель";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(1029, 113);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(37, 13);
-            this.label7.TabIndex = 6;
-            this.label7.Text = "Сокет";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(1012, 173);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(70, 13);
-            this.label8.TabIndex = 7;
-            this.label8.Text = "Архитектура";
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(993, 233);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(108, 13);
+            this.label9.TabIndex = 9;
+            this.label9.Text = "Энергопотребление";
             // 
             // nudCpuPower
             // 
@@ -400,51 +398,92 @@
             0,
             0});
             // 
-            // label9
+            // label8
             // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(993, 233);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(108, 13);
-            this.label9.TabIndex = 9;
-            this.label9.Text = "Энергопотребление";
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(1012, 173);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(70, 13);
+            this.label8.TabIndex = 7;
+            this.label8.Text = "Архитектура";
             // 
-            // cmbCpuFrequency
+            // label7
             // 
-            this.cmbCpuFrequency.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbCpuFrequency.FormattingEnabled = true;
-            this.cmbCpuFrequency.Location = new System.Drawing.Point(974, 318);
-            this.cmbCpuFrequency.Name = "cmbCpuFrequency";
-            this.cmbCpuFrequency.Size = new System.Drawing.Size(146, 21);
-            this.cmbCpuFrequency.TabIndex = 10;
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(1029, 113);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(37, 13);
+            this.label7.TabIndex = 6;
+            this.label7.Text = "Сокет";
             // 
-            // label10
+            // label6
             // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(999, 292);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(97, 13);
-            this.label10.TabIndex = 11;
-            this.label10.Text = "Тактовая частота";
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(1004, 53);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(86, 13);
+            this.label6.TabIndex = 5;
+            this.label6.Text = "Производитель";
             // 
-            // btnCpuAdd
+            // cbCpuIsDelete
             // 
-            this.btnCpuAdd.Location = new System.Drawing.Point(987, 417);
-            this.btnCpuAdd.Name = "btnCpuAdd";
-            this.btnCpuAdd.Size = new System.Drawing.Size(114, 46);
-            this.btnCpuAdd.TabIndex = 12;
-            this.btnCpuAdd.Text = "Добавить";
-            this.btnCpuAdd.UseVisualStyleBackColor = true;
-            this.btnCpuAdd.Click += new System.EventHandler(this.btnCpuAdd_Click);
+            this.cbCpuIsDelete.AutoSize = true;
+            this.cbCpuIsDelete.Location = new System.Drawing.Point(974, 20);
+            this.cbCpuIsDelete.Name = "cbCpuIsDelete";
+            this.cbCpuIsDelete.Size = new System.Drawing.Size(125, 17);
+            this.cbCpuIsDelete.TabIndex = 4;
+            this.cbCpuIsDelete.Text = "Включить удаление";
+            this.cbCpuIsDelete.UseVisualStyleBackColor = true;
+            this.cbCpuIsDelete.CheckedChanged += new System.EventHandler(this.cbCpuIsDelete_CheckedChanged);
             // 
-            // label11
+            // cmbCpuArchetype
             // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(1019, 352);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(57, 13);
-            this.label11.TabIndex = 13;
-            this.label11.Text = "Название";
+            this.cmbCpuArchetype.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbCpuArchetype.FormattingEnabled = true;
+            this.cmbCpuArchetype.Location = new System.Drawing.Point(974, 199);
+            this.cmbCpuArchetype.Name = "cmbCpuArchetype";
+            this.cmbCpuArchetype.Size = new System.Drawing.Size(146, 21);
+            this.cmbCpuArchetype.TabIndex = 3;
+            // 
+            // cmbCpuSocket
+            // 
+            this.cmbCpuSocket.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbCpuSocket.FormattingEnabled = true;
+            this.cmbCpuSocket.Location = new System.Drawing.Point(974, 139);
+            this.cmbCpuSocket.Name = "cmbCpuSocket";
+            this.cmbCpuSocket.Size = new System.Drawing.Size(146, 21);
+            this.cmbCpuSocket.TabIndex = 2;
+            // 
+            // cmbCpuMonufacturer
+            // 
+            this.cmbCpuMonufacturer.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbCpuMonufacturer.FormattingEnabled = true;
+            this.cmbCpuMonufacturer.Location = new System.Drawing.Point(974, 79);
+            this.cmbCpuMonufacturer.Name = "cmbCpuMonufacturer";
+            this.cmbCpuMonufacturer.Size = new System.Drawing.Size(146, 21);
+            this.cmbCpuMonufacturer.TabIndex = 1;
+            // 
+            // dgvCPU
+            // 
+            this.dgvCPU.AllowUserToAddRows = false;
+            this.dgvCPU.AutoGenerateColumns = false;
+            this.dgvCPU.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvCPU.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idDataGridViewTextBoxColumn1,
+            this.frequencyDataGridViewTextBoxColumn,
+            this.powerDataGridViewTextBoxColumn,
+            this.socketDataGridViewTextBoxColumn1,
+            this.archetypeDataGridViewTextBoxColumn,
+            this.titleDataGridViewTextBoxColumn1,
+            this.manufacturerDataGridViewTextBoxColumn1,
+            this.cpuDelete});
+            this.dgvCPU.DataSource = this.cPUBindingSource;
+            this.dgvCPU.Location = new System.Drawing.Point(17, 6);
+            this.dgvCPU.Name = "dgvCPU";
+            this.dgvCPU.ReadOnly = true;
+            this.dgvCPU.Size = new System.Drawing.Size(839, 469);
+            this.dgvCPU.TabIndex = 0;
+            this.dgvCPU.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCPU_CellContentClick);
             // 
             // cpuDelete
             // 
@@ -455,12 +494,199 @@
             this.cpuDelete.UseColumnTextForButtonValue = true;
             this.cpuDelete.Visible = false;
             // 
-            // txtCpuTitle
+            // tabPage3
             // 
-            this.txtCpuTitle.Location = new System.Drawing.Point(974, 378);
-            this.txtCpuTitle.Name = "txtCpuTitle";
-            this.txtCpuTitle.Size = new System.Drawing.Size(146, 20);
-            this.txtCpuTitle.TabIndex = 14;
+            this.tabPage3.Controls.Add(this.cbVideoCardDelete);
+            this.tabPage3.Controls.Add(this.btnVideoCardAdd);
+            this.tabPage3.Controls.Add(this.label18);
+            this.tabPage3.Controls.Add(this.label17);
+            this.tabPage3.Controls.Add(this.label16);
+            this.tabPage3.Controls.Add(this.label15);
+            this.tabPage3.Controls.Add(this.label14);
+            this.tabPage3.Controls.Add(this.label13);
+            this.tabPage3.Controls.Add(this.label12);
+            this.tabPage3.Controls.Add(this.txtVideoCardTitle);
+            this.tabPage3.Controls.Add(this.cmbVideoCardVolume);
+            this.tabPage3.Controls.Add(this.cmbVideoCardPower);
+            this.tabPage3.Controls.Add(this.cmbVideoCardFrequency);
+            this.tabPage3.Controls.Add(this.cmbVideoCardMemory);
+            this.tabPage3.Controls.Add(this.cmbVideoCardGCPU);
+            this.tabPage3.Controls.Add(this.cmbVideoCardManufacturer);
+            this.tabPage3.Controls.Add(this.dgvVideoCard);
+            this.tabPage3.Location = new System.Drawing.Point(4, 22);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Size = new System.Drawing.Size(1233, 496);
+            this.tabPage3.TabIndex = 2;
+            this.tabPage3.Text = "Видеокарта";
+            this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // dgvVideoCard
+            // 
+            this.dgvVideoCard.AllowUserToAddRows = false;
+            this.dgvVideoCard.AutoGenerateColumns = false;
+            this.dgvVideoCard.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvVideoCard.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idDataGridViewTextBoxColumn2,
+            this.gCPUDataGridViewTextBoxColumn,
+            this.volumeMemoryDataGridViewTextBoxColumn,
+            this.typeMemoryDataGridViewTextBoxColumn,
+            this.frequencyMemoryDataGridViewTextBoxColumn,
+            this.powerDataGridViewTextBoxColumn1,
+            this.titleDataGridViewTextBoxColumn2,
+            this.manufacturerDataGridViewTextBoxColumn2,
+            this.vcDelete});
+            this.dgvVideoCard.DataSource = this.videoCardBindingSource;
+            this.dgvVideoCard.Location = new System.Drawing.Point(3, 3);
+            this.dgvVideoCard.Name = "dgvVideoCard";
+            this.dgvVideoCard.ReadOnly = true;
+            this.dgvVideoCard.Size = new System.Drawing.Size(955, 490);
+            this.dgvVideoCard.TabIndex = 0;
+            this.dgvVideoCard.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvVideoCard_CellContentClick);
+            // 
+            // cmbVideoCardManufacturer
+            // 
+            this.cmbVideoCardManufacturer.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbVideoCardManufacturer.FormattingEnabled = true;
+            this.cmbVideoCardManufacturer.Location = new System.Drawing.Point(1028, 47);
+            this.cmbVideoCardManufacturer.Name = "cmbVideoCardManufacturer";
+            this.cmbVideoCardManufacturer.Size = new System.Drawing.Size(121, 21);
+            this.cmbVideoCardManufacturer.TabIndex = 1;
+            // 
+            // cmbVideoCardGCPU
+            // 
+            this.cmbVideoCardGCPU.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbVideoCardGCPU.FormattingEnabled = true;
+            this.cmbVideoCardGCPU.Location = new System.Drawing.Point(1028, 103);
+            this.cmbVideoCardGCPU.Name = "cmbVideoCardGCPU";
+            this.cmbVideoCardGCPU.Size = new System.Drawing.Size(121, 21);
+            this.cmbVideoCardGCPU.TabIndex = 2;
+            // 
+            // cmbVideoCardMemory
+            // 
+            this.cmbVideoCardMemory.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbVideoCardMemory.FormattingEnabled = true;
+            this.cmbVideoCardMemory.Location = new System.Drawing.Point(1028, 159);
+            this.cmbVideoCardMemory.Name = "cmbVideoCardMemory";
+            this.cmbVideoCardMemory.Size = new System.Drawing.Size(121, 21);
+            this.cmbVideoCardMemory.TabIndex = 3;
+            // 
+            // cmbVideoCardFrequency
+            // 
+            this.cmbVideoCardFrequency.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbVideoCardFrequency.FormattingEnabled = true;
+            this.cmbVideoCardFrequency.Location = new System.Drawing.Point(1028, 215);
+            this.cmbVideoCardFrequency.Name = "cmbVideoCardFrequency";
+            this.cmbVideoCardFrequency.Size = new System.Drawing.Size(121, 21);
+            this.cmbVideoCardFrequency.TabIndex = 4;
+            // 
+            // cmbVideoCardPower
+            // 
+            this.cmbVideoCardPower.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbVideoCardPower.FormattingEnabled = true;
+            this.cmbVideoCardPower.Location = new System.Drawing.Point(1028, 271);
+            this.cmbVideoCardPower.Name = "cmbVideoCardPower";
+            this.cmbVideoCardPower.Size = new System.Drawing.Size(121, 21);
+            this.cmbVideoCardPower.TabIndex = 5;
+            // 
+            // cmbVideoCardVolume
+            // 
+            this.cmbVideoCardVolume.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbVideoCardVolume.FormattingEnabled = true;
+            this.cmbVideoCardVolume.Location = new System.Drawing.Point(1028, 327);
+            this.cmbVideoCardVolume.Name = "cmbVideoCardVolume";
+            this.cmbVideoCardVolume.Size = new System.Drawing.Size(121, 21);
+            this.cmbVideoCardVolume.TabIndex = 6;
+            // 
+            // txtVideoCardTitle
+            // 
+            this.txtVideoCardTitle.Location = new System.Drawing.Point(1028, 383);
+            this.txtVideoCardTitle.Name = "txtVideoCardTitle";
+            this.txtVideoCardTitle.Size = new System.Drawing.Size(121, 20);
+            this.txtVideoCardTitle.TabIndex = 7;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(1045, 23);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(86, 13);
+            this.label12.TabIndex = 8;
+            this.label12.Text = "Производитель";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(1038, 79);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(101, 13);
+            this.label13.TabIndex = 9;
+            this.label13.Text = "Графическое ядро";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(1055, 135);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(66, 13);
+            this.label14.TabIndex = 10;
+            this.label14.Text = "Тип памяти";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(1064, 191);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(49, 13);
+            this.label15.TabIndex = 11;
+            this.label15.Text = "Частота";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(1020, 247);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(137, 13);
+            this.label16.TabIndex = 12;
+            this.label16.Text = "Потребляемая мощность";
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(1047, 303);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(82, 13);
+            this.label17.TabIndex = 13;
+            this.label17.Text = "Объем памяти";
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(1060, 359);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(57, 13);
+            this.label18.TabIndex = 14;
+            this.label18.Text = "Название";
+            // 
+            // btnVideoCardAdd
+            // 
+            this.btnVideoCardAdd.Location = new System.Drawing.Point(1044, 426);
+            this.btnVideoCardAdd.Name = "btnVideoCardAdd";
+            this.btnVideoCardAdd.Size = new System.Drawing.Size(89, 35);
+            this.btnVideoCardAdd.TabIndex = 15;
+            this.btnVideoCardAdd.Text = "Добавить";
+            this.btnVideoCardAdd.UseVisualStyleBackColor = true;
+            this.btnVideoCardAdd.Click += new System.EventHandler(this.btnVideoCardAdd_Click);
+            // 
+            // cbVideoCardDelete
+            // 
+            this.cbVideoCardDelete.AutoSize = true;
+            this.cbVideoCardDelete.Location = new System.Drawing.Point(1028, 3);
+            this.cbVideoCardDelete.Name = "cbVideoCardDelete";
+            this.cbVideoCardDelete.Size = new System.Drawing.Size(125, 17);
+            this.cbVideoCardDelete.TabIndex = 16;
+            this.cbVideoCardDelete.Text = "Включить удаление";
+            this.cbVideoCardDelete.UseVisualStyleBackColor = true;
+            this.cbVideoCardDelete.CheckedChanged += new System.EventHandler(this.cbVideoCardDelete_CheckedChanged);
             // 
             // idDataGridViewTextBoxColumn
             // 
@@ -670,6 +896,76 @@
             // 
             this.cPUBindingSource.DataSource = typeof(db.Classes.CPU);
             // 
+            // videoCardBindingSource
+            // 
+            this.videoCardBindingSource.DataSource = typeof(db.Classes.VideoCard);
+            // 
+            // idDataGridViewTextBoxColumn2
+            // 
+            this.idDataGridViewTextBoxColumn2.DataPropertyName = "id";
+            this.idDataGridViewTextBoxColumn2.HeaderText = "id";
+            this.idDataGridViewTextBoxColumn2.Name = "idDataGridViewTextBoxColumn2";
+            this.idDataGridViewTextBoxColumn2.ReadOnly = true;
+            // 
+            // gCPUDataGridViewTextBoxColumn
+            // 
+            this.gCPUDataGridViewTextBoxColumn.DataPropertyName = "GCPU";
+            this.gCPUDataGridViewTextBoxColumn.HeaderText = "Графический CPU";
+            this.gCPUDataGridViewTextBoxColumn.Name = "gCPUDataGridViewTextBoxColumn";
+            this.gCPUDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // volumeMemoryDataGridViewTextBoxColumn
+            // 
+            this.volumeMemoryDataGridViewTextBoxColumn.DataPropertyName = "volumeMemory";
+            this.volumeMemoryDataGridViewTextBoxColumn.HeaderText = "Объем памяти";
+            this.volumeMemoryDataGridViewTextBoxColumn.Name = "volumeMemoryDataGridViewTextBoxColumn";
+            this.volumeMemoryDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // typeMemoryDataGridViewTextBoxColumn
+            // 
+            this.typeMemoryDataGridViewTextBoxColumn.DataPropertyName = "typeMemory";
+            this.typeMemoryDataGridViewTextBoxColumn.HeaderText = "Тип памяти";
+            this.typeMemoryDataGridViewTextBoxColumn.Name = "typeMemoryDataGridViewTextBoxColumn";
+            this.typeMemoryDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // frequencyMemoryDataGridViewTextBoxColumn
+            // 
+            this.frequencyMemoryDataGridViewTextBoxColumn.DataPropertyName = "frequencyMemory";
+            this.frequencyMemoryDataGridViewTextBoxColumn.HeaderText = "Частота памяти";
+            this.frequencyMemoryDataGridViewTextBoxColumn.Name = "frequencyMemoryDataGridViewTextBoxColumn";
+            this.frequencyMemoryDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // powerDataGridViewTextBoxColumn1
+            // 
+            this.powerDataGridViewTextBoxColumn1.DataPropertyName = "power";
+            this.powerDataGridViewTextBoxColumn1.HeaderText = "Мощность";
+            this.powerDataGridViewTextBoxColumn1.Name = "powerDataGridViewTextBoxColumn1";
+            this.powerDataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // titleDataGridViewTextBoxColumn2
+            // 
+            this.titleDataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.titleDataGridViewTextBoxColumn2.DataPropertyName = "title";
+            this.titleDataGridViewTextBoxColumn2.HeaderText = "Название";
+            this.titleDataGridViewTextBoxColumn2.Name = "titleDataGridViewTextBoxColumn2";
+            this.titleDataGridViewTextBoxColumn2.ReadOnly = true;
+            // 
+            // manufacturerDataGridViewTextBoxColumn2
+            // 
+            this.manufacturerDataGridViewTextBoxColumn2.DataPropertyName = "manufacturer";
+            this.manufacturerDataGridViewTextBoxColumn2.HeaderText = "Производитель";
+            this.manufacturerDataGridViewTextBoxColumn2.Name = "manufacturerDataGridViewTextBoxColumn2";
+            this.manufacturerDataGridViewTextBoxColumn2.ReadOnly = true;
+            // 
+            // vcDelete
+            // 
+            this.vcDelete.HeaderText = "Удаление";
+            this.vcDelete.Name = "vcDelete";
+            this.vcDelete.ReadOnly = true;
+            this.vcDelete.Text = "Удалить";
+            this.vcDelete.UseColumnTextForButtonValue = true;
+            this.vcDelete.Visible = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -686,10 +982,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvMotherBoard)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvCPU)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudCpuPower)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCPU)).EndInit();
+            this.tabPage3.ResumeLayout(false);
+            this.tabPage3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvVideoCard)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.motherBoardBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cPUBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.videoCardBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -745,6 +1045,34 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn titleDataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn manufacturerDataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewButtonColumn cpuDelete;
+        private System.Windows.Forms.TabPage tabPage3;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.TextBox txtVideoCardTitle;
+        private System.Windows.Forms.ComboBox cmbVideoCardVolume;
+        private System.Windows.Forms.ComboBox cmbVideoCardPower;
+        private System.Windows.Forms.ComboBox cmbVideoCardFrequency;
+        private System.Windows.Forms.ComboBox cmbVideoCardMemory;
+        private System.Windows.Forms.ComboBox cmbVideoCardGCPU;
+        private System.Windows.Forms.ComboBox cmbVideoCardManufacturer;
+        private System.Windows.Forms.DataGridView dgvVideoCard;
+        private System.Windows.Forms.BindingSource videoCardBindingSource;
+        private System.Windows.Forms.CheckBox cbVideoCardDelete;
+        private System.Windows.Forms.Button btnVideoCardAdd;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn gCPUDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn volumeMemoryDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn typeMemoryDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn frequencyMemoryDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn powerDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn titleDataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn manufacturerDataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewButtonColumn vcDelete;
     }
 }
 

@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -23,6 +24,12 @@ namespace db
         List<String> archetype = new List<string>();
         List<String> cpuMonufacturer = new List<string>();
         List<float> cpuFrequency = new List<float>();
+        List<String> vcManufacturer = new List<string>();
+        List<string> vcGCPU = new List<string>();
+        List<string> vcMemory = new List<string>();
+        List<int> vcFrequency = new List<int>();
+        List<int> vcPower = new List<int>();
+        List<int> vcVolumeMemory = new List<int>();
 
         string chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789" + "ABCDEFGHIJKLMNOPQRSTUVWXYZ".ToLower();
 
@@ -135,16 +142,64 @@ namespace db
             {
                 cpuFrequency.Add(i);
             }
+
+            vcManufacturer.Add("NVIDIA");
+            vcManufacturer.Add("AMD");
+
+            for (int i = 128; i <= 16384; i *= 2)
+            {
+                vcVolumeMemory.Add(i);
+            }
+
+            vcMemory.Add("DDR");
+            vcMemory.Add("DDR2");
+            vcMemory.Add("GDDR3");
+            vcMemory.Add("GDDR4");
+            vcMemory.Add("GDDR5");
+            vcMemory.Add("GDDR6");
+
+            for (int i = 40; i <= 600; i += 40)
+            {
+                vcPower.Add(i);
+            }
+
+            for (int i = 500; i <= 5000; i += 250)
+            {
+                vcFrequency.Add(i);
+            }
+
+            vcGCPU.Add("GeForce series");
+            for (int i = 2; i < 10; i++)
+            {
+                vcGCPU.Add($"GeForce {i} series");
+            }
+            for (int i = 100; i <= 900; i += 100)
+            {
+                vcGCPU.Add($"GeForce {i} series");
+            }
+            vcGCPU.Add("GeForce 10 series");
+            vcGCPU.Add("GeForce 16 series");
+            vcGCPU.Add("GeForce 20 series");
+            vcGCPU.Add("GeForce 30 series");
+            vcGCPU.Add("GeForce 40 series");
+            for (int i = 100; i <= 800; i += 100)
+            {
+                vcGCPU.Add($"Radeon R{i}");
+            }
         }
         void setBindingSource()
         {
-            foreach(var m in dataBase.getMotherBoard())
+            foreach (var m in dataBase.getMotherBoard())
             {
                 motherBoardBindingSource.Add(m);
             }
-            foreach(var c in dataBase.GetCPU())
+            foreach (var c in dataBase.GetCPU())
             {
                 cPUBindingSource.Add(c);
+            }
+            foreach (var vc in dataBase.GetVideoCard())
+            {
+                videoCardBindingSource.Add(vc);
             }
         }
         void setCMB()
@@ -166,6 +221,19 @@ namespace db
             cmbCpuMonufacturer.SelectedIndex = 0;
             cmbCpuFrequency.DataSource = cpuFrequency;
             cmbCpuFrequency.SelectedIndex = 0;
+
+            cmbVideoCardFrequency.DataSource = vcFrequency;
+            cmbVideoCardFrequency.SelectedIndex = 0;
+            cmbVideoCardGCPU.DataSource = vcGCPU;
+            cmbVideoCardGCPU.SelectedIndex = 0;
+            cmbVideoCardManufacturer.DataSource = vcManufacturer;
+            cmbVideoCardManufacturer.SelectedIndex = 0;
+            cmbVideoCardMemory.DataSource = vcMemory;
+            cmbVideoCardMemory.SelectedIndex = 0;
+            cmbVideoCardPower.DataSource = vcPower;
+            cmbVideoCardPower.SelectedIndex = 0;
+            cmbVideoCardVolume.DataSource = vcVolumeMemory;
+            cmbVideoCardVolume.SelectedIndex = 0;
         }
 
         #endregion
@@ -207,7 +275,7 @@ namespace db
 
         }
         #endregion
-
+        #region Работа с материнской платой
         private void dgvMotherBoard_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex < 0)
@@ -307,7 +375,8 @@ namespace db
             txtMBtitle.Clear();
             messageBoxSuccessAdd();
         }
-
+        #endregion
+        #region Работа с процессором
         private void cbCpuIsDelete_CheckedChanged(object sender, EventArgs e)
         {
             if (cbCpuIsDelete.Checked)
@@ -355,5 +424,57 @@ namespace db
                 }
             }
         }
+        #endregion
+        #region Работа с видео картой
+        private void cbVideoCardDelete_CheckedChanged(object sender, EventArgs e)
+        {
+            if (cbVideoCardDelete.Checked)
+            {
+                dgvVideoCard.Columns[8].Visible = true;
+            }
+            else
+            {
+                dgvVideoCard.Columns[8].Visible = false;
+            }
+        }
+
+        private void dgvVideoCard_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex < 0)
+            {
+                return;
+            }
+            if (dgvVideoCard.Columns[e.ColumnIndex].Index == dgvVideoCard.Columns.Count - 1)
+            {
+                if (messageBoxClickResult("Удалить эту запись?") == DialogResult.Yes)
+                {
+                    var id = dgvVideoCard.Rows[e.RowIndex].Cells[0].Value.ToString();
+                    videoCardBindingSource.RemoveAt(e.RowIndex);
+                    dataBase.DeleteVideoCard(id);
+                }
+            }
+        }
+
+        private void btnVideoCardAdd_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(txtVideoCardTitle.Text))
+            {
+                messageBoxError("Вы не ввели название");
+                return;
+            }
+            var vc = new VideoCard();
+            vc.title = txtVideoCardTitle.Text;
+            vc.manufacturer = cmbVideoCardManufacturer.SelectedItem.ToString();
+            vc.frequencyMemory = (int)cmbVideoCardFrequency.SelectedItem;
+            vc.volumeMemory = (int)cmbVideoCardVolume.SelectedItem;
+            vc.typeMemory = cmbVideoCardMemory.SelectedItem.ToString();
+            vc.GCPU = cmbVideoCardGCPU.SelectedItem.ToString();
+            vc.power = (int)cmbVideoCardPower.SelectedItem;
+            dataBase.AddVideoCard(vc);
+            videoCardBindingSource.Add(vc);
+            txtVideoCardTitle.Clear();
+            messageBoxSuccessAdd();
+        }
+        #endregion
     }
 }

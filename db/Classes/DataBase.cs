@@ -48,7 +48,7 @@ namespace db.Classes
             db.Store(found);
         }
         #endregion
-        #region
+        #region Работа с процессором
         public void AddCPU(CPU cpu)
         {
             db.Store(cpu);
@@ -62,6 +62,19 @@ namespace db.Classes
         {
             return db.Query<CPU>().ToList();
         }
+        #endregion
+        #region
+        public void AddVideoCard(VideoCard vc)
+        {
+            db.Store(vc);
+        }
+
+        public void DeleteVideoCard(string id)
+        {
+            var found = db.Query<VideoCard>(vc => vc.id == id);
+            db.Delete(found);
+        }
+        public List<VideoCard> GetVideoCard() => db.Query<VideoCard>().ToList();
         #endregion
     }
 }
