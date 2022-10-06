@@ -81,6 +81,17 @@
             this.label18 = new System.Windows.Forms.Label();
             this.btnVideoCardAdd = new System.Windows.Forms.Button();
             this.cbVideoCardDelete = new System.Windows.Forms.CheckBox();
+            this.vcDelete = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.dgvPowerBlock = new System.Windows.Forms.DataGridView();
+            this.cmbPowerBlockPower = new System.Windows.Forms.ComboBox();
+            this.cmbPowerBlockManufacturer = new System.Windows.Forms.ComboBox();
+            this.label19 = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
+            this.txtPowerBlockTitle = new System.Windows.Forms.TextBox();
+            this.btnPowerBlock = new System.Windows.Forms.Button();
+            this.cbPowerBlockDelete = new System.Windows.Forms.CheckBox();
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.socketDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.gCPUtypeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
@@ -96,7 +107,6 @@
             this.titleDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.manufacturerDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cPUBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.videoCardBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.idDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gCPUDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.volumeMemoryDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -105,7 +115,13 @@
             this.powerDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.titleDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.manufacturerDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.vcDelete = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.videoCardBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.powerBlockBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.idDataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.powerDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.titleDataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.manufacturerDataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvPowerBlockDelete = new System.Windows.Forms.DataGridViewButtonColumn();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -115,9 +131,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvCPU)).BeginInit();
             this.tabPage3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVideoCard)).BeginInit();
+            this.tabPage4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPowerBlock)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.motherBoardBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cPUBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.videoCardBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.powerBlockBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -125,6 +144,7 @@
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Controls.Add(this.tabPage3);
+            this.tabControl1.Controls.Add(this.tabPage4);
             this.tabControl1.Location = new System.Drawing.Point(12, 12);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
@@ -688,6 +708,125 @@
             this.cbVideoCardDelete.UseVisualStyleBackColor = true;
             this.cbVideoCardDelete.CheckedChanged += new System.EventHandler(this.cbVideoCardDelete_CheckedChanged);
             // 
+            // vcDelete
+            // 
+            this.vcDelete.HeaderText = "Удаление";
+            this.vcDelete.Name = "vcDelete";
+            this.vcDelete.ReadOnly = true;
+            this.vcDelete.Text = "Удалить";
+            this.vcDelete.UseColumnTextForButtonValue = true;
+            this.vcDelete.Visible = false;
+            // 
+            // tabPage4
+            // 
+            this.tabPage4.Controls.Add(this.cbPowerBlockDelete);
+            this.tabPage4.Controls.Add(this.btnPowerBlock);
+            this.tabPage4.Controls.Add(this.txtPowerBlockTitle);
+            this.tabPage4.Controls.Add(this.label21);
+            this.tabPage4.Controls.Add(this.label20);
+            this.tabPage4.Controls.Add(this.label19);
+            this.tabPage4.Controls.Add(this.cmbPowerBlockManufacturer);
+            this.tabPage4.Controls.Add(this.cmbPowerBlockPower);
+            this.tabPage4.Controls.Add(this.dgvPowerBlock);
+            this.tabPage4.Location = new System.Drawing.Point(4, 22);
+            this.tabPage4.Name = "tabPage4";
+            this.tabPage4.Size = new System.Drawing.Size(1233, 496);
+            this.tabPage4.TabIndex = 3;
+            this.tabPage4.Text = "Блок питания";
+            this.tabPage4.UseVisualStyleBackColor = true;
+            // 
+            // dgvPowerBlock
+            // 
+            this.dgvPowerBlock.AllowUserToAddRows = false;
+            this.dgvPowerBlock.AutoGenerateColumns = false;
+            this.dgvPowerBlock.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvPowerBlock.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idDataGridViewTextBoxColumn3,
+            this.powerDataGridViewTextBoxColumn2,
+            this.titleDataGridViewTextBoxColumn3,
+            this.manufacturerDataGridViewTextBoxColumn3,
+            this.dgvPowerBlockDelete});
+            this.dgvPowerBlock.DataSource = this.powerBlockBindingSource;
+            this.dgvPowerBlock.Location = new System.Drawing.Point(3, 3);
+            this.dgvPowerBlock.Name = "dgvPowerBlock";
+            this.dgvPowerBlock.ReadOnly = true;
+            this.dgvPowerBlock.Size = new System.Drawing.Size(578, 490);
+            this.dgvPowerBlock.TabIndex = 0;
+            this.dgvPowerBlock.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPowerBlock_CellContentClick);
+            // 
+            // cmbPowerBlockPower
+            // 
+            this.cmbPowerBlockPower.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbPowerBlockPower.FormattingEnabled = true;
+            this.cmbPowerBlockPower.Location = new System.Drawing.Point(831, 56);
+            this.cmbPowerBlockPower.Name = "cmbPowerBlockPower";
+            this.cmbPowerBlockPower.Size = new System.Drawing.Size(121, 21);
+            this.cmbPowerBlockPower.TabIndex = 1;
+            // 
+            // cmbPowerBlockManufacturer
+            // 
+            this.cmbPowerBlockManufacturer.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbPowerBlockManufacturer.FormattingEnabled = true;
+            this.cmbPowerBlockManufacturer.Location = new System.Drawing.Point(831, 114);
+            this.cmbPowerBlockManufacturer.Name = "cmbPowerBlockManufacturer";
+            this.cmbPowerBlockManufacturer.Size = new System.Drawing.Size(121, 21);
+            this.cmbPowerBlockManufacturer.TabIndex = 2;
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(861, 31);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(60, 13);
+            this.label19.TabIndex = 4;
+            this.label19.Text = "Мощность";
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Location = new System.Drawing.Point(848, 89);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(86, 13);
+            this.label20.TabIndex = 5;
+            this.label20.Text = "Производитель";
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Location = new System.Drawing.Point(863, 147);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(57, 13);
+            this.label21.TabIndex = 6;
+            this.label21.Text = "Название";
+            // 
+            // txtPowerBlockTitle
+            // 
+            this.txtPowerBlockTitle.Location = new System.Drawing.Point(831, 172);
+            this.txtPowerBlockTitle.Name = "txtPowerBlockTitle";
+            this.txtPowerBlockTitle.Size = new System.Drawing.Size(121, 20);
+            this.txtPowerBlockTitle.TabIndex = 7;
+            // 
+            // btnPowerBlock
+            // 
+            this.btnPowerBlock.Location = new System.Drawing.Point(850, 216);
+            this.btnPowerBlock.Name = "btnPowerBlock";
+            this.btnPowerBlock.Size = new System.Drawing.Size(83, 38);
+            this.btnPowerBlock.TabIndex = 8;
+            this.btnPowerBlock.Text = "Добавить";
+            this.btnPowerBlock.UseVisualStyleBackColor = true;
+            this.btnPowerBlock.Click += new System.EventHandler(this.btnPowerBlock_Click);
+            // 
+            // cbPowerBlockDelete
+            // 
+            this.cbPowerBlockDelete.AutoSize = true;
+            this.cbPowerBlockDelete.Location = new System.Drawing.Point(643, 43);
+            this.cbPowerBlockDelete.Name = "cbPowerBlockDelete";
+            this.cbPowerBlockDelete.Size = new System.Drawing.Size(125, 17);
+            this.cbPowerBlockDelete.TabIndex = 9;
+            this.cbPowerBlockDelete.Text = "Включить удаление";
+            this.cbPowerBlockDelete.UseVisualStyleBackColor = true;
+            this.cbPowerBlockDelete.CheckedChanged += new System.EventHandler(this.cbPowerBlockDelete_CheckedChanged);
+            // 
             // idDataGridViewTextBoxColumn
             // 
             this.idDataGridViewTextBoxColumn.DataPropertyName = "id";
@@ -896,10 +1035,6 @@
             // 
             this.cPUBindingSource.DataSource = typeof(db.Classes.CPU);
             // 
-            // videoCardBindingSource
-            // 
-            this.videoCardBindingSource.DataSource = typeof(db.Classes.VideoCard);
-            // 
             // idDataGridViewTextBoxColumn2
             // 
             this.idDataGridViewTextBoxColumn2.DataPropertyName = "id";
@@ -957,14 +1092,53 @@
             this.manufacturerDataGridViewTextBoxColumn2.Name = "manufacturerDataGridViewTextBoxColumn2";
             this.manufacturerDataGridViewTextBoxColumn2.ReadOnly = true;
             // 
-            // vcDelete
+            // videoCardBindingSource
             // 
-            this.vcDelete.HeaderText = "Удаление";
-            this.vcDelete.Name = "vcDelete";
-            this.vcDelete.ReadOnly = true;
-            this.vcDelete.Text = "Удалить";
-            this.vcDelete.UseColumnTextForButtonValue = true;
-            this.vcDelete.Visible = false;
+            this.videoCardBindingSource.DataSource = typeof(db.Classes.VideoCard);
+            // 
+            // powerBlockBindingSource
+            // 
+            this.powerBlockBindingSource.DataSource = typeof(db.Classes.PowerBlock);
+            // 
+            // idDataGridViewTextBoxColumn3
+            // 
+            this.idDataGridViewTextBoxColumn3.DataPropertyName = "id";
+            this.idDataGridViewTextBoxColumn3.HeaderText = "id";
+            this.idDataGridViewTextBoxColumn3.Name = "idDataGridViewTextBoxColumn3";
+            this.idDataGridViewTextBoxColumn3.ReadOnly = true;
+            // 
+            // powerDataGridViewTextBoxColumn2
+            // 
+            this.powerDataGridViewTextBoxColumn2.DataPropertyName = "power";
+            this.powerDataGridViewTextBoxColumn2.HeaderText = "Мощность";
+            this.powerDataGridViewTextBoxColumn2.Name = "powerDataGridViewTextBoxColumn2";
+            this.powerDataGridViewTextBoxColumn2.ReadOnly = true;
+            // 
+            // titleDataGridViewTextBoxColumn3
+            // 
+            this.titleDataGridViewTextBoxColumn3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.titleDataGridViewTextBoxColumn3.DataPropertyName = "title";
+            this.titleDataGridViewTextBoxColumn3.HeaderText = "Название";
+            this.titleDataGridViewTextBoxColumn3.Name = "titleDataGridViewTextBoxColumn3";
+            this.titleDataGridViewTextBoxColumn3.ReadOnly = true;
+            // 
+            // manufacturerDataGridViewTextBoxColumn3
+            // 
+            this.manufacturerDataGridViewTextBoxColumn3.DataPropertyName = "manufacturer";
+            this.manufacturerDataGridViewTextBoxColumn3.HeaderText = "Производитель";
+            this.manufacturerDataGridViewTextBoxColumn3.Name = "manufacturerDataGridViewTextBoxColumn3";
+            this.manufacturerDataGridViewTextBoxColumn3.ReadOnly = true;
+            // 
+            // dgvPowerBlockDelete
+            // 
+            this.dgvPowerBlockDelete.HeaderText = "Удаление";
+            this.dgvPowerBlockDelete.Name = "dgvPowerBlockDelete";
+            this.dgvPowerBlockDelete.ReadOnly = true;
+            this.dgvPowerBlockDelete.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvPowerBlockDelete.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.dgvPowerBlockDelete.Text = "Удалить";
+            this.dgvPowerBlockDelete.UseColumnTextForButtonValue = true;
+            this.dgvPowerBlockDelete.Visible = false;
             // 
             // Form1
             // 
@@ -987,9 +1161,13 @@
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVideoCard)).EndInit();
+            this.tabPage4.ResumeLayout(false);
+            this.tabPage4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPowerBlock)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.motherBoardBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cPUBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.videoCardBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.powerBlockBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1073,6 +1251,22 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn titleDataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn manufacturerDataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewButtonColumn vcDelete;
+        private System.Windows.Forms.TabPage tabPage4;
+        private System.Windows.Forms.CheckBox cbPowerBlockDelete;
+        private System.Windows.Forms.Button btnPowerBlock;
+        private System.Windows.Forms.TextBox txtPowerBlockTitle;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.ComboBox cmbPowerBlockManufacturer;
+        private System.Windows.Forms.ComboBox cmbPowerBlockPower;
+        private System.Windows.Forms.DataGridView dgvPowerBlock;
+        private System.Windows.Forms.BindingSource powerBlockBindingSource;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn powerDataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn titleDataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn manufacturerDataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewButtonColumn dgvPowerBlockDelete;
     }
 }
 

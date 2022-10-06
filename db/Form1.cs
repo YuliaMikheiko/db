@@ -30,6 +30,8 @@ namespace db
         List<int> vcFrequency = new List<int>();
         List<int> vcPower = new List<int>();
         List<int> vcVolumeMemory = new List<int>();
+        List<int> pbPower = new List<int>();
+        List<String> pbManufacturer = new List<string>();
 
         string chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789" + "ABCDEFGHIJKLMNOPQRSTUVWXYZ".ToLower();
 
@@ -186,6 +188,22 @@ namespace db
             {
                 vcGCPU.Add($"Radeon R{i}");
             }
+
+            pbManufacturer.Add("Thermaltake");
+            pbManufacturer.Add("Sea Sonic");
+            pbManufacturer.Add("Chieftec");
+            pbManufacturer.Add("Cougar");
+            pbManufacturer.Add("Zalman");
+            pbManufacturer.Add("ENERMAX");
+            pbManufacturer.Add("BE QUIET!");
+            pbManufacturer.Add("Corsair");
+            pbManufacturer.Add("DeepCool");
+            pbManufacturer.Add("FSP");
+
+            for (int i = 300; i <= 1500; i += 150)
+            {
+                pbPower.Add(i);
+            }
         }
         void setBindingSource()
         {
@@ -200,6 +218,11 @@ namespace db
             foreach (var vc in dataBase.GetVideoCard())
             {
                 videoCardBindingSource.Add(vc);
+            }
+            
+            foreach(var pb in dataBase.GetPowerBlocks())
+            {
+                powerBlockBindingSource.Add(pb);
             }
         }
         void setCMB()
@@ -234,6 +257,11 @@ namespace db
             cmbVideoCardPower.SelectedIndex = 0;
             cmbVideoCardVolume.DataSource = vcVolumeMemory;
             cmbVideoCardVolume.SelectedIndex = 0;
+
+            cmbPowerBlockManufacturer.DataSource = pbManufacturer;
+            cmbPowerBlockManufacturer.SelectedIndex = 0;
+            cmbPowerBlockPower.DataSource = pbPower;
+            cmbPowerBlockPower.SelectedIndex = 0;
         }
 
         #endregion
@@ -476,5 +504,51 @@ namespace db
             messageBoxSuccessAdd();
         }
         #endregion
+
+        private void btnPowerBlock_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(txtPowerBlockTitle.Text))
+            {
+                messageBoxError("Вы не ввели название");
+                return;
+            }
+            var pb = new PowerBlock();
+            pb.manufacturer = cmbPowerBlockManufacturer.SelectedItem.ToString();
+            pb.power = (int)cmbPowerBlockPower.SelectedItem;
+            pb.title = txtPowerBlockTitle.Text;
+            dataBase.AddPowerBlock(pb);
+            powerBlockBindingSource.Add(pb);
+            txtPowerBlockTitle.Clear();
+            messageBoxSuccessAdd();
+        }
+
+        private void cbPowerBlockDelete_CheckedChanged(object sender, EventArgs e)
+        {
+            if (cbPowerBlockDelete.Checked)
+            {
+                dgvPowerBlock.Columns[4].Visible = true;
+            }
+            else
+            {
+                dgvPowerBlock.Columns[4].Visible = false;
+            }
+        }
+
+        private void dgvPowerBlock_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex < 0)
+            {
+                return;
+            }
+            if (dgvPowerBlock.Columns[e.ColumnIndex].Index == dgvPowerBlock.Columns.Count - 1)
+            {
+                if (messageBoxClickResult("Удалить эту запись?") == DialogResult.Yes)
+                {
+                    var id = dgvPowerBlock.Rows[e.RowIndex].Cells[0].Value.ToString();
+                    powerBlockBindingSource.RemoveAt(e.RowIndex);
+                    dataBase.DeletePowerBlock(id);
+                }
+            }
+        }
     }
 }

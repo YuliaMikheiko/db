@@ -71,10 +71,23 @@ namespace db.Classes
 
         public void DeleteVideoCard(string id)
         {
-            var found = db.Query<VideoCard>(vc => vc.id == id);
+            var found = db.Query<VideoCard>(vc => vc.id == id)[0];
             db.Delete(found);
         }
         public List<VideoCard> GetVideoCard() => db.Query<VideoCard>().ToList();
+        #endregion
+
+        #region
+        public void AddPowerBlock(PowerBlock pb)
+        {
+            db.Store(pb);
+        }
+        public void DeletePowerBlock(string id)
+        {
+            var found = db.Query<PowerBlock>(pb => pb.id == id)[0];
+            db.Delete(found);
+        }
+        public List<PowerBlock> GetPowerBlocks() => db.Query<PowerBlock>().ToList();
         #endregion
     }
 }
