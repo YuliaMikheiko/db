@@ -55,6 +55,11 @@ namespace db
             dataBase.dbConnect();
             setBindingSource();
             setCMB();
+            rtxtMotherBoardSearch.Text = "Самый востребованный производитель";
+            foreach (var ans in dataBase.MotherBoardSearch())
+            {
+                rtxtMotherBoardSearch.Text += $"\n{ans}";
+            }
         }
         void ListsSet()
         {
@@ -494,6 +499,12 @@ namespace db
             motherBoardBindingSource.Add(mb);
             txtMBtitle.Clear();
             messageBoxSuccessAdd();
+            rtxtMotherBoardSearch.Clear();
+            rtxtMotherBoardSearch.Text = "Самый востребованный производитель";
+            foreach(var ans in dataBase.MotherBoardSearch())
+            {
+                rtxtMotherBoardSearch.Text += $"\n{ans}";
+            }
         }
         #endregion
         #region Работа с процессором

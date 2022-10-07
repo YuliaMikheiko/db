@@ -1,5 +1,7 @@
 ﻿using Db4objects.Db4o;
+using Db4objects.Db4o.Linq;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -127,5 +129,30 @@ namespace db.Classes
 
         public List<RAM> GetRAMs() => db.Query<RAM>().ToList();
         #endregion
+
+        public List<string> MotherBoardSearch()
+        {
+            var asn = (from MotherBoard tt in db.Cast<MotherBoard>()
+                       group tt by tt.manufacturer into t
+                       select new
+                       {
+                           Name = t.Key,
+                           Count = t.Count()
+                       }).OrderByDescending(v => v.Count).ToList();
+            var lists = new List<string>();
+            lists.Add(asn[0].Name);
+            for (int i = 0; i < asn.Count-1; i++)
+            {
+                if (asn[i].Count == asn[i + 1].Count)
+                {
+                    lists.Add(asn[i+1].Name);
+                }
+                else
+                {
+                    break;
+                }
+            }
+            return lists;
+        }
     }
 }
