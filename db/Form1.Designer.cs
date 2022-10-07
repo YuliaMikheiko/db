@@ -64,34 +64,51 @@
             this.dgvCPU = new System.Windows.Forms.DataGridView();
             this.cpuDelete = new System.Windows.Forms.DataGridViewButtonColumn();
             this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.dgvVideoCard = new System.Windows.Forms.DataGridView();
-            this.cmbVideoCardManufacturer = new System.Windows.Forms.ComboBox();
-            this.cmbVideoCardGCPU = new System.Windows.Forms.ComboBox();
-            this.cmbVideoCardMemory = new System.Windows.Forms.ComboBox();
-            this.cmbVideoCardFrequency = new System.Windows.Forms.ComboBox();
-            this.cmbVideoCardPower = new System.Windows.Forms.ComboBox();
-            this.cmbVideoCardVolume = new System.Windows.Forms.ComboBox();
-            this.txtVideoCardTitle = new System.Windows.Forms.TextBox();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
-            this.btnVideoCardAdd = new System.Windows.Forms.Button();
             this.cbVideoCardDelete = new System.Windows.Forms.CheckBox();
+            this.btnVideoCardAdd = new System.Windows.Forms.Button();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.txtVideoCardTitle = new System.Windows.Forms.TextBox();
+            this.cmbVideoCardVolume = new System.Windows.Forms.ComboBox();
+            this.cmbVideoCardPower = new System.Windows.Forms.ComboBox();
+            this.cmbVideoCardFrequency = new System.Windows.Forms.ComboBox();
+            this.cmbVideoCardMemory = new System.Windows.Forms.ComboBox();
+            this.cmbVideoCardGCPU = new System.Windows.Forms.ComboBox();
+            this.cmbVideoCardManufacturer = new System.Windows.Forms.ComboBox();
+            this.dgvVideoCard = new System.Windows.Forms.DataGridView();
             this.vcDelete = new System.Windows.Forms.DataGridViewButtonColumn();
             this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.dgvPowerBlock = new System.Windows.Forms.DataGridView();
-            this.cmbPowerBlockPower = new System.Windows.Forms.ComboBox();
-            this.cmbPowerBlockManufacturer = new System.Windows.Forms.ComboBox();
-            this.label19 = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
-            this.label21 = new System.Windows.Forms.Label();
-            this.txtPowerBlockTitle = new System.Windows.Forms.TextBox();
-            this.btnPowerBlock = new System.Windows.Forms.Button();
             this.cbPowerBlockDelete = new System.Windows.Forms.CheckBox();
+            this.btnPowerBlock = new System.Windows.Forms.Button();
+            this.txtPowerBlockTitle = new System.Windows.Forms.TextBox();
+            this.label21 = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.cmbPowerBlockManufacturer = new System.Windows.Forms.ComboBox();
+            this.cmbPowerBlockPower = new System.Windows.Forms.ComboBox();
+            this.dgvPowerBlock = new System.Windows.Forms.DataGridView();
+            this.dgvPowerBlockDelete = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.btnStorageAdd = new System.Windows.Forms.Button();
+            this.label27 = new System.Windows.Forms.Label();
+            this.label26 = new System.Windows.Forms.Label();
+            this.label25 = new System.Windows.Forms.Label();
+            this.label24 = new System.Windows.Forms.Label();
+            this.label23 = new System.Windows.Forms.Label();
+            this.label22 = new System.Windows.Forms.Label();
+            this.txtStorageTitle = new System.Windows.Forms.TextBox();
+            this.cmbStorageRead = new System.Windows.Forms.ComboBox();
+            this.cmbStorageWrite = new System.Windows.Forms.ComboBox();
+            this.cmbStorageType = new System.Windows.Forms.ComboBox();
+            this.cmbStorageVolume = new System.Windows.Forms.ComboBox();
+            this.cmbStorageManufacturer = new System.Windows.Forms.ComboBox();
+            this.cbStorageDelete = new System.Windows.Forms.CheckBox();
+            this.dgvStorage = new System.Windows.Forms.DataGridView();
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.socketDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.gCPUtypeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
@@ -116,12 +133,31 @@
             this.titleDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.manufacturerDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.videoCardBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.powerBlockBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.idDataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.powerDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.titleDataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.manufacturerDataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvPowerBlockDelete = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.powerBlockBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.storageBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.idDataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.voluneDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.typeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.speedOfWriteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.speedOfReadDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.titleDataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.manufacturerDataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.storageDelete = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.tabPage6 = new System.Windows.Forms.TabPage();
+            this.dgvRam = new System.Windows.Forms.DataGridView();
+            this.rAMBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.idDataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.typeMemoryDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.frequencyDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.voluneDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.titleDataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.manufacturerDataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ramDelete = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.cbRamDelete = new System.Windows.Forms.CheckBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -133,10 +169,16 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvVideoCard)).BeginInit();
             this.tabPage4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPowerBlock)).BeginInit();
+            this.tabPage5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvStorage)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.motherBoardBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cPUBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.videoCardBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.powerBlockBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.storageBindingSource)).BeginInit();
+            this.tabPage6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvRam)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rAMBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -145,6 +187,8 @@
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Controls.Add(this.tabPage4);
+            this.tabControl1.Controls.Add(this.tabPage5);
+            this.tabControl1.Controls.Add(this.tabPage6);
             this.tabControl1.Location = new System.Drawing.Point(12, 12);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
@@ -540,6 +584,151 @@
             this.tabPage3.Text = "Видеокарта";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
+            // cbVideoCardDelete
+            // 
+            this.cbVideoCardDelete.AutoSize = true;
+            this.cbVideoCardDelete.Location = new System.Drawing.Point(1028, 3);
+            this.cbVideoCardDelete.Name = "cbVideoCardDelete";
+            this.cbVideoCardDelete.Size = new System.Drawing.Size(125, 17);
+            this.cbVideoCardDelete.TabIndex = 16;
+            this.cbVideoCardDelete.Text = "Включить удаление";
+            this.cbVideoCardDelete.UseVisualStyleBackColor = true;
+            this.cbVideoCardDelete.CheckedChanged += new System.EventHandler(this.cbVideoCardDelete_CheckedChanged);
+            // 
+            // btnVideoCardAdd
+            // 
+            this.btnVideoCardAdd.Location = new System.Drawing.Point(1044, 426);
+            this.btnVideoCardAdd.Name = "btnVideoCardAdd";
+            this.btnVideoCardAdd.Size = new System.Drawing.Size(89, 35);
+            this.btnVideoCardAdd.TabIndex = 15;
+            this.btnVideoCardAdd.Text = "Добавить";
+            this.btnVideoCardAdd.UseVisualStyleBackColor = true;
+            this.btnVideoCardAdd.Click += new System.EventHandler(this.btnVideoCardAdd_Click);
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(1060, 359);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(57, 13);
+            this.label18.TabIndex = 14;
+            this.label18.Text = "Название";
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(1047, 303);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(82, 13);
+            this.label17.TabIndex = 13;
+            this.label17.Text = "Объем памяти";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(1020, 247);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(137, 13);
+            this.label16.TabIndex = 12;
+            this.label16.Text = "Потребляемая мощность";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(1064, 191);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(49, 13);
+            this.label15.TabIndex = 11;
+            this.label15.Text = "Частота";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(1055, 135);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(66, 13);
+            this.label14.TabIndex = 10;
+            this.label14.Text = "Тип памяти";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(1038, 79);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(101, 13);
+            this.label13.TabIndex = 9;
+            this.label13.Text = "Графическое ядро";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(1045, 23);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(86, 13);
+            this.label12.TabIndex = 8;
+            this.label12.Text = "Производитель";
+            // 
+            // txtVideoCardTitle
+            // 
+            this.txtVideoCardTitle.Location = new System.Drawing.Point(1028, 383);
+            this.txtVideoCardTitle.Name = "txtVideoCardTitle";
+            this.txtVideoCardTitle.Size = new System.Drawing.Size(121, 20);
+            this.txtVideoCardTitle.TabIndex = 7;
+            // 
+            // cmbVideoCardVolume
+            // 
+            this.cmbVideoCardVolume.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbVideoCardVolume.FormattingEnabled = true;
+            this.cmbVideoCardVolume.Location = new System.Drawing.Point(1028, 327);
+            this.cmbVideoCardVolume.Name = "cmbVideoCardVolume";
+            this.cmbVideoCardVolume.Size = new System.Drawing.Size(121, 21);
+            this.cmbVideoCardVolume.TabIndex = 6;
+            // 
+            // cmbVideoCardPower
+            // 
+            this.cmbVideoCardPower.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbVideoCardPower.FormattingEnabled = true;
+            this.cmbVideoCardPower.Location = new System.Drawing.Point(1028, 271);
+            this.cmbVideoCardPower.Name = "cmbVideoCardPower";
+            this.cmbVideoCardPower.Size = new System.Drawing.Size(121, 21);
+            this.cmbVideoCardPower.TabIndex = 5;
+            // 
+            // cmbVideoCardFrequency
+            // 
+            this.cmbVideoCardFrequency.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbVideoCardFrequency.FormattingEnabled = true;
+            this.cmbVideoCardFrequency.Location = new System.Drawing.Point(1028, 215);
+            this.cmbVideoCardFrequency.Name = "cmbVideoCardFrequency";
+            this.cmbVideoCardFrequency.Size = new System.Drawing.Size(121, 21);
+            this.cmbVideoCardFrequency.TabIndex = 4;
+            // 
+            // cmbVideoCardMemory
+            // 
+            this.cmbVideoCardMemory.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbVideoCardMemory.FormattingEnabled = true;
+            this.cmbVideoCardMemory.Location = new System.Drawing.Point(1028, 159);
+            this.cmbVideoCardMemory.Name = "cmbVideoCardMemory";
+            this.cmbVideoCardMemory.Size = new System.Drawing.Size(121, 21);
+            this.cmbVideoCardMemory.TabIndex = 3;
+            // 
+            // cmbVideoCardGCPU
+            // 
+            this.cmbVideoCardGCPU.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbVideoCardGCPU.FormattingEnabled = true;
+            this.cmbVideoCardGCPU.Location = new System.Drawing.Point(1028, 103);
+            this.cmbVideoCardGCPU.Name = "cmbVideoCardGCPU";
+            this.cmbVideoCardGCPU.Size = new System.Drawing.Size(121, 21);
+            this.cmbVideoCardGCPU.TabIndex = 2;
+            // 
+            // cmbVideoCardManufacturer
+            // 
+            this.cmbVideoCardManufacturer.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbVideoCardManufacturer.FormattingEnabled = true;
+            this.cmbVideoCardManufacturer.Location = new System.Drawing.Point(1028, 47);
+            this.cmbVideoCardManufacturer.Name = "cmbVideoCardManufacturer";
+            this.cmbVideoCardManufacturer.Size = new System.Drawing.Size(121, 21);
+            this.cmbVideoCardManufacturer.TabIndex = 1;
+            // 
             // dgvVideoCard
             // 
             this.dgvVideoCard.AllowUserToAddRows = false;
@@ -562,151 +751,6 @@
             this.dgvVideoCard.Size = new System.Drawing.Size(955, 490);
             this.dgvVideoCard.TabIndex = 0;
             this.dgvVideoCard.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvVideoCard_CellContentClick);
-            // 
-            // cmbVideoCardManufacturer
-            // 
-            this.cmbVideoCardManufacturer.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbVideoCardManufacturer.FormattingEnabled = true;
-            this.cmbVideoCardManufacturer.Location = new System.Drawing.Point(1028, 47);
-            this.cmbVideoCardManufacturer.Name = "cmbVideoCardManufacturer";
-            this.cmbVideoCardManufacturer.Size = new System.Drawing.Size(121, 21);
-            this.cmbVideoCardManufacturer.TabIndex = 1;
-            // 
-            // cmbVideoCardGCPU
-            // 
-            this.cmbVideoCardGCPU.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbVideoCardGCPU.FormattingEnabled = true;
-            this.cmbVideoCardGCPU.Location = new System.Drawing.Point(1028, 103);
-            this.cmbVideoCardGCPU.Name = "cmbVideoCardGCPU";
-            this.cmbVideoCardGCPU.Size = new System.Drawing.Size(121, 21);
-            this.cmbVideoCardGCPU.TabIndex = 2;
-            // 
-            // cmbVideoCardMemory
-            // 
-            this.cmbVideoCardMemory.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbVideoCardMemory.FormattingEnabled = true;
-            this.cmbVideoCardMemory.Location = new System.Drawing.Point(1028, 159);
-            this.cmbVideoCardMemory.Name = "cmbVideoCardMemory";
-            this.cmbVideoCardMemory.Size = new System.Drawing.Size(121, 21);
-            this.cmbVideoCardMemory.TabIndex = 3;
-            // 
-            // cmbVideoCardFrequency
-            // 
-            this.cmbVideoCardFrequency.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbVideoCardFrequency.FormattingEnabled = true;
-            this.cmbVideoCardFrequency.Location = new System.Drawing.Point(1028, 215);
-            this.cmbVideoCardFrequency.Name = "cmbVideoCardFrequency";
-            this.cmbVideoCardFrequency.Size = new System.Drawing.Size(121, 21);
-            this.cmbVideoCardFrequency.TabIndex = 4;
-            // 
-            // cmbVideoCardPower
-            // 
-            this.cmbVideoCardPower.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbVideoCardPower.FormattingEnabled = true;
-            this.cmbVideoCardPower.Location = new System.Drawing.Point(1028, 271);
-            this.cmbVideoCardPower.Name = "cmbVideoCardPower";
-            this.cmbVideoCardPower.Size = new System.Drawing.Size(121, 21);
-            this.cmbVideoCardPower.TabIndex = 5;
-            // 
-            // cmbVideoCardVolume
-            // 
-            this.cmbVideoCardVolume.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbVideoCardVolume.FormattingEnabled = true;
-            this.cmbVideoCardVolume.Location = new System.Drawing.Point(1028, 327);
-            this.cmbVideoCardVolume.Name = "cmbVideoCardVolume";
-            this.cmbVideoCardVolume.Size = new System.Drawing.Size(121, 21);
-            this.cmbVideoCardVolume.TabIndex = 6;
-            // 
-            // txtVideoCardTitle
-            // 
-            this.txtVideoCardTitle.Location = new System.Drawing.Point(1028, 383);
-            this.txtVideoCardTitle.Name = "txtVideoCardTitle";
-            this.txtVideoCardTitle.Size = new System.Drawing.Size(121, 20);
-            this.txtVideoCardTitle.TabIndex = 7;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(1045, 23);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(86, 13);
-            this.label12.TabIndex = 8;
-            this.label12.Text = "Производитель";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(1038, 79);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(101, 13);
-            this.label13.TabIndex = 9;
-            this.label13.Text = "Графическое ядро";
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(1055, 135);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(66, 13);
-            this.label14.TabIndex = 10;
-            this.label14.Text = "Тип памяти";
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(1064, 191);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(49, 13);
-            this.label15.TabIndex = 11;
-            this.label15.Text = "Частота";
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(1020, 247);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(137, 13);
-            this.label16.TabIndex = 12;
-            this.label16.Text = "Потребляемая мощность";
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(1047, 303);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(82, 13);
-            this.label17.TabIndex = 13;
-            this.label17.Text = "Объем памяти";
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(1060, 359);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(57, 13);
-            this.label18.TabIndex = 14;
-            this.label18.Text = "Название";
-            // 
-            // btnVideoCardAdd
-            // 
-            this.btnVideoCardAdd.Location = new System.Drawing.Point(1044, 426);
-            this.btnVideoCardAdd.Name = "btnVideoCardAdd";
-            this.btnVideoCardAdd.Size = new System.Drawing.Size(89, 35);
-            this.btnVideoCardAdd.TabIndex = 15;
-            this.btnVideoCardAdd.Text = "Добавить";
-            this.btnVideoCardAdd.UseVisualStyleBackColor = true;
-            this.btnVideoCardAdd.Click += new System.EventHandler(this.btnVideoCardAdd_Click);
-            // 
-            // cbVideoCardDelete
-            // 
-            this.cbVideoCardDelete.AutoSize = true;
-            this.cbVideoCardDelete.Location = new System.Drawing.Point(1028, 3);
-            this.cbVideoCardDelete.Name = "cbVideoCardDelete";
-            this.cbVideoCardDelete.Size = new System.Drawing.Size(125, 17);
-            this.cbVideoCardDelete.TabIndex = 16;
-            this.cbVideoCardDelete.Text = "Включить удаление";
-            this.cbVideoCardDelete.UseVisualStyleBackColor = true;
-            this.cbVideoCardDelete.CheckedChanged += new System.EventHandler(this.cbVideoCardDelete_CheckedChanged);
             // 
             // vcDelete
             // 
@@ -735,6 +779,79 @@
             this.tabPage4.Text = "Блок питания";
             this.tabPage4.UseVisualStyleBackColor = true;
             // 
+            // cbPowerBlockDelete
+            // 
+            this.cbPowerBlockDelete.AutoSize = true;
+            this.cbPowerBlockDelete.Location = new System.Drawing.Point(643, 43);
+            this.cbPowerBlockDelete.Name = "cbPowerBlockDelete";
+            this.cbPowerBlockDelete.Size = new System.Drawing.Size(125, 17);
+            this.cbPowerBlockDelete.TabIndex = 9;
+            this.cbPowerBlockDelete.Text = "Включить удаление";
+            this.cbPowerBlockDelete.UseVisualStyleBackColor = true;
+            this.cbPowerBlockDelete.CheckedChanged += new System.EventHandler(this.cbPowerBlockDelete_CheckedChanged);
+            // 
+            // btnPowerBlock
+            // 
+            this.btnPowerBlock.Location = new System.Drawing.Point(850, 216);
+            this.btnPowerBlock.Name = "btnPowerBlock";
+            this.btnPowerBlock.Size = new System.Drawing.Size(83, 38);
+            this.btnPowerBlock.TabIndex = 8;
+            this.btnPowerBlock.Text = "Добавить";
+            this.btnPowerBlock.UseVisualStyleBackColor = true;
+            this.btnPowerBlock.Click += new System.EventHandler(this.btnPowerBlock_Click);
+            // 
+            // txtPowerBlockTitle
+            // 
+            this.txtPowerBlockTitle.Location = new System.Drawing.Point(831, 172);
+            this.txtPowerBlockTitle.Name = "txtPowerBlockTitle";
+            this.txtPowerBlockTitle.Size = new System.Drawing.Size(121, 20);
+            this.txtPowerBlockTitle.TabIndex = 7;
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Location = new System.Drawing.Point(863, 147);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(57, 13);
+            this.label21.TabIndex = 6;
+            this.label21.Text = "Название";
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Location = new System.Drawing.Point(848, 89);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(86, 13);
+            this.label20.TabIndex = 5;
+            this.label20.Text = "Производитель";
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(861, 31);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(60, 13);
+            this.label19.TabIndex = 4;
+            this.label19.Text = "Мощность";
+            // 
+            // cmbPowerBlockManufacturer
+            // 
+            this.cmbPowerBlockManufacturer.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbPowerBlockManufacturer.FormattingEnabled = true;
+            this.cmbPowerBlockManufacturer.Location = new System.Drawing.Point(831, 114);
+            this.cmbPowerBlockManufacturer.Name = "cmbPowerBlockManufacturer";
+            this.cmbPowerBlockManufacturer.Size = new System.Drawing.Size(121, 21);
+            this.cmbPowerBlockManufacturer.TabIndex = 2;
+            // 
+            // cmbPowerBlockPower
+            // 
+            this.cmbPowerBlockPower.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbPowerBlockPower.FormattingEnabled = true;
+            this.cmbPowerBlockPower.Location = new System.Drawing.Point(831, 56);
+            this.cmbPowerBlockPower.Name = "cmbPowerBlockPower";
+            this.cmbPowerBlockPower.Size = new System.Drawing.Size(121, 21);
+            this.cmbPowerBlockPower.TabIndex = 1;
+            // 
             // dgvPowerBlock
             // 
             this.dgvPowerBlock.AllowUserToAddRows = false;
@@ -754,78 +871,189 @@
             this.dgvPowerBlock.TabIndex = 0;
             this.dgvPowerBlock.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPowerBlock_CellContentClick);
             // 
-            // cmbPowerBlockPower
+            // dgvPowerBlockDelete
             // 
-            this.cmbPowerBlockPower.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbPowerBlockPower.FormattingEnabled = true;
-            this.cmbPowerBlockPower.Location = new System.Drawing.Point(831, 56);
-            this.cmbPowerBlockPower.Name = "cmbPowerBlockPower";
-            this.cmbPowerBlockPower.Size = new System.Drawing.Size(121, 21);
-            this.cmbPowerBlockPower.TabIndex = 1;
+            this.dgvPowerBlockDelete.HeaderText = "Удаление";
+            this.dgvPowerBlockDelete.Name = "dgvPowerBlockDelete";
+            this.dgvPowerBlockDelete.ReadOnly = true;
+            this.dgvPowerBlockDelete.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvPowerBlockDelete.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.dgvPowerBlockDelete.Text = "Удалить";
+            this.dgvPowerBlockDelete.UseColumnTextForButtonValue = true;
+            this.dgvPowerBlockDelete.Visible = false;
             // 
-            // cmbPowerBlockManufacturer
+            // tabPage5
             // 
-            this.cmbPowerBlockManufacturer.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbPowerBlockManufacturer.FormattingEnabled = true;
-            this.cmbPowerBlockManufacturer.Location = new System.Drawing.Point(831, 114);
-            this.cmbPowerBlockManufacturer.Name = "cmbPowerBlockManufacturer";
-            this.cmbPowerBlockManufacturer.Size = new System.Drawing.Size(121, 21);
-            this.cmbPowerBlockManufacturer.TabIndex = 2;
+            this.tabPage5.Controls.Add(this.btnStorageAdd);
+            this.tabPage5.Controls.Add(this.label27);
+            this.tabPage5.Controls.Add(this.label26);
+            this.tabPage5.Controls.Add(this.label25);
+            this.tabPage5.Controls.Add(this.label24);
+            this.tabPage5.Controls.Add(this.label23);
+            this.tabPage5.Controls.Add(this.label22);
+            this.tabPage5.Controls.Add(this.txtStorageTitle);
+            this.tabPage5.Controls.Add(this.cmbStorageRead);
+            this.tabPage5.Controls.Add(this.cmbStorageWrite);
+            this.tabPage5.Controls.Add(this.cmbStorageType);
+            this.tabPage5.Controls.Add(this.cmbStorageVolume);
+            this.tabPage5.Controls.Add(this.cmbStorageManufacturer);
+            this.tabPage5.Controls.Add(this.cbStorageDelete);
+            this.tabPage5.Controls.Add(this.dgvStorage);
+            this.tabPage5.Location = new System.Drawing.Point(4, 22);
+            this.tabPage5.Name = "tabPage5";
+            this.tabPage5.Size = new System.Drawing.Size(1233, 496);
+            this.tabPage5.TabIndex = 4;
+            this.tabPage5.Text = "ПЗУ";
+            this.tabPage5.UseVisualStyleBackColor = true;
             // 
-            // label19
+            // btnStorageAdd
             // 
-            this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(861, 31);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(60, 13);
-            this.label19.TabIndex = 4;
-            this.label19.Text = "Мощность";
+            this.btnStorageAdd.Location = new System.Drawing.Point(989, 372);
+            this.btnStorageAdd.Name = "btnStorageAdd";
+            this.btnStorageAdd.Size = new System.Drawing.Size(86, 41);
+            this.btnStorageAdd.TabIndex = 14;
+            this.btnStorageAdd.Text = "Добавить";
+            this.btnStorageAdd.UseVisualStyleBackColor = true;
+            this.btnStorageAdd.Click += new System.EventHandler(this.btnStorageAdd_Click);
             // 
-            // label20
+            // label27
             // 
-            this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(848, 89);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(86, 13);
-            this.label20.TabIndex = 5;
-            this.label20.Text = "Производитель";
+            this.label27.AutoSize = true;
+            this.label27.Location = new System.Drawing.Point(1004, 310);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(57, 13);
+            this.label27.TabIndex = 13;
+            this.label27.Text = "Название";
             // 
-            // label21
+            // label26
             // 
-            this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(863, 147);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(57, 13);
-            this.label21.TabIndex = 6;
-            this.label21.Text = "Название";
+            this.label26.AutoSize = true;
+            this.label26.Location = new System.Drawing.Point(985, 260);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(94, 13);
+            this.label26.TabIndex = 12;
+            this.label26.Text = "Скорость записи";
             // 
-            // txtPowerBlockTitle
+            // label25
             // 
-            this.txtPowerBlockTitle.Location = new System.Drawing.Point(831, 172);
-            this.txtPowerBlockTitle.Name = "txtPowerBlockTitle";
-            this.txtPowerBlockTitle.Size = new System.Drawing.Size(121, 20);
-            this.txtPowerBlockTitle.TabIndex = 7;
+            this.label25.AutoSize = true;
+            this.label25.Location = new System.Drawing.Point(985, 210);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(94, 13);
+            this.label25.TabIndex = 11;
+            this.label25.Text = "Скорость записи";
             // 
-            // btnPowerBlock
+            // label24
             // 
-            this.btnPowerBlock.Location = new System.Drawing.Point(850, 216);
-            this.btnPowerBlock.Name = "btnPowerBlock";
-            this.btnPowerBlock.Size = new System.Drawing.Size(83, 38);
-            this.btnPowerBlock.TabIndex = 8;
-            this.btnPowerBlock.Text = "Добавить";
-            this.btnPowerBlock.UseVisualStyleBackColor = true;
-            this.btnPowerBlock.Click += new System.EventHandler(this.btnPowerBlock_Click);
+            this.label24.AutoSize = true;
+            this.label24.Location = new System.Drawing.Point(1019, 160);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(26, 13);
+            this.label24.TabIndex = 10;
+            this.label24.Text = "Тип";
             // 
-            // cbPowerBlockDelete
+            // label23
             // 
-            this.cbPowerBlockDelete.AutoSize = true;
-            this.cbPowerBlockDelete.Location = new System.Drawing.Point(643, 43);
-            this.cbPowerBlockDelete.Name = "cbPowerBlockDelete";
-            this.cbPowerBlockDelete.Size = new System.Drawing.Size(125, 17);
-            this.cbPowerBlockDelete.TabIndex = 9;
-            this.cbPowerBlockDelete.Text = "Включить удаление";
-            this.cbPowerBlockDelete.UseVisualStyleBackColor = true;
-            this.cbPowerBlockDelete.CheckedChanged += new System.EventHandler(this.cbPowerBlockDelete_CheckedChanged);
+            this.label23.AutoSize = true;
+            this.label23.Location = new System.Drawing.Point(1011, 110);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(42, 13);
+            this.label23.TabIndex = 9;
+            this.label23.Text = "Объем";
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Location = new System.Drawing.Point(989, 60);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(86, 13);
+            this.label22.TabIndex = 8;
+            this.label22.Text = "Производитель";
+            // 
+            // txtStorageTitle
+            // 
+            this.txtStorageTitle.Location = new System.Drawing.Point(972, 331);
+            this.txtStorageTitle.Name = "txtStorageTitle";
+            this.txtStorageTitle.Size = new System.Drawing.Size(121, 20);
+            this.txtStorageTitle.TabIndex = 7;
+            // 
+            // cmbStorageRead
+            // 
+            this.cmbStorageRead.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbStorageRead.FormattingEnabled = true;
+            this.cmbStorageRead.Location = new System.Drawing.Point(972, 281);
+            this.cmbStorageRead.Name = "cmbStorageRead";
+            this.cmbStorageRead.Size = new System.Drawing.Size(121, 21);
+            this.cmbStorageRead.TabIndex = 6;
+            // 
+            // cmbStorageWrite
+            // 
+            this.cmbStorageWrite.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbStorageWrite.FormattingEnabled = true;
+            this.cmbStorageWrite.Location = new System.Drawing.Point(972, 231);
+            this.cmbStorageWrite.Name = "cmbStorageWrite";
+            this.cmbStorageWrite.Size = new System.Drawing.Size(121, 21);
+            this.cmbStorageWrite.TabIndex = 5;
+            // 
+            // cmbStorageType
+            // 
+            this.cmbStorageType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbStorageType.FormattingEnabled = true;
+            this.cmbStorageType.Location = new System.Drawing.Point(972, 181);
+            this.cmbStorageType.Name = "cmbStorageType";
+            this.cmbStorageType.Size = new System.Drawing.Size(121, 21);
+            this.cmbStorageType.TabIndex = 4;
+            // 
+            // cmbStorageVolume
+            // 
+            this.cmbStorageVolume.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbStorageVolume.FormattingEnabled = true;
+            this.cmbStorageVolume.Location = new System.Drawing.Point(972, 131);
+            this.cmbStorageVolume.Name = "cmbStorageVolume";
+            this.cmbStorageVolume.Size = new System.Drawing.Size(121, 21);
+            this.cmbStorageVolume.TabIndex = 3;
+            // 
+            // cmbStorageManufacturer
+            // 
+            this.cmbStorageManufacturer.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbStorageManufacturer.FormattingEnabled = true;
+            this.cmbStorageManufacturer.Location = new System.Drawing.Point(972, 81);
+            this.cmbStorageManufacturer.Name = "cmbStorageManufacturer";
+            this.cmbStorageManufacturer.Size = new System.Drawing.Size(121, 21);
+            this.cmbStorageManufacturer.TabIndex = 2;
+            // 
+            // cbStorageDelete
+            // 
+            this.cbStorageDelete.AutoSize = true;
+            this.cbStorageDelete.Location = new System.Drawing.Point(970, 26);
+            this.cbStorageDelete.Name = "cbStorageDelete";
+            this.cbStorageDelete.Size = new System.Drawing.Size(125, 17);
+            this.cbStorageDelete.TabIndex = 1;
+            this.cbStorageDelete.Text = "Включить удаление";
+            this.cbStorageDelete.UseVisualStyleBackColor = true;
+            this.cbStorageDelete.CheckedChanged += new System.EventHandler(this.cbStorageDelete_CheckedChanged);
+            // 
+            // dgvStorage
+            // 
+            this.dgvStorage.AllowUserToAddRows = false;
+            this.dgvStorage.AutoGenerateColumns = false;
+            this.dgvStorage.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvStorage.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idDataGridViewTextBoxColumn4,
+            this.voluneDataGridViewTextBoxColumn,
+            this.typeDataGridViewTextBoxColumn,
+            this.speedOfWriteDataGridViewTextBoxColumn,
+            this.speedOfReadDataGridViewTextBoxColumn,
+            this.titleDataGridViewTextBoxColumn4,
+            this.manufacturerDataGridViewTextBoxColumn4,
+            this.storageDelete});
+            this.dgvStorage.DataSource = this.storageBindingSource;
+            this.dgvStorage.Location = new System.Drawing.Point(3, 3);
+            this.dgvStorage.Name = "dgvStorage";
+            this.dgvStorage.ReadOnly = true;
+            this.dgvStorage.Size = new System.Drawing.Size(852, 490);
+            this.dgvStorage.TabIndex = 0;
+            this.dgvStorage.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvStorage_CellContentClick);
             // 
             // idDataGridViewTextBoxColumn
             // 
@@ -1096,10 +1324,6 @@
             // 
             this.videoCardBindingSource.DataSource = typeof(db.Classes.VideoCard);
             // 
-            // powerBlockBindingSource
-            // 
-            this.powerBlockBindingSource.DataSource = typeof(db.Classes.PowerBlock);
-            // 
             // idDataGridViewTextBoxColumn3
             // 
             this.idDataGridViewTextBoxColumn3.DataPropertyName = "id";
@@ -1129,16 +1353,166 @@
             this.manufacturerDataGridViewTextBoxColumn3.Name = "manufacturerDataGridViewTextBoxColumn3";
             this.manufacturerDataGridViewTextBoxColumn3.ReadOnly = true;
             // 
-            // dgvPowerBlockDelete
+            // powerBlockBindingSource
             // 
-            this.dgvPowerBlockDelete.HeaderText = "Удаление";
-            this.dgvPowerBlockDelete.Name = "dgvPowerBlockDelete";
-            this.dgvPowerBlockDelete.ReadOnly = true;
-            this.dgvPowerBlockDelete.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvPowerBlockDelete.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.dgvPowerBlockDelete.Text = "Удалить";
-            this.dgvPowerBlockDelete.UseColumnTextForButtonValue = true;
-            this.dgvPowerBlockDelete.Visible = false;
+            this.powerBlockBindingSource.DataSource = typeof(db.Classes.PowerBlock);
+            // 
+            // storageBindingSource
+            // 
+            this.storageBindingSource.DataSource = typeof(db.Classes.Storage);
+            // 
+            // idDataGridViewTextBoxColumn4
+            // 
+            this.idDataGridViewTextBoxColumn4.DataPropertyName = "id";
+            this.idDataGridViewTextBoxColumn4.HeaderText = "id";
+            this.idDataGridViewTextBoxColumn4.Name = "idDataGridViewTextBoxColumn4";
+            this.idDataGridViewTextBoxColumn4.ReadOnly = true;
+            // 
+            // voluneDataGridViewTextBoxColumn
+            // 
+            this.voluneDataGridViewTextBoxColumn.DataPropertyName = "volune";
+            this.voluneDataGridViewTextBoxColumn.HeaderText = "Объем";
+            this.voluneDataGridViewTextBoxColumn.Name = "voluneDataGridViewTextBoxColumn";
+            this.voluneDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // typeDataGridViewTextBoxColumn
+            // 
+            this.typeDataGridViewTextBoxColumn.DataPropertyName = "type";
+            this.typeDataGridViewTextBoxColumn.HeaderText = "Тип памяти";
+            this.typeDataGridViewTextBoxColumn.Name = "typeDataGridViewTextBoxColumn";
+            this.typeDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // speedOfWriteDataGridViewTextBoxColumn
+            // 
+            this.speedOfWriteDataGridViewTextBoxColumn.DataPropertyName = "speedOfWrite";
+            this.speedOfWriteDataGridViewTextBoxColumn.HeaderText = "Скорость записи";
+            this.speedOfWriteDataGridViewTextBoxColumn.Name = "speedOfWriteDataGridViewTextBoxColumn";
+            this.speedOfWriteDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // speedOfReadDataGridViewTextBoxColumn
+            // 
+            this.speedOfReadDataGridViewTextBoxColumn.DataPropertyName = "speedOfRead";
+            this.speedOfReadDataGridViewTextBoxColumn.HeaderText = "Скорость чтения";
+            this.speedOfReadDataGridViewTextBoxColumn.Name = "speedOfReadDataGridViewTextBoxColumn";
+            this.speedOfReadDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // titleDataGridViewTextBoxColumn4
+            // 
+            this.titleDataGridViewTextBoxColumn4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.titleDataGridViewTextBoxColumn4.DataPropertyName = "title";
+            this.titleDataGridViewTextBoxColumn4.HeaderText = "Название";
+            this.titleDataGridViewTextBoxColumn4.Name = "titleDataGridViewTextBoxColumn4";
+            this.titleDataGridViewTextBoxColumn4.ReadOnly = true;
+            // 
+            // manufacturerDataGridViewTextBoxColumn4
+            // 
+            this.manufacturerDataGridViewTextBoxColumn4.DataPropertyName = "manufacturer";
+            this.manufacturerDataGridViewTextBoxColumn4.HeaderText = "Производитель";
+            this.manufacturerDataGridViewTextBoxColumn4.Name = "manufacturerDataGridViewTextBoxColumn4";
+            this.manufacturerDataGridViewTextBoxColumn4.ReadOnly = true;
+            // 
+            // storageDelete
+            // 
+            this.storageDelete.HeaderText = "Удаление";
+            this.storageDelete.Name = "storageDelete";
+            this.storageDelete.ReadOnly = true;
+            this.storageDelete.Text = "Удалить";
+            this.storageDelete.UseColumnTextForButtonValue = true;
+            this.storageDelete.Visible = false;
+            // 
+            // tabPage6
+            // 
+            this.tabPage6.Controls.Add(this.cbRamDelete);
+            this.tabPage6.Controls.Add(this.dgvRam);
+            this.tabPage6.Location = new System.Drawing.Point(4, 22);
+            this.tabPage6.Name = "tabPage6";
+            this.tabPage6.Size = new System.Drawing.Size(1233, 496);
+            this.tabPage6.TabIndex = 5;
+            this.tabPage6.Text = "ОЗУ";
+            this.tabPage6.UseVisualStyleBackColor = true;
+            // 
+            // dgvRam
+            // 
+            this.dgvRam.AllowUserToAddRows = false;
+            this.dgvRam.AutoGenerateColumns = false;
+            this.dgvRam.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvRam.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idDataGridViewTextBoxColumn5,
+            this.typeMemoryDataGridViewTextBoxColumn1,
+            this.frequencyDataGridViewTextBoxColumn1,
+            this.voluneDataGridViewTextBoxColumn1,
+            this.titleDataGridViewTextBoxColumn5,
+            this.manufacturerDataGridViewTextBoxColumn5,
+            this.ramDelete});
+            this.dgvRam.DataSource = this.rAMBindingSource;
+            this.dgvRam.Location = new System.Drawing.Point(3, 3);
+            this.dgvRam.Name = "dgvRam";
+            this.dgvRam.ReadOnly = true;
+            this.dgvRam.Size = new System.Drawing.Size(741, 490);
+            this.dgvRam.TabIndex = 0;
+            // 
+            // rAMBindingSource
+            // 
+            this.rAMBindingSource.DataSource = typeof(db.Classes.RAM);
+            // 
+            // idDataGridViewTextBoxColumn5
+            // 
+            this.idDataGridViewTextBoxColumn5.DataPropertyName = "id";
+            this.idDataGridViewTextBoxColumn5.HeaderText = "id";
+            this.idDataGridViewTextBoxColumn5.Name = "idDataGridViewTextBoxColumn5";
+            this.idDataGridViewTextBoxColumn5.ReadOnly = true;
+            // 
+            // typeMemoryDataGridViewTextBoxColumn1
+            // 
+            this.typeMemoryDataGridViewTextBoxColumn1.DataPropertyName = "typeMemory";
+            this.typeMemoryDataGridViewTextBoxColumn1.HeaderText = "Тип памяти";
+            this.typeMemoryDataGridViewTextBoxColumn1.Name = "typeMemoryDataGridViewTextBoxColumn1";
+            this.typeMemoryDataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // frequencyDataGridViewTextBoxColumn1
+            // 
+            this.frequencyDataGridViewTextBoxColumn1.DataPropertyName = "frequency";
+            this.frequencyDataGridViewTextBoxColumn1.HeaderText = "Частота";
+            this.frequencyDataGridViewTextBoxColumn1.Name = "frequencyDataGridViewTextBoxColumn1";
+            this.frequencyDataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // voluneDataGridViewTextBoxColumn1
+            // 
+            this.voluneDataGridViewTextBoxColumn1.DataPropertyName = "volune";
+            this.voluneDataGridViewTextBoxColumn1.HeaderText = "Объем";
+            this.voluneDataGridViewTextBoxColumn1.Name = "voluneDataGridViewTextBoxColumn1";
+            this.voluneDataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // titleDataGridViewTextBoxColumn5
+            // 
+            this.titleDataGridViewTextBoxColumn5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.titleDataGridViewTextBoxColumn5.DataPropertyName = "title";
+            this.titleDataGridViewTextBoxColumn5.HeaderText = "Название";
+            this.titleDataGridViewTextBoxColumn5.Name = "titleDataGridViewTextBoxColumn5";
+            this.titleDataGridViewTextBoxColumn5.ReadOnly = true;
+            // 
+            // manufacturerDataGridViewTextBoxColumn5
+            // 
+            this.manufacturerDataGridViewTextBoxColumn5.DataPropertyName = "manufacturer";
+            this.manufacturerDataGridViewTextBoxColumn5.HeaderText = "Производитель";
+            this.manufacturerDataGridViewTextBoxColumn5.Name = "manufacturerDataGridViewTextBoxColumn5";
+            this.manufacturerDataGridViewTextBoxColumn5.ReadOnly = true;
+            // 
+            // ramDelete
+            // 
+            this.ramDelete.HeaderText = "Удаление";
+            this.ramDelete.Name = "ramDelete";
+            this.ramDelete.ReadOnly = true;
+            // 
+            // cbRamDelete
+            // 
+            this.cbRamDelete.AutoSize = true;
+            this.cbRamDelete.Location = new System.Drawing.Point(791, 24);
+            this.cbRamDelete.Name = "cbRamDelete";
+            this.cbRamDelete.Size = new System.Drawing.Size(125, 17);
+            this.cbRamDelete.TabIndex = 1;
+            this.cbRamDelete.Text = "Включить удаление";
+            this.cbRamDelete.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
@@ -1164,10 +1538,18 @@
             this.tabPage4.ResumeLayout(false);
             this.tabPage4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPowerBlock)).EndInit();
+            this.tabPage5.ResumeLayout(false);
+            this.tabPage5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvStorage)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.motherBoardBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cPUBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.videoCardBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.powerBlockBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.storageBindingSource)).EndInit();
+            this.tabPage6.ResumeLayout(false);
+            this.tabPage6.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvRam)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rAMBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1267,6 +1649,42 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn titleDataGridViewTextBoxColumn3;
         private System.Windows.Forms.DataGridViewTextBoxColumn manufacturerDataGridViewTextBoxColumn3;
         private System.Windows.Forms.DataGridViewButtonColumn dgvPowerBlockDelete;
+        private System.Windows.Forms.TabPage tabPage5;
+        private System.Windows.Forms.CheckBox cbStorageDelete;
+        private System.Windows.Forms.DataGridView dgvStorage;
+        private System.Windows.Forms.BindingSource storageBindingSource;
+        private System.Windows.Forms.Button btnStorageAdd;
+        private System.Windows.Forms.Label label27;
+        private System.Windows.Forms.Label label26;
+        private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.TextBox txtStorageTitle;
+        private System.Windows.Forms.ComboBox cmbStorageRead;
+        private System.Windows.Forms.ComboBox cmbStorageWrite;
+        private System.Windows.Forms.ComboBox cmbStorageType;
+        private System.Windows.Forms.ComboBox cmbStorageVolume;
+        private System.Windows.Forms.ComboBox cmbStorageManufacturer;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn voluneDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn typeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn speedOfWriteDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn speedOfReadDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn titleDataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn manufacturerDataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewButtonColumn storageDelete;
+        private System.Windows.Forms.TabPage tabPage6;
+        private System.Windows.Forms.CheckBox cbRamDelete;
+        private System.Windows.Forms.DataGridView dgvRam;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn typeMemoryDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn frequencyDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn voluneDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn titleDataGridViewTextBoxColumn5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn manufacturerDataGridViewTextBoxColumn5;
+        private System.Windows.Forms.DataGridViewButtonColumn ramDelete;
+        private System.Windows.Forms.BindingSource rAMBindingSource;
     }
 }
 

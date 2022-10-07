@@ -91,6 +91,8 @@
     <None Include="Properties\DataSources\db.Classes.CPU.datasource" />
     <None Include="Properties\DataSources\db.Classes.MotherBoard.datasource" />
     <None Include="Properties\DataSources\db.Classes.PowerBlock.datasource" />
+    <None Include="Properties\DataSources\db.Classes.RAM.datasource" />
+    <None Include="Properties\DataSources\db.Classes.Storage.datasource" />
     <None Include="Properties\DataSources\db.Classes.VideoCard.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

@@ -1,4 +1,6 @@
 ﻿using db.Classes;
+using Db4objects.Db4o.IO;
+using Db4objects.Db4o.Reflect.Net;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -6,6 +8,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Runtime.InteropServices;
+using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -32,6 +35,11 @@ namespace db
         List<int> vcVolumeMemory = new List<int>();
         List<int> pbPower = new List<int>();
         List<String> pbManufacturer = new List<string>();
+        List<String> storageManufacturer = new List<string>();
+        List<int> storageVolume = new List<int>();
+        List<String> storageType = new List<string>();
+        List<int> storageWrite = new List<int>();
+        List<int> storageRead = new List<int>();
 
         string chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789" + "ABCDEFGHIJKLMNOPQRSTUVWXYZ".ToLower();
 
@@ -204,6 +212,32 @@ namespace db
             {
                 pbPower.Add(i);
             }
+
+            storageManufacturer.Add("Western Digital");
+            storageManufacturer.Add("Seagate");
+            storageManufacturer.Add("Hitachi HGST");
+            storageManufacturer.Add("Toshiba");
+            storageManufacturer.Add("Samsung");
+
+            storageType.Add("HHD");
+            storageType.Add("SSD");
+            storageType.Add("M2");
+
+            for (int i = 128; i <= 8192; i *= 2)
+            {
+                storageVolume.Add(i);
+            }
+
+            for (int i = 50; i <= 300; i += 50)
+            {
+                storageRead.Add(i);
+            }
+            for (int i = 10; i <= 60; i += 10)
+            {
+                storageWrite.Add(i);
+            }
+
+
         }
         void setBindingSource()
         {
@@ -262,6 +296,17 @@ namespace db
             cmbPowerBlockManufacturer.SelectedIndex = 0;
             cmbPowerBlockPower.DataSource = pbPower;
             cmbPowerBlockPower.SelectedIndex = 0;
+
+            cmbStorageManufacturer.DataSource = storageManufacturer;
+            cmbStorageManufacturer.SelectedIndex = 0;
+            cmbStorageRead.DataSource = storageRead;
+            cmbStorageRead.SelectedIndex = 0;
+            cmbStorageType.DataSource = storageType;
+            cmbStorageType.SelectedIndex = 0;
+            cmbStorageVolume.DataSource = storageVolume;
+            cmbStorageVolume.SelectedIndex = 0;
+            cmbStorageWrite.DataSource = storageWrite;
+            cmbStorageWrite.SelectedIndex = 0;
         }
 
         #endregion
@@ -504,7 +549,7 @@ namespace db
             messageBoxSuccessAdd();
         }
         #endregion
-
+        #region Работа с блоком питания
         private void btnPowerBlock_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrEmpty(txtPowerBlockTitle.Text))
@@ -550,5 +595,56 @@ namespace db
                 }
             }
         }
+        #endregion
+        #region Работа с ПУЗ
+        private void cbStorageDelete_CheckedChanged(object sender, EventArgs e)
+        {
+            if (cbStorageDelete.Checked)
+            {
+                dgvStorage.Columns[7].Visible = true;
+            }
+            else
+            {
+                dgvStorage.Columns[7].Visible = false;
+            }
+        }
+
+        private void dgvStorage_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex < 0)
+            {
+                return;
+            }
+            if (dgvStorage.Columns[e.ColumnIndex].Index == dgvStorage.Columns.Count - 1)
+            {
+                if (messageBoxClickResult("Удалить эту запись?") == DialogResult.Yes)
+                {
+                    var id = dgvStorage.Rows[e.RowIndex].Cells[0].Value.ToString();
+                    storageBindingSource.RemoveAt(e.RowIndex);
+                    dataBase.DeleteStorage(id);
+                }
+            }
+        }
+
+        private void btnStorageAdd_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(txtStorageTitle.Text))
+            {
+                messageBoxError("Вы не ввели название");
+                return;
+            }
+            var storage = new Storage();
+            storage.manufacturer = cmbStorageManufacturer.SelectedItem.ToString();
+            storage.title = txtStorageTitle.Text;
+            storage.volune = (int)cmbStorageVolume.SelectedItem;
+            storage.speedOfRead = (int)cmbStorageRead.SelectedItem;
+            storage.speedOfWrite = (int)cmbStorageRead.SelectedItem;
+            storage.type = cmbStorageType.SelectedItem.ToString();
+            dataBase.AddStorage(storage);
+            storageBindingSource.Add(storage);
+            txtPowerBlockTitle.Clear();
+            messageBoxSuccessAdd();
+        }
+        #endregion
     }
 }

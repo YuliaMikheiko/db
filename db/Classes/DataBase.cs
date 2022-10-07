@@ -89,5 +89,28 @@ namespace db.Classes
         }
         public List<PowerBlock> GetPowerBlocks() => db.Query<PowerBlock>().ToList();
         #endregion
+
+        #region Работа с ПЗУ
+        public void AddStorage(Storage storage)
+        {
+            db.Store(storage);
+        }
+
+        public void DeleteStorage(string id)
+        {
+            var proto = new Storage();
+            proto.id = id;
+            proto.manufacturer = null;
+            proto.title = null;
+            proto.type = null;
+            proto.speedOfRead = 0;
+            proto.speedOfWrite = 0;
+            proto.volune = 0;
+            var found = db.QueryByExample(proto).Next() as Storage;
+            db.Delete(found);
+        }
+
+        public List<Storage> GetSrorage() => db.Query<Storage>().ToList();
+        #endregion
     }
 }
