@@ -112,5 +112,20 @@ namespace db.Classes
 
         public List<Storage> GetSrorage() => db.Query<Storage>().ToList();
         #endregion
+
+        #region Работа с ОЗУ
+        public void AddRAM(RAM ram)
+        {
+            db.Store(ram);
+        }
+
+        public void DeleteRAM(string id)
+        {
+            var found = db.Query<RAM>(ram => ram.id == id)[0];
+            db.Delete(found);
+        }
+
+        public List<RAM> GetRAMs() => db.Query<RAM>().ToList();
+        #endregion
     }
 }

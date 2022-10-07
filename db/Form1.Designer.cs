@@ -109,6 +109,21 @@
             this.cmbStorageManufacturer = new System.Windows.Forms.ComboBox();
             this.cbStorageDelete = new System.Windows.Forms.CheckBox();
             this.dgvStorage = new System.Windows.Forms.DataGridView();
+            this.storageDelete = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.tabPage6 = new System.Windows.Forms.TabPage();
+            this.dgvRam = new System.Windows.Forms.DataGridView();
+            this.cbRamDelete = new System.Windows.Forms.CheckBox();
+            this.cmbRamManufacturer = new System.Windows.Forms.ComboBox();
+            this.cmbRamVolume = new System.Windows.Forms.ComboBox();
+            this.cmbRamFrenquency = new System.Windows.Forms.ComboBox();
+            this.cmbRamType = new System.Windows.Forms.ComboBox();
+            this.txtRamTitle = new System.Windows.Forms.TextBox();
+            this.label28 = new System.Windows.Forms.Label();
+            this.label29 = new System.Windows.Forms.Label();
+            this.label30 = new System.Windows.Forms.Label();
+            this.label31 = new System.Windows.Forms.Label();
+            this.label32 = new System.Windows.Forms.Label();
+            this.btnRamAdd = new System.Windows.Forms.Button();
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.socketDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.gCPUtypeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
@@ -138,7 +153,6 @@
             this.titleDataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.manufacturerDataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.powerBlockBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.storageBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.idDataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.voluneDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.typeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -146,9 +160,7 @@
             this.speedOfReadDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.titleDataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.manufacturerDataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.storageDelete = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.tabPage6 = new System.Windows.Forms.TabPage();
-            this.dgvRam = new System.Windows.Forms.DataGridView();
+            this.storageBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.rAMBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.idDataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.typeMemoryDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -157,7 +169,6 @@
             this.titleDataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.manufacturerDataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ramDelete = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.cbRamDelete = new System.Windows.Forms.CheckBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -171,13 +182,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvPowerBlock)).BeginInit();
             this.tabPage5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvStorage)).BeginInit();
+            this.tabPage6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvRam)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.motherBoardBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cPUBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.videoCardBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.powerBlockBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.storageBindingSource)).BeginInit();
-            this.tabPage6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvRam)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rAMBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -1055,6 +1066,167 @@
             this.dgvStorage.TabIndex = 0;
             this.dgvStorage.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvStorage_CellContentClick);
             // 
+            // storageDelete
+            // 
+            this.storageDelete.HeaderText = "Удаление";
+            this.storageDelete.Name = "storageDelete";
+            this.storageDelete.ReadOnly = true;
+            this.storageDelete.Text = "Удалить";
+            this.storageDelete.UseColumnTextForButtonValue = true;
+            this.storageDelete.Visible = false;
+            // 
+            // tabPage6
+            // 
+            this.tabPage6.Controls.Add(this.btnRamAdd);
+            this.tabPage6.Controls.Add(this.label32);
+            this.tabPage6.Controls.Add(this.label31);
+            this.tabPage6.Controls.Add(this.label30);
+            this.tabPage6.Controls.Add(this.label29);
+            this.tabPage6.Controls.Add(this.label28);
+            this.tabPage6.Controls.Add(this.txtRamTitle);
+            this.tabPage6.Controls.Add(this.cmbRamType);
+            this.tabPage6.Controls.Add(this.cmbRamFrenquency);
+            this.tabPage6.Controls.Add(this.cmbRamVolume);
+            this.tabPage6.Controls.Add(this.cmbRamManufacturer);
+            this.tabPage6.Controls.Add(this.cbRamDelete);
+            this.tabPage6.Controls.Add(this.dgvRam);
+            this.tabPage6.Location = new System.Drawing.Point(4, 22);
+            this.tabPage6.Name = "tabPage6";
+            this.tabPage6.Size = new System.Drawing.Size(1233, 496);
+            this.tabPage6.TabIndex = 5;
+            this.tabPage6.Text = "ОЗУ";
+            this.tabPage6.UseVisualStyleBackColor = true;
+            // 
+            // dgvRam
+            // 
+            this.dgvRam.AllowUserToAddRows = false;
+            this.dgvRam.AutoGenerateColumns = false;
+            this.dgvRam.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvRam.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idDataGridViewTextBoxColumn5,
+            this.typeMemoryDataGridViewTextBoxColumn1,
+            this.frequencyDataGridViewTextBoxColumn1,
+            this.voluneDataGridViewTextBoxColumn1,
+            this.titleDataGridViewTextBoxColumn5,
+            this.manufacturerDataGridViewTextBoxColumn5,
+            this.ramDelete});
+            this.dgvRam.DataSource = this.rAMBindingSource;
+            this.dgvRam.Location = new System.Drawing.Point(3, 3);
+            this.dgvRam.Name = "dgvRam";
+            this.dgvRam.ReadOnly = true;
+            this.dgvRam.Size = new System.Drawing.Size(741, 490);
+            this.dgvRam.TabIndex = 0;
+            this.dgvRam.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvRam_CellContentClick);
+            // 
+            // cbRamDelete
+            // 
+            this.cbRamDelete.AutoSize = true;
+            this.cbRamDelete.Location = new System.Drawing.Point(910, 27);
+            this.cbRamDelete.Name = "cbRamDelete";
+            this.cbRamDelete.Size = new System.Drawing.Size(125, 17);
+            this.cbRamDelete.TabIndex = 1;
+            this.cbRamDelete.Text = "Включить удаление";
+            this.cbRamDelete.UseVisualStyleBackColor = true;
+            this.cbRamDelete.CheckedChanged += new System.EventHandler(this.cbRamDelete_CheckedChanged);
+            // 
+            // cmbRamManufacturer
+            // 
+            this.cmbRamManufacturer.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbRamManufacturer.FormattingEnabled = true;
+            this.cmbRamManufacturer.Location = new System.Drawing.Point(913, 80);
+            this.cmbRamManufacturer.Name = "cmbRamManufacturer";
+            this.cmbRamManufacturer.Size = new System.Drawing.Size(121, 21);
+            this.cmbRamManufacturer.TabIndex = 2;
+            // 
+            // cmbRamVolume
+            // 
+            this.cmbRamVolume.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbRamVolume.FormattingEnabled = true;
+            this.cmbRamVolume.Location = new System.Drawing.Point(913, 136);
+            this.cmbRamVolume.Name = "cmbRamVolume";
+            this.cmbRamVolume.Size = new System.Drawing.Size(121, 21);
+            this.cmbRamVolume.TabIndex = 3;
+            // 
+            // cmbRamFrenquency
+            // 
+            this.cmbRamFrenquency.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbRamFrenquency.FormattingEnabled = true;
+            this.cmbRamFrenquency.Location = new System.Drawing.Point(913, 192);
+            this.cmbRamFrenquency.Name = "cmbRamFrenquency";
+            this.cmbRamFrenquency.Size = new System.Drawing.Size(121, 21);
+            this.cmbRamFrenquency.TabIndex = 4;
+            // 
+            // cmbRamType
+            // 
+            this.cmbRamType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbRamType.FormattingEnabled = true;
+            this.cmbRamType.Location = new System.Drawing.Point(913, 248);
+            this.cmbRamType.Name = "cmbRamType";
+            this.cmbRamType.Size = new System.Drawing.Size(121, 21);
+            this.cmbRamType.TabIndex = 5;
+            // 
+            // txtRamTitle
+            // 
+            this.txtRamTitle.Location = new System.Drawing.Point(912, 304);
+            this.txtRamTitle.Name = "txtRamTitle";
+            this.txtRamTitle.Size = new System.Drawing.Size(122, 20);
+            this.txtRamTitle.TabIndex = 6;
+            // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.Location = new System.Drawing.Point(930, 56);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(86, 13);
+            this.label28.TabIndex = 7;
+            this.label28.Text = "Производитель";
+            // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.Location = new System.Drawing.Point(932, 112);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(82, 13);
+            this.label29.TabIndex = 8;
+            this.label29.Text = "Объем памяти";
+            // 
+            // label30
+            // 
+            this.label30.AutoSize = true;
+            this.label30.Location = new System.Drawing.Point(949, 168);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(49, 13);
+            this.label30.TabIndex = 9;
+            this.label30.Text = "Частота";
+            // 
+            // label31
+            // 
+            this.label31.AutoSize = true;
+            this.label31.Location = new System.Drawing.Point(960, 224);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(26, 13);
+            this.label31.TabIndex = 10;
+            this.label31.Text = "Тип";
+            // 
+            // label32
+            // 
+            this.label32.AutoSize = true;
+            this.label32.Location = new System.Drawing.Point(945, 280);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(57, 13);
+            this.label32.TabIndex = 11;
+            this.label32.Text = "Название";
+            // 
+            // btnRamAdd
+            // 
+            this.btnRamAdd.Location = new System.Drawing.Point(924, 344);
+            this.btnRamAdd.Name = "btnRamAdd";
+            this.btnRamAdd.Size = new System.Drawing.Size(99, 45);
+            this.btnRamAdd.TabIndex = 12;
+            this.btnRamAdd.Text = "Добавить";
+            this.btnRamAdd.UseVisualStyleBackColor = true;
+            this.btnRamAdd.Click += new System.EventHandler(this.btnRamAdd_Click);
+            // 
             // idDataGridViewTextBoxColumn
             // 
             this.idDataGridViewTextBoxColumn.DataPropertyName = "id";
@@ -1357,10 +1529,6 @@
             // 
             this.powerBlockBindingSource.DataSource = typeof(db.Classes.PowerBlock);
             // 
-            // storageBindingSource
-            // 
-            this.storageBindingSource.DataSource = typeof(db.Classes.Storage);
-            // 
             // idDataGridViewTextBoxColumn4
             // 
             this.idDataGridViewTextBoxColumn4.DataPropertyName = "id";
@@ -1411,45 +1579,9 @@
             this.manufacturerDataGridViewTextBoxColumn4.Name = "manufacturerDataGridViewTextBoxColumn4";
             this.manufacturerDataGridViewTextBoxColumn4.ReadOnly = true;
             // 
-            // storageDelete
+            // storageBindingSource
             // 
-            this.storageDelete.HeaderText = "Удаление";
-            this.storageDelete.Name = "storageDelete";
-            this.storageDelete.ReadOnly = true;
-            this.storageDelete.Text = "Удалить";
-            this.storageDelete.UseColumnTextForButtonValue = true;
-            this.storageDelete.Visible = false;
-            // 
-            // tabPage6
-            // 
-            this.tabPage6.Controls.Add(this.cbRamDelete);
-            this.tabPage6.Controls.Add(this.dgvRam);
-            this.tabPage6.Location = new System.Drawing.Point(4, 22);
-            this.tabPage6.Name = "tabPage6";
-            this.tabPage6.Size = new System.Drawing.Size(1233, 496);
-            this.tabPage6.TabIndex = 5;
-            this.tabPage6.Text = "ОЗУ";
-            this.tabPage6.UseVisualStyleBackColor = true;
-            // 
-            // dgvRam
-            // 
-            this.dgvRam.AllowUserToAddRows = false;
-            this.dgvRam.AutoGenerateColumns = false;
-            this.dgvRam.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvRam.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.idDataGridViewTextBoxColumn5,
-            this.typeMemoryDataGridViewTextBoxColumn1,
-            this.frequencyDataGridViewTextBoxColumn1,
-            this.voluneDataGridViewTextBoxColumn1,
-            this.titleDataGridViewTextBoxColumn5,
-            this.manufacturerDataGridViewTextBoxColumn5,
-            this.ramDelete});
-            this.dgvRam.DataSource = this.rAMBindingSource;
-            this.dgvRam.Location = new System.Drawing.Point(3, 3);
-            this.dgvRam.Name = "dgvRam";
-            this.dgvRam.ReadOnly = true;
-            this.dgvRam.Size = new System.Drawing.Size(741, 490);
-            this.dgvRam.TabIndex = 0;
+            this.storageBindingSource.DataSource = typeof(db.Classes.Storage);
             // 
             // rAMBindingSource
             // 
@@ -1503,16 +1635,9 @@
             this.ramDelete.HeaderText = "Удаление";
             this.ramDelete.Name = "ramDelete";
             this.ramDelete.ReadOnly = true;
-            // 
-            // cbRamDelete
-            // 
-            this.cbRamDelete.AutoSize = true;
-            this.cbRamDelete.Location = new System.Drawing.Point(791, 24);
-            this.cbRamDelete.Name = "cbRamDelete";
-            this.cbRamDelete.Size = new System.Drawing.Size(125, 17);
-            this.cbRamDelete.TabIndex = 1;
-            this.cbRamDelete.Text = "Включить удаление";
-            this.cbRamDelete.UseVisualStyleBackColor = true;
+            this.ramDelete.Text = "Удаление";
+            this.ramDelete.UseColumnTextForButtonValue = true;
+            this.ramDelete.Visible = false;
             // 
             // Form1
             // 
@@ -1541,14 +1666,14 @@
             this.tabPage5.ResumeLayout(false);
             this.tabPage5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvStorage)).EndInit();
+            this.tabPage6.ResumeLayout(false);
+            this.tabPage6.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvRam)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.motherBoardBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cPUBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.videoCardBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.powerBlockBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.storageBindingSource)).EndInit();
-            this.tabPage6.ResumeLayout(false);
-            this.tabPage6.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvRam)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.rAMBindingSource)).EndInit();
             this.ResumeLayout(false);
 
@@ -1677,6 +1802,18 @@
         private System.Windows.Forms.TabPage tabPage6;
         private System.Windows.Forms.CheckBox cbRamDelete;
         private System.Windows.Forms.DataGridView dgvRam;
+        private System.Windows.Forms.BindingSource rAMBindingSource;
+        private System.Windows.Forms.Button btnRamAdd;
+        private System.Windows.Forms.Label label32;
+        private System.Windows.Forms.Label label31;
+        private System.Windows.Forms.Label label30;
+        private System.Windows.Forms.Label label29;
+        private System.Windows.Forms.Label label28;
+        private System.Windows.Forms.TextBox txtRamTitle;
+        private System.Windows.Forms.ComboBox cmbRamType;
+        private System.Windows.Forms.ComboBox cmbRamFrenquency;
+        private System.Windows.Forms.ComboBox cmbRamVolume;
+        private System.Windows.Forms.ComboBox cmbRamManufacturer;
         private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn5;
         private System.Windows.Forms.DataGridViewTextBoxColumn typeMemoryDataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn frequencyDataGridViewTextBoxColumn1;
@@ -1684,7 +1821,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn titleDataGridViewTextBoxColumn5;
         private System.Windows.Forms.DataGridViewTextBoxColumn manufacturerDataGridViewTextBoxColumn5;
         private System.Windows.Forms.DataGridViewButtonColumn ramDelete;
-        private System.Windows.Forms.BindingSource rAMBindingSource;
     }
 }
 

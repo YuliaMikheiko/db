@@ -40,6 +40,10 @@ namespace db
         List<String> storageType = new List<string>();
         List<int> storageWrite = new List<int>();
         List<int> storageRead = new List<int>();
+        List<String> ramManufacturer = new List<string>();
+        List<int> ramVolume = new List<int>();
+        List<int> ramFrequency = new List<int>();
+        List<String> ramType = new List<string>();
 
         string chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789" + "ABCDEFGHIJKLMNOPQRSTUVWXYZ".ToLower();
 
@@ -237,7 +241,31 @@ namespace db
                 storageWrite.Add(i);
             }
 
+            ramManufacturer.Add("Kingston");
+            ramManufacturer.Add("Hynix");
+            ramManufacturer.Add("Crucial");
+            ramManufacturer.Add("Patriot Memory");
+            ramManufacturer.Add("Samsung");
+            ramManufacturer.Add("Corsair");
+            ramManufacturer.Add("G.Skill");
+            ramManufacturer.Add("Apacer");
+            ramManufacturer.Add("GoodRAM");
+            ramManufacturer.Add("Silicon Power");
 
+            for (int i = 1; i <= 4; i++)
+            {
+                ramType.Add($"DDR{i}");
+            }
+
+            for (int i = 200; i <= 3200; i += 100)
+            {
+                ramFrequency.Add(i);
+            }
+
+            for (int i = 512; i <= 16384; i *= 2)
+            {
+                ramVolume.Add(i);
+            }
         }
         void setBindingSource()
         {
@@ -257,6 +285,16 @@ namespace db
             foreach(var pb in dataBase.GetPowerBlocks())
             {
                 powerBlockBindingSource.Add(pb);
+            }
+
+            foreach(var s in dataBase.GetSrorage())
+            {
+                storageBindingSource.Add(s);
+            }
+
+            foreach(var ram in dataBase.GetRAMs())
+            {
+                rAMBindingSource.Add(ram);
             }
         }
         void setCMB()
@@ -307,6 +345,15 @@ namespace db
             cmbStorageVolume.SelectedIndex = 0;
             cmbStorageWrite.DataSource = storageWrite;
             cmbStorageWrite.SelectedIndex = 0;
+
+            cmbRamFrenquency.DataSource = ramFrequency;
+            cmbRamFrenquency.SelectedIndex = 0;
+            cmbRamManufacturer.DataSource = ramManufacturer;
+            cmbRamManufacturer.SelectedIndex = 0;
+            cmbRamType.DataSource = ramType;
+            cmbRamType.SelectedIndex = 0;
+            cmbRamVolume.DataSource = ramVolume;
+            cmbRamVolume.SelectedIndex = 0;
         }
 
         #endregion
@@ -642,9 +689,57 @@ namespace db
             storage.type = cmbStorageType.SelectedItem.ToString();
             dataBase.AddStorage(storage);
             storageBindingSource.Add(storage);
-            txtPowerBlockTitle.Clear();
+            txtRamTitle.Clear();
             messageBoxSuccessAdd();
         }
         #endregion
+
+        private void dgvRam_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex < 0)
+            {
+                return;
+            }
+            if (dgvRam.Columns[e.ColumnIndex].Index == dgvRam.Columns.Count - 1)
+            {
+                if (messageBoxClickResult("Удалить эту запись?") == DialogResult.Yes)
+                {
+                    var id = dgvRam.Rows[e.RowIndex].Cells[0].Value.ToString();
+                    rAMBindingSource.RemoveAt(e.RowIndex);
+                    dataBase.DeleteRAM(id);
+                }
+            }
+        }
+
+        private void cbRamDelete_CheckedChanged(object sender, EventArgs e)
+        {
+            if (cbRamDelete.Checked)
+            {
+                dgvRam.Columns[6].Visible = true;
+            }
+            else
+            {
+                dgvRam.Columns[6].Visible = false;
+            }
+        }
+
+        private void btnRamAdd_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(txtRamTitle.Text))
+            {
+                messageBoxError("Вы не ввели название");
+                return;
+            }
+            var ram = new RAM();
+            ram.manufacturer = cmbRamManufacturer.SelectedItem.ToString();
+            ram.title = txtRamTitle.Text;
+            ram.volune = (int)cmbRamVolume.SelectedItem;
+            ram.typeMemory = cmbRamVolume.SelectedItem.ToString();
+            ram.frequency = (int)cmbRamFrenquency.SelectedItem;
+            dataBase.AddRAM(ram);
+            rAMBindingSource.Add(ram);
+            txtRamTitle.Clear();
+            messageBoxSuccessAdd();
+        }
     }
 }
