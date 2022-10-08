@@ -600,7 +600,7 @@ namespace db
             vc.volumeMemory = (int)cmbVideoCardVolume.SelectedItem;
             vc.typeMemory = cmbVideoCardMemory.SelectedItem.ToString();
             vc.GCPU = cmbVideoCardGCPU.SelectedItem.ToString();
-            vc.power = (int)cmbVideoCardPower.SelectedItem;
+            vc.Power = (int)cmbVideoCardPower.SelectedItem;
             dataBase.AddVideoCard(vc);
             videoCardBindingSource.Add(vc);
             txtVideoCardTitle.Clear();
@@ -751,6 +751,16 @@ namespace db
             rAMBindingSource.Add(ram);
             txtRamTitle.Clear();
             messageBoxSuccessAdd();
+        }
+
+        private void nudVideoCardSearch_ValueChanged(object sender, EventArgs e)
+        {
+            var ans = dataBase.VideoCardSearch((int)nudVideoCardSearch.Value);
+            videoCardBindingSource.Clear();
+            foreach (var a in ans)
+            {
+                videoCardBindingSource.Add(a);
+            }
         }
     }
 }

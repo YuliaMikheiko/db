@@ -1,8 +1,10 @@
 ﻿using Db4objects.Db4o;
 using Db4objects.Db4o.Linq;
+using Db4objects.Db4o.Query;
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 
 namespace db.Classes
@@ -153,6 +155,20 @@ namespace db.Classes
                 }
             }
             return lists;
+        }
+
+        public List<VideoCard> VideoCardSearch(int power)
+        {
+            IQuery query = db.Query();
+            query.Constrain(typeof(VideoCard));
+            query.Descend("_power").Constrain(power).Smaller().Equal();
+            IObjectSet result = query.Execute();
+            var soda = new List<VideoCard>();
+            foreach (var r in result)
+            {
+                soda.Add(r as VideoCard);
+            }
+            return soda;
         }
     }
 }

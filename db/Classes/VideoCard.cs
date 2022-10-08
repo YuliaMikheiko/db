@@ -24,8 +24,14 @@ namespace db.Classes
         [DisplayName("Частота памяти")]
         public int frequencyMemory { get; set; }
 
+        private int _power;
         [DisplayName("Мощность")]
-        public int power { get; set; }
+        public int Power
+        {
+            get { return _power; }
+            set { _power = value; }
+        }
+
 
         [DisplayName("Название")]
         public string title { get; set; }
@@ -45,7 +51,7 @@ namespace db.Classes
             this.volumeMemory = volumeMemory;
             this.typeMemory = typeMemory;
             this.frequencyMemory = frequencyMemory;
-            this.power = power;
+            this.Power = power;
             this.title = title;
             this.manufacturer = manufacturer;
         }

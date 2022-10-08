@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.rtxtMotherBoardSearch = new System.Windows.Forms.RichTextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnMotherBoardAdd = new System.Windows.Forms.Button();
             this.txtMBtitle = new System.Windows.Forms.TextBox();
@@ -45,14 +46,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.cbMotherBoard = new System.Windows.Forms.CheckBox();
             this.dgvMotherBoard = new System.Windows.Forms.DataGridView();
-            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.socketDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.gCPUtypeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.rAMtypeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.titleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.manufacturerDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.mbDelete = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.motherBoardBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.txtCpuTitle = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
@@ -69,15 +63,7 @@
             this.cmbCpuSocket = new System.Windows.Forms.ComboBox();
             this.cmbCpuMonufacturer = new System.Windows.Forms.ComboBox();
             this.dgvCPU = new System.Windows.Forms.DataGridView();
-            this.idDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.frequencyDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.powerDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.socketDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.archetypeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.titleDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.manufacturerDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cpuDelete = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.cPUBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.cbVideoCardDelete = new System.Windows.Forms.CheckBox();
             this.btnVideoCardAdd = new System.Windows.Forms.Button();
@@ -96,16 +82,7 @@
             this.cmbVideoCardGCPU = new System.Windows.Forms.ComboBox();
             this.cmbVideoCardManufacturer = new System.Windows.Forms.ComboBox();
             this.dgvVideoCard = new System.Windows.Forms.DataGridView();
-            this.idDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.gCPUDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.volumeMemoryDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.typeMemoryDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.frequencyMemoryDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.powerDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.titleDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.manufacturerDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.vcDelete = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.videoCardBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.cbPowerBlockDelete = new System.Windows.Forms.CheckBox();
             this.btnPowerBlock = new System.Windows.Forms.Button();
@@ -116,12 +93,7 @@
             this.cmbPowerBlockManufacturer = new System.Windows.Forms.ComboBox();
             this.cmbPowerBlockPower = new System.Windows.Forms.ComboBox();
             this.dgvPowerBlock = new System.Windows.Forms.DataGridView();
-            this.idDataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.powerDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.titleDataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.manufacturerDataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvPowerBlockDelete = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.powerBlockBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tabPage5 = new System.Windows.Forms.TabPage();
             this.btnStorageAdd = new System.Windows.Forms.Button();
             this.label27 = new System.Windows.Forms.Label();
@@ -138,15 +110,7 @@
             this.cmbStorageManufacturer = new System.Windows.Forms.ComboBox();
             this.cbStorageDelete = new System.Windows.Forms.CheckBox();
             this.dgvStorage = new System.Windows.Forms.DataGridView();
-            this.idDataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.voluneDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.typeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.speedOfWriteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.speedOfReadDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.titleDataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.manufacturerDataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.storageDelete = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.storageBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tabPage6 = new System.Windows.Forms.TabPage();
             this.btnRamAdd = new System.Windows.Forms.Button();
             this.label32 = new System.Windows.Forms.Label();
@@ -161,36 +125,80 @@
             this.cmbRamManufacturer = new System.Windows.Forms.ComboBox();
             this.cbRamDelete = new System.Windows.Forms.CheckBox();
             this.dgvRam = new System.Windows.Forms.DataGridView();
+            this.ramDelete = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.tabControl2 = new System.Windows.Forms.TabControl();
+            this.tabPage7 = new System.Windows.Forms.TabPage();
+            this.tabPage8 = new System.Windows.Forms.TabPage();
+            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.socketDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.gCPUtypeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.rAMtypeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.titleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.manufacturerDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.motherBoardBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.idDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.frequencyDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.powerDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.socketDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.archetypeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.titleDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.manufacturerDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cPUBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.idDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gCPUDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.volumeMemoryDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.typeMemoryDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.frequencyMemoryDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.powerDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.titleDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.manufacturerDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.videoCardBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.idDataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.powerDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.titleDataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.manufacturerDataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.powerBlockBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.idDataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.voluneDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.typeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.speedOfWriteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.speedOfReadDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.titleDataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.manufacturerDataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.storageBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.idDataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.typeMemoryDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.frequencyDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.voluneDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.titleDataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.manufacturerDataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ramDelete = new System.Windows.Forms.DataGridViewButtonColumn();
             this.rAMBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.rtxtMotherBoardSearch = new System.Windows.Forms.RichTextBox();
+            this.nudVideoCardSearch = new System.Windows.Forms.NumericUpDown();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMotherBoard)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.motherBoardBindingSource)).BeginInit();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudCpuPower)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCPU)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cPUBindingSource)).BeginInit();
             this.tabPage3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVideoCard)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.videoCardBindingSource)).BeginInit();
             this.tabPage4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPowerBlock)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.powerBlockBindingSource)).BeginInit();
             this.tabPage5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvStorage)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.storageBindingSource)).BeginInit();
             this.tabPage6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRam)).BeginInit();
+            this.tabControl2.SuspendLayout();
+            this.tabPage7.SuspendLayout();
+            this.tabPage8.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.motherBoardBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cPUBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.videoCardBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.powerBlockBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.storageBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rAMBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudVideoCardSearch)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -220,6 +228,15 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Материнская плата";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // rtxtMotherBoardSearch
+            // 
+            this.rtxtMotherBoardSearch.Location = new System.Drawing.Point(1056, 73);
+            this.rtxtMotherBoardSearch.Name = "rtxtMotherBoardSearch";
+            this.rtxtMotherBoardSearch.ReadOnly = true;
+            this.rtxtMotherBoardSearch.Size = new System.Drawing.Size(171, 163);
+            this.rtxtMotherBoardSearch.TabIndex = 3;
+            this.rtxtMotherBoardSearch.Text = "";
             // 
             // panel1
             // 
@@ -367,152 +384,6 @@
             this.dgvMotherBoard.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvMotherBoard_CellEndEdit);
             this.dgvMotherBoard.CellValidating += new System.Windows.Forms.DataGridViewCellValidatingEventHandler(this.tableValidating);
             // 
-            // idDataGridViewTextBoxColumn
-            // 
-            this.idDataGridViewTextBoxColumn.DataPropertyName = "id";
-            this.idDataGridViewTextBoxColumn.HeaderText = "id";
-            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
-            this.idDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // socketDataGridViewTextBoxColumn
-            // 
-            this.socketDataGridViewTextBoxColumn.DataPropertyName = "socket";
-            this.socketDataGridViewTextBoxColumn.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.ComboBox;
-            this.socketDataGridViewTextBoxColumn.FillWeight = 26.19114F;
-            this.socketDataGridViewTextBoxColumn.HeaderText = "Сокет";
-            this.socketDataGridViewTextBoxColumn.Items.AddRange(new object[] {
-            "Socket 8",
-            "Socket 370",
-            "Socket 423",
-            "Socket 478",
-            "LGA 775",
-            "LGA 771",
-            "LGA 1366",
-            "LGA 1156",
-            "LGA 1567",
-            "LGA 1155",
-            "LGA 2011",
-            "LGA 1356",
-            "LGA 1150",
-            "LGA2011-3",
-            "LGA 1151;",
-            "LGA 3647",
-            "LGA 2066",
-            "LGA 1200",
-            "LGA 1700",
-            "Super Socket 7",
-            "Slot A",
-            "Socket A",
-            "Socket 754",
-            "Socket 940",
-            "Socket 939",
-            "Socket S1",
-            "Socket AM2",
-            "Socket F",
-            "Socket AM2+",
-            " Socket AM3",
-            "Socket G3",
-            "Socket C32",
-            "Socket AM3+",
-            "Socket FM1",
-            "Socket FS1",
-            "Socket FM2",
-            "Socket FM2+",
-            "Socket AM1",
-            "АМ4",
-            "Socket SP3",
-            "Socket TR4",
-            "Socket sTRX4"});
-            this.socketDataGridViewTextBoxColumn.Name = "socketDataGridViewTextBoxColumn";
-            this.socketDataGridViewTextBoxColumn.ReadOnly = true;
-            this.socketDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.socketDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.socketDataGridViewTextBoxColumn.Width = 70;
-            // 
-            // gCPUtypeDataGridViewTextBoxColumn
-            // 
-            this.gCPUtypeDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.gCPUtypeDataGridViewTextBoxColumn.DataPropertyName = "GCPUtype";
-            this.gCPUtypeDataGridViewTextBoxColumn.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.ComboBox;
-            this.gCPUtypeDataGridViewTextBoxColumn.FillWeight = 18.3338F;
-            this.gCPUtypeDataGridViewTextBoxColumn.HeaderText = "Поддерживаемые видеокарты";
-            this.gCPUtypeDataGridViewTextBoxColumn.Items.AddRange(new object[] {
-            "GeForce series",
-            "GeForce 100 serie",
-            "GeForce 200 series",
-            "GeForce 300 series",
-            "GeForce 400 series",
-            "GeForce 500 series",
-            "GeForce 600 series",
-            "GeForce 700 series",
-            "GeForce 800 series",
-            "GeForce 900 series",
-            "GeForce 2 series",
-            "GeForce 3 series",
-            "GeForce 4 series",
-            "GeForce 5 series",
-            "GeForce 6 series",
-            "GeForce 7 series",
-            "GeForce 8 series",
-            "GeForce 9 series",
-            "GeForce 10 series",
-            "GeForce 16 series",
-            "GeForce 20 series",
-            "Radeon R100",
-            "Radeon R200",
-            "Radeon R300",
-            "Radeon R400",
-            "Radeon R500",
-            "Radeon R600",
-            "Radeon R700",
-            "Radeon R800"});
-            this.gCPUtypeDataGridViewTextBoxColumn.Name = "gCPUtypeDataGridViewTextBoxColumn";
-            this.gCPUtypeDataGridViewTextBoxColumn.ReadOnly = true;
-            this.gCPUtypeDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            // 
-            // rAMtypeDataGridViewTextBoxColumn
-            // 
-            this.rAMtypeDataGridViewTextBoxColumn.DataPropertyName = "RAMtype";
-            this.rAMtypeDataGridViewTextBoxColumn.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.ComboBox;
-            this.rAMtypeDataGridViewTextBoxColumn.FillWeight = 26.19114F;
-            this.rAMtypeDataGridViewTextBoxColumn.HeaderText = "Тип поддерживаемой RAM";
-            this.rAMtypeDataGridViewTextBoxColumn.Items.AddRange(new object[] {
-            "DDR1",
-            "DDR2",
-            "DDR3",
-            "DDR4"});
-            this.rAMtypeDataGridViewTextBoxColumn.Name = "rAMtypeDataGridViewTextBoxColumn";
-            this.rAMtypeDataGridViewTextBoxColumn.ReadOnly = true;
-            this.rAMtypeDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.rAMtypeDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.rAMtypeDataGridViewTextBoxColumn.Width = 70;
-            // 
-            // titleDataGridViewTextBoxColumn
-            // 
-            this.titleDataGridViewTextBoxColumn.DataPropertyName = "title";
-            this.titleDataGridViewTextBoxColumn.FillWeight = 26.19114F;
-            this.titleDataGridViewTextBoxColumn.HeaderText = "Название";
-            this.titleDataGridViewTextBoxColumn.Name = "titleDataGridViewTextBoxColumn";
-            this.titleDataGridViewTextBoxColumn.ReadOnly = true;
-            this.titleDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            // 
-            // manufacturerDataGridViewTextBoxColumn
-            // 
-            this.manufacturerDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.manufacturerDataGridViewTextBoxColumn.DataPropertyName = "manufacturer";
-            this.manufacturerDataGridViewTextBoxColumn.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.ComboBox;
-            this.manufacturerDataGridViewTextBoxColumn.FillWeight = 373.0928F;
-            this.manufacturerDataGridViewTextBoxColumn.HeaderText = "Производитель";
-            this.manufacturerDataGridViewTextBoxColumn.Items.AddRange(new object[] {
-            "ASRock",
-            "MSI",
-            "ASUS",
-            "Gigabyte"});
-            this.manufacturerDataGridViewTextBoxColumn.Name = "manufacturerDataGridViewTextBoxColumn";
-            this.manufacturerDataGridViewTextBoxColumn.ReadOnly = true;
-            this.manufacturerDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.manufacturerDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            // 
             // mbDelete
             // 
             this.mbDelete.HeaderText = "Удаление";
@@ -520,10 +391,6 @@
             this.mbDelete.Text = "Удалить";
             this.mbDelete.UseColumnTextForButtonValue = true;
             this.mbDelete.Visible = false;
-            // 
-            // motherBoardBindingSource
-            // 
-            this.motherBoardBindingSource.DataSource = typeof(db.Classes.MotherBoard);
             // 
             // tabPage2
             // 
@@ -712,60 +579,6 @@
             this.dgvCPU.TabIndex = 0;
             this.dgvCPU.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCPU_CellContentClick);
             // 
-            // idDataGridViewTextBoxColumn1
-            // 
-            this.idDataGridViewTextBoxColumn1.DataPropertyName = "id";
-            this.idDataGridViewTextBoxColumn1.HeaderText = "id";
-            this.idDataGridViewTextBoxColumn1.Name = "idDataGridViewTextBoxColumn1";
-            this.idDataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // frequencyDataGridViewTextBoxColumn
-            // 
-            this.frequencyDataGridViewTextBoxColumn.DataPropertyName = "frequency";
-            this.frequencyDataGridViewTextBoxColumn.HeaderText = "Тактовая частота";
-            this.frequencyDataGridViewTextBoxColumn.Name = "frequencyDataGridViewTextBoxColumn";
-            this.frequencyDataGridViewTextBoxColumn.ReadOnly = true;
-            this.frequencyDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            // 
-            // powerDataGridViewTextBoxColumn
-            // 
-            this.powerDataGridViewTextBoxColumn.DataPropertyName = "power";
-            this.powerDataGridViewTextBoxColumn.HeaderText = "Энергопотребление";
-            this.powerDataGridViewTextBoxColumn.Name = "powerDataGridViewTextBoxColumn";
-            this.powerDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // socketDataGridViewTextBoxColumn1
-            // 
-            this.socketDataGridViewTextBoxColumn1.DataPropertyName = "socket";
-            this.socketDataGridViewTextBoxColumn1.HeaderText = "Сокет";
-            this.socketDataGridViewTextBoxColumn1.Name = "socketDataGridViewTextBoxColumn1";
-            this.socketDataGridViewTextBoxColumn1.ReadOnly = true;
-            this.socketDataGridViewTextBoxColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            // 
-            // archetypeDataGridViewTextBoxColumn
-            // 
-            this.archetypeDataGridViewTextBoxColumn.DataPropertyName = "archetype";
-            this.archetypeDataGridViewTextBoxColumn.HeaderText = "Архитектура";
-            this.archetypeDataGridViewTextBoxColumn.Name = "archetypeDataGridViewTextBoxColumn";
-            this.archetypeDataGridViewTextBoxColumn.ReadOnly = true;
-            this.archetypeDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            // 
-            // titleDataGridViewTextBoxColumn1
-            // 
-            this.titleDataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.titleDataGridViewTextBoxColumn1.DataPropertyName = "title";
-            this.titleDataGridViewTextBoxColumn1.HeaderText = "Название";
-            this.titleDataGridViewTextBoxColumn1.Name = "titleDataGridViewTextBoxColumn1";
-            this.titleDataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // manufacturerDataGridViewTextBoxColumn1
-            // 
-            this.manufacturerDataGridViewTextBoxColumn1.DataPropertyName = "manufacturer";
-            this.manufacturerDataGridViewTextBoxColumn1.HeaderText = "Производитель";
-            this.manufacturerDataGridViewTextBoxColumn1.Name = "manufacturerDataGridViewTextBoxColumn1";
-            this.manufacturerDataGridViewTextBoxColumn1.ReadOnly = true;
-            this.manufacturerDataGridViewTextBoxColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            // 
             // cpuDelete
             // 
             this.cpuDelete.HeaderText = "Удаление";
@@ -775,28 +588,9 @@
             this.cpuDelete.UseColumnTextForButtonValue = true;
             this.cpuDelete.Visible = false;
             // 
-            // cPUBindingSource
-            // 
-            this.cPUBindingSource.DataSource = typeof(db.Classes.CPU);
-            // 
             // tabPage3
             // 
-            this.tabPage3.Controls.Add(this.cbVideoCardDelete);
-            this.tabPage3.Controls.Add(this.btnVideoCardAdd);
-            this.tabPage3.Controls.Add(this.label18);
-            this.tabPage3.Controls.Add(this.label17);
-            this.tabPage3.Controls.Add(this.label16);
-            this.tabPage3.Controls.Add(this.label15);
-            this.tabPage3.Controls.Add(this.label14);
-            this.tabPage3.Controls.Add(this.label13);
-            this.tabPage3.Controls.Add(this.label12);
-            this.tabPage3.Controls.Add(this.txtVideoCardTitle);
-            this.tabPage3.Controls.Add(this.cmbVideoCardVolume);
-            this.tabPage3.Controls.Add(this.cmbVideoCardPower);
-            this.tabPage3.Controls.Add(this.cmbVideoCardFrequency);
-            this.tabPage3.Controls.Add(this.cmbVideoCardMemory);
-            this.tabPage3.Controls.Add(this.cmbVideoCardGCPU);
-            this.tabPage3.Controls.Add(this.cmbVideoCardManufacturer);
+            this.tabPage3.Controls.Add(this.tabControl2);
             this.tabPage3.Controls.Add(this.dgvVideoCard);
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
@@ -808,7 +602,7 @@
             // cbVideoCardDelete
             // 
             this.cbVideoCardDelete.AutoSize = true;
-            this.cbVideoCardDelete.Location = new System.Drawing.Point(1028, 3);
+            this.cbVideoCardDelete.Location = new System.Drawing.Point(54, 4);
             this.cbVideoCardDelete.Name = "cbVideoCardDelete";
             this.cbVideoCardDelete.Size = new System.Drawing.Size(125, 17);
             this.cbVideoCardDelete.TabIndex = 16;
@@ -818,7 +612,7 @@
             // 
             // btnVideoCardAdd
             // 
-            this.btnVideoCardAdd.Location = new System.Drawing.Point(1044, 426);
+            this.btnVideoCardAdd.Location = new System.Drawing.Point(70, 427);
             this.btnVideoCardAdd.Name = "btnVideoCardAdd";
             this.btnVideoCardAdd.Size = new System.Drawing.Size(89, 35);
             this.btnVideoCardAdd.TabIndex = 15;
@@ -829,7 +623,7 @@
             // label18
             // 
             this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(1060, 359);
+            this.label18.Location = new System.Drawing.Point(86, 360);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(57, 13);
             this.label18.TabIndex = 14;
@@ -838,7 +632,7 @@
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(1047, 303);
+            this.label17.Location = new System.Drawing.Point(73, 304);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(82, 13);
             this.label17.TabIndex = 13;
@@ -847,7 +641,7 @@
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(1020, 247);
+            this.label16.Location = new System.Drawing.Point(46, 248);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(137, 13);
             this.label16.TabIndex = 12;
@@ -856,7 +650,7 @@
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(1064, 191);
+            this.label15.Location = new System.Drawing.Point(90, 192);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(49, 13);
             this.label15.TabIndex = 11;
@@ -865,7 +659,7 @@
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(1055, 135);
+            this.label14.Location = new System.Drawing.Point(81, 136);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(66, 13);
             this.label14.TabIndex = 10;
@@ -874,7 +668,7 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(1038, 79);
+            this.label13.Location = new System.Drawing.Point(64, 80);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(101, 13);
             this.label13.TabIndex = 9;
@@ -883,7 +677,7 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(1045, 23);
+            this.label12.Location = new System.Drawing.Point(71, 24);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(86, 13);
             this.label12.TabIndex = 8;
@@ -891,7 +685,7 @@
             // 
             // txtVideoCardTitle
             // 
-            this.txtVideoCardTitle.Location = new System.Drawing.Point(1028, 383);
+            this.txtVideoCardTitle.Location = new System.Drawing.Point(54, 384);
             this.txtVideoCardTitle.Name = "txtVideoCardTitle";
             this.txtVideoCardTitle.Size = new System.Drawing.Size(121, 20);
             this.txtVideoCardTitle.TabIndex = 7;
@@ -900,7 +694,7 @@
             // 
             this.cmbVideoCardVolume.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbVideoCardVolume.FormattingEnabled = true;
-            this.cmbVideoCardVolume.Location = new System.Drawing.Point(1028, 327);
+            this.cmbVideoCardVolume.Location = new System.Drawing.Point(54, 328);
             this.cmbVideoCardVolume.Name = "cmbVideoCardVolume";
             this.cmbVideoCardVolume.Size = new System.Drawing.Size(121, 21);
             this.cmbVideoCardVolume.TabIndex = 6;
@@ -909,7 +703,7 @@
             // 
             this.cmbVideoCardPower.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbVideoCardPower.FormattingEnabled = true;
-            this.cmbVideoCardPower.Location = new System.Drawing.Point(1028, 271);
+            this.cmbVideoCardPower.Location = new System.Drawing.Point(54, 272);
             this.cmbVideoCardPower.Name = "cmbVideoCardPower";
             this.cmbVideoCardPower.Size = new System.Drawing.Size(121, 21);
             this.cmbVideoCardPower.TabIndex = 5;
@@ -918,7 +712,7 @@
             // 
             this.cmbVideoCardFrequency.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbVideoCardFrequency.FormattingEnabled = true;
-            this.cmbVideoCardFrequency.Location = new System.Drawing.Point(1028, 215);
+            this.cmbVideoCardFrequency.Location = new System.Drawing.Point(54, 216);
             this.cmbVideoCardFrequency.Name = "cmbVideoCardFrequency";
             this.cmbVideoCardFrequency.Size = new System.Drawing.Size(121, 21);
             this.cmbVideoCardFrequency.TabIndex = 4;
@@ -927,7 +721,7 @@
             // 
             this.cmbVideoCardMemory.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbVideoCardMemory.FormattingEnabled = true;
-            this.cmbVideoCardMemory.Location = new System.Drawing.Point(1028, 159);
+            this.cmbVideoCardMemory.Location = new System.Drawing.Point(54, 160);
             this.cmbVideoCardMemory.Name = "cmbVideoCardMemory";
             this.cmbVideoCardMemory.Size = new System.Drawing.Size(121, 21);
             this.cmbVideoCardMemory.TabIndex = 3;
@@ -936,7 +730,7 @@
             // 
             this.cmbVideoCardGCPU.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbVideoCardGCPU.FormattingEnabled = true;
-            this.cmbVideoCardGCPU.Location = new System.Drawing.Point(1028, 103);
+            this.cmbVideoCardGCPU.Location = new System.Drawing.Point(54, 104);
             this.cmbVideoCardGCPU.Name = "cmbVideoCardGCPU";
             this.cmbVideoCardGCPU.Size = new System.Drawing.Size(121, 21);
             this.cmbVideoCardGCPU.TabIndex = 2;
@@ -945,7 +739,7 @@
             // 
             this.cmbVideoCardManufacturer.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbVideoCardManufacturer.FormattingEnabled = true;
-            this.cmbVideoCardManufacturer.Location = new System.Drawing.Point(1028, 47);
+            this.cmbVideoCardManufacturer.Location = new System.Drawing.Point(54, 48);
             this.cmbVideoCardManufacturer.Name = "cmbVideoCardManufacturer";
             this.cmbVideoCardManufacturer.Size = new System.Drawing.Size(121, 21);
             this.cmbVideoCardManufacturer.TabIndex = 1;
@@ -973,63 +767,6 @@
             this.dgvVideoCard.TabIndex = 0;
             this.dgvVideoCard.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvVideoCard_CellContentClick);
             // 
-            // idDataGridViewTextBoxColumn2
-            // 
-            this.idDataGridViewTextBoxColumn2.DataPropertyName = "id";
-            this.idDataGridViewTextBoxColumn2.HeaderText = "id";
-            this.idDataGridViewTextBoxColumn2.Name = "idDataGridViewTextBoxColumn2";
-            this.idDataGridViewTextBoxColumn2.ReadOnly = true;
-            // 
-            // gCPUDataGridViewTextBoxColumn
-            // 
-            this.gCPUDataGridViewTextBoxColumn.DataPropertyName = "GCPU";
-            this.gCPUDataGridViewTextBoxColumn.HeaderText = "Графический CPU";
-            this.gCPUDataGridViewTextBoxColumn.Name = "gCPUDataGridViewTextBoxColumn";
-            this.gCPUDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // volumeMemoryDataGridViewTextBoxColumn
-            // 
-            this.volumeMemoryDataGridViewTextBoxColumn.DataPropertyName = "volumeMemory";
-            this.volumeMemoryDataGridViewTextBoxColumn.HeaderText = "Объем памяти";
-            this.volumeMemoryDataGridViewTextBoxColumn.Name = "volumeMemoryDataGridViewTextBoxColumn";
-            this.volumeMemoryDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // typeMemoryDataGridViewTextBoxColumn
-            // 
-            this.typeMemoryDataGridViewTextBoxColumn.DataPropertyName = "typeMemory";
-            this.typeMemoryDataGridViewTextBoxColumn.HeaderText = "Тип памяти";
-            this.typeMemoryDataGridViewTextBoxColumn.Name = "typeMemoryDataGridViewTextBoxColumn";
-            this.typeMemoryDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // frequencyMemoryDataGridViewTextBoxColumn
-            // 
-            this.frequencyMemoryDataGridViewTextBoxColumn.DataPropertyName = "frequencyMemory";
-            this.frequencyMemoryDataGridViewTextBoxColumn.HeaderText = "Частота памяти";
-            this.frequencyMemoryDataGridViewTextBoxColumn.Name = "frequencyMemoryDataGridViewTextBoxColumn";
-            this.frequencyMemoryDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // powerDataGridViewTextBoxColumn1
-            // 
-            this.powerDataGridViewTextBoxColumn1.DataPropertyName = "power";
-            this.powerDataGridViewTextBoxColumn1.HeaderText = "Мощность";
-            this.powerDataGridViewTextBoxColumn1.Name = "powerDataGridViewTextBoxColumn1";
-            this.powerDataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // titleDataGridViewTextBoxColumn2
-            // 
-            this.titleDataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.titleDataGridViewTextBoxColumn2.DataPropertyName = "title";
-            this.titleDataGridViewTextBoxColumn2.HeaderText = "Название";
-            this.titleDataGridViewTextBoxColumn2.Name = "titleDataGridViewTextBoxColumn2";
-            this.titleDataGridViewTextBoxColumn2.ReadOnly = true;
-            // 
-            // manufacturerDataGridViewTextBoxColumn2
-            // 
-            this.manufacturerDataGridViewTextBoxColumn2.DataPropertyName = "manufacturer";
-            this.manufacturerDataGridViewTextBoxColumn2.HeaderText = "Производитель";
-            this.manufacturerDataGridViewTextBoxColumn2.Name = "manufacturerDataGridViewTextBoxColumn2";
-            this.manufacturerDataGridViewTextBoxColumn2.ReadOnly = true;
-            // 
             // vcDelete
             // 
             this.vcDelete.HeaderText = "Удаление";
@@ -1038,10 +775,6 @@
             this.vcDelete.Text = "Удалить";
             this.vcDelete.UseColumnTextForButtonValue = true;
             this.vcDelete.Visible = false;
-            // 
-            // videoCardBindingSource
-            // 
-            this.videoCardBindingSource.DataSource = typeof(db.Classes.VideoCard);
             // 
             // tabPage4
             // 
@@ -1153,35 +886,6 @@
             this.dgvPowerBlock.TabIndex = 0;
             this.dgvPowerBlock.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPowerBlock_CellContentClick);
             // 
-            // idDataGridViewTextBoxColumn3
-            // 
-            this.idDataGridViewTextBoxColumn3.DataPropertyName = "id";
-            this.idDataGridViewTextBoxColumn3.HeaderText = "id";
-            this.idDataGridViewTextBoxColumn3.Name = "idDataGridViewTextBoxColumn3";
-            this.idDataGridViewTextBoxColumn3.ReadOnly = true;
-            // 
-            // powerDataGridViewTextBoxColumn2
-            // 
-            this.powerDataGridViewTextBoxColumn2.DataPropertyName = "power";
-            this.powerDataGridViewTextBoxColumn2.HeaderText = "Мощность";
-            this.powerDataGridViewTextBoxColumn2.Name = "powerDataGridViewTextBoxColumn2";
-            this.powerDataGridViewTextBoxColumn2.ReadOnly = true;
-            // 
-            // titleDataGridViewTextBoxColumn3
-            // 
-            this.titleDataGridViewTextBoxColumn3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.titleDataGridViewTextBoxColumn3.DataPropertyName = "title";
-            this.titleDataGridViewTextBoxColumn3.HeaderText = "Название";
-            this.titleDataGridViewTextBoxColumn3.Name = "titleDataGridViewTextBoxColumn3";
-            this.titleDataGridViewTextBoxColumn3.ReadOnly = true;
-            // 
-            // manufacturerDataGridViewTextBoxColumn3
-            // 
-            this.manufacturerDataGridViewTextBoxColumn3.DataPropertyName = "manufacturer";
-            this.manufacturerDataGridViewTextBoxColumn3.HeaderText = "Производитель";
-            this.manufacturerDataGridViewTextBoxColumn3.Name = "manufacturerDataGridViewTextBoxColumn3";
-            this.manufacturerDataGridViewTextBoxColumn3.ReadOnly = true;
-            // 
             // dgvPowerBlockDelete
             // 
             this.dgvPowerBlockDelete.HeaderText = "Удаление";
@@ -1192,10 +896,6 @@
             this.dgvPowerBlockDelete.Text = "Удалить";
             this.dgvPowerBlockDelete.UseColumnTextForButtonValue = true;
             this.dgvPowerBlockDelete.Visible = false;
-            // 
-            // powerBlockBindingSource
-            // 
-            this.powerBlockBindingSource.DataSource = typeof(db.Classes.PowerBlock);
             // 
             // tabPage5
             // 
@@ -1370,56 +1070,6 @@
             this.dgvStorage.TabIndex = 0;
             this.dgvStorage.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvStorage_CellContentClick);
             // 
-            // idDataGridViewTextBoxColumn4
-            // 
-            this.idDataGridViewTextBoxColumn4.DataPropertyName = "id";
-            this.idDataGridViewTextBoxColumn4.HeaderText = "id";
-            this.idDataGridViewTextBoxColumn4.Name = "idDataGridViewTextBoxColumn4";
-            this.idDataGridViewTextBoxColumn4.ReadOnly = true;
-            // 
-            // voluneDataGridViewTextBoxColumn
-            // 
-            this.voluneDataGridViewTextBoxColumn.DataPropertyName = "volune";
-            this.voluneDataGridViewTextBoxColumn.HeaderText = "Объем";
-            this.voluneDataGridViewTextBoxColumn.Name = "voluneDataGridViewTextBoxColumn";
-            this.voluneDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // typeDataGridViewTextBoxColumn
-            // 
-            this.typeDataGridViewTextBoxColumn.DataPropertyName = "type";
-            this.typeDataGridViewTextBoxColumn.HeaderText = "Тип памяти";
-            this.typeDataGridViewTextBoxColumn.Name = "typeDataGridViewTextBoxColumn";
-            this.typeDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // speedOfWriteDataGridViewTextBoxColumn
-            // 
-            this.speedOfWriteDataGridViewTextBoxColumn.DataPropertyName = "speedOfWrite";
-            this.speedOfWriteDataGridViewTextBoxColumn.HeaderText = "Скорость записи";
-            this.speedOfWriteDataGridViewTextBoxColumn.Name = "speedOfWriteDataGridViewTextBoxColumn";
-            this.speedOfWriteDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // speedOfReadDataGridViewTextBoxColumn
-            // 
-            this.speedOfReadDataGridViewTextBoxColumn.DataPropertyName = "speedOfRead";
-            this.speedOfReadDataGridViewTextBoxColumn.HeaderText = "Скорость чтения";
-            this.speedOfReadDataGridViewTextBoxColumn.Name = "speedOfReadDataGridViewTextBoxColumn";
-            this.speedOfReadDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // titleDataGridViewTextBoxColumn4
-            // 
-            this.titleDataGridViewTextBoxColumn4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.titleDataGridViewTextBoxColumn4.DataPropertyName = "title";
-            this.titleDataGridViewTextBoxColumn4.HeaderText = "Название";
-            this.titleDataGridViewTextBoxColumn4.Name = "titleDataGridViewTextBoxColumn4";
-            this.titleDataGridViewTextBoxColumn4.ReadOnly = true;
-            // 
-            // manufacturerDataGridViewTextBoxColumn4
-            // 
-            this.manufacturerDataGridViewTextBoxColumn4.DataPropertyName = "manufacturer";
-            this.manufacturerDataGridViewTextBoxColumn4.HeaderText = "Производитель";
-            this.manufacturerDataGridViewTextBoxColumn4.Name = "manufacturerDataGridViewTextBoxColumn4";
-            this.manufacturerDataGridViewTextBoxColumn4.ReadOnly = true;
-            // 
             // storageDelete
             // 
             this.storageDelete.HeaderText = "Удаление";
@@ -1428,10 +1078,6 @@
             this.storageDelete.Text = "Удалить";
             this.storageDelete.UseColumnTextForButtonValue = true;
             this.storageDelete.Visible = false;
-            // 
-            // storageBindingSource
-            // 
-            this.storageBindingSource.DataSource = typeof(db.Classes.Storage);
             // 
             // tabPage6
             // 
@@ -1585,6 +1231,418 @@
             this.dgvRam.TabIndex = 0;
             this.dgvRam.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvRam_CellContentClick);
             // 
+            // ramDelete
+            // 
+            this.ramDelete.HeaderText = "Удаление";
+            this.ramDelete.Name = "ramDelete";
+            this.ramDelete.ReadOnly = true;
+            this.ramDelete.Text = "Удаление";
+            this.ramDelete.UseColumnTextForButtonValue = true;
+            this.ramDelete.Visible = false;
+            // 
+            // tabControl2
+            // 
+            this.tabControl2.Controls.Add(this.tabPage7);
+            this.tabControl2.Controls.Add(this.tabPage8);
+            this.tabControl2.Location = new System.Drawing.Point(974, 3);
+            this.tabControl2.Name = "tabControl2";
+            this.tabControl2.SelectedIndex = 0;
+            this.tabControl2.Size = new System.Drawing.Size(245, 490);
+            this.tabControl2.TabIndex = 17;
+            // 
+            // tabPage7
+            // 
+            this.tabPage7.Controls.Add(this.label12);
+            this.tabPage7.Controls.Add(this.cbVideoCardDelete);
+            this.tabPage7.Controls.Add(this.cmbVideoCardManufacturer);
+            this.tabPage7.Controls.Add(this.btnVideoCardAdd);
+            this.tabPage7.Controls.Add(this.cmbVideoCardGCPU);
+            this.tabPage7.Controls.Add(this.label18);
+            this.tabPage7.Controls.Add(this.cmbVideoCardMemory);
+            this.tabPage7.Controls.Add(this.label17);
+            this.tabPage7.Controls.Add(this.cmbVideoCardFrequency);
+            this.tabPage7.Controls.Add(this.label16);
+            this.tabPage7.Controls.Add(this.cmbVideoCardPower);
+            this.tabPage7.Controls.Add(this.label15);
+            this.tabPage7.Controls.Add(this.cmbVideoCardVolume);
+            this.tabPage7.Controls.Add(this.label14);
+            this.tabPage7.Controls.Add(this.txtVideoCardTitle);
+            this.tabPage7.Controls.Add(this.label13);
+            this.tabPage7.Location = new System.Drawing.Point(4, 22);
+            this.tabPage7.Name = "tabPage7";
+            this.tabPage7.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage7.Size = new System.Drawing.Size(237, 464);
+            this.tabPage7.TabIndex = 0;
+            this.tabPage7.Text = "Добавление";
+            this.tabPage7.UseVisualStyleBackColor = true;
+            // 
+            // tabPage8
+            // 
+            this.tabPage8.Controls.Add(this.nudVideoCardSearch);
+            this.tabPage8.Location = new System.Drawing.Point(4, 22);
+            this.tabPage8.Name = "tabPage8";
+            this.tabPage8.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage8.Size = new System.Drawing.Size(237, 464);
+            this.tabPage8.TabIndex = 1;
+            this.tabPage8.Text = "Поиск";
+            this.tabPage8.UseVisualStyleBackColor = true;
+            // 
+            // idDataGridViewTextBoxColumn
+            // 
+            this.idDataGridViewTextBoxColumn.DataPropertyName = "id";
+            this.idDataGridViewTextBoxColumn.HeaderText = "id";
+            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            this.idDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // socketDataGridViewTextBoxColumn
+            // 
+            this.socketDataGridViewTextBoxColumn.DataPropertyName = "socket";
+            this.socketDataGridViewTextBoxColumn.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.ComboBox;
+            this.socketDataGridViewTextBoxColumn.FillWeight = 26.19114F;
+            this.socketDataGridViewTextBoxColumn.HeaderText = "Сокет";
+            this.socketDataGridViewTextBoxColumn.Items.AddRange(new object[] {
+            "Socket 8",
+            "Socket 370",
+            "Socket 423",
+            "Socket 478",
+            "LGA 775",
+            "LGA 771",
+            "LGA 1366",
+            "LGA 1156",
+            "LGA 1567",
+            "LGA 1155",
+            "LGA 2011",
+            "LGA 1356",
+            "LGA 1150",
+            "LGA2011-3",
+            "LGA 1151;",
+            "LGA 3647",
+            "LGA 2066",
+            "LGA 1200",
+            "LGA 1700",
+            "Super Socket 7",
+            "Slot A",
+            "Socket A",
+            "Socket 754",
+            "Socket 940",
+            "Socket 939",
+            "Socket S1",
+            "Socket AM2",
+            "Socket F",
+            "Socket AM2+",
+            " Socket AM3",
+            "Socket G3",
+            "Socket C32",
+            "Socket AM3+",
+            "Socket FM1",
+            "Socket FS1",
+            "Socket FM2",
+            "Socket FM2+",
+            "Socket AM1",
+            "АМ4",
+            "Socket SP3",
+            "Socket TR4",
+            "Socket sTRX4"});
+            this.socketDataGridViewTextBoxColumn.Name = "socketDataGridViewTextBoxColumn";
+            this.socketDataGridViewTextBoxColumn.ReadOnly = true;
+            this.socketDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.socketDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.socketDataGridViewTextBoxColumn.Width = 70;
+            // 
+            // gCPUtypeDataGridViewTextBoxColumn
+            // 
+            this.gCPUtypeDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.gCPUtypeDataGridViewTextBoxColumn.DataPropertyName = "GCPUtype";
+            this.gCPUtypeDataGridViewTextBoxColumn.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.ComboBox;
+            this.gCPUtypeDataGridViewTextBoxColumn.FillWeight = 18.3338F;
+            this.gCPUtypeDataGridViewTextBoxColumn.HeaderText = "Поддерживаемые видеокарты";
+            this.gCPUtypeDataGridViewTextBoxColumn.Items.AddRange(new object[] {
+            "GeForce series",
+            "GeForce 100 serie",
+            "GeForce 200 series",
+            "GeForce 300 series",
+            "GeForce 400 series",
+            "GeForce 500 series",
+            "GeForce 600 series",
+            "GeForce 700 series",
+            "GeForce 800 series",
+            "GeForce 900 series",
+            "GeForce 2 series",
+            "GeForce 3 series",
+            "GeForce 4 series",
+            "GeForce 5 series",
+            "GeForce 6 series",
+            "GeForce 7 series",
+            "GeForce 8 series",
+            "GeForce 9 series",
+            "GeForce 10 series",
+            "GeForce 16 series",
+            "GeForce 20 series",
+            "Radeon R100",
+            "Radeon R200",
+            "Radeon R300",
+            "Radeon R400",
+            "Radeon R500",
+            "Radeon R600",
+            "Radeon R700",
+            "Radeon R800"});
+            this.gCPUtypeDataGridViewTextBoxColumn.Name = "gCPUtypeDataGridViewTextBoxColumn";
+            this.gCPUtypeDataGridViewTextBoxColumn.ReadOnly = true;
+            this.gCPUtypeDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            // 
+            // rAMtypeDataGridViewTextBoxColumn
+            // 
+            this.rAMtypeDataGridViewTextBoxColumn.DataPropertyName = "RAMtype";
+            this.rAMtypeDataGridViewTextBoxColumn.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.ComboBox;
+            this.rAMtypeDataGridViewTextBoxColumn.FillWeight = 26.19114F;
+            this.rAMtypeDataGridViewTextBoxColumn.HeaderText = "Тип поддерживаемой RAM";
+            this.rAMtypeDataGridViewTextBoxColumn.Items.AddRange(new object[] {
+            "DDR1",
+            "DDR2",
+            "DDR3",
+            "DDR4"});
+            this.rAMtypeDataGridViewTextBoxColumn.Name = "rAMtypeDataGridViewTextBoxColumn";
+            this.rAMtypeDataGridViewTextBoxColumn.ReadOnly = true;
+            this.rAMtypeDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.rAMtypeDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.rAMtypeDataGridViewTextBoxColumn.Width = 70;
+            // 
+            // titleDataGridViewTextBoxColumn
+            // 
+            this.titleDataGridViewTextBoxColumn.DataPropertyName = "title";
+            this.titleDataGridViewTextBoxColumn.FillWeight = 26.19114F;
+            this.titleDataGridViewTextBoxColumn.HeaderText = "Название";
+            this.titleDataGridViewTextBoxColumn.Name = "titleDataGridViewTextBoxColumn";
+            this.titleDataGridViewTextBoxColumn.ReadOnly = true;
+            this.titleDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            // 
+            // manufacturerDataGridViewTextBoxColumn
+            // 
+            this.manufacturerDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.manufacturerDataGridViewTextBoxColumn.DataPropertyName = "manufacturer";
+            this.manufacturerDataGridViewTextBoxColumn.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.ComboBox;
+            this.manufacturerDataGridViewTextBoxColumn.FillWeight = 373.0928F;
+            this.manufacturerDataGridViewTextBoxColumn.HeaderText = "Производитель";
+            this.manufacturerDataGridViewTextBoxColumn.Items.AddRange(new object[] {
+            "ASRock",
+            "MSI",
+            "ASUS",
+            "Gigabyte"});
+            this.manufacturerDataGridViewTextBoxColumn.Name = "manufacturerDataGridViewTextBoxColumn";
+            this.manufacturerDataGridViewTextBoxColumn.ReadOnly = true;
+            this.manufacturerDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.manufacturerDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            // 
+            // motherBoardBindingSource
+            // 
+            this.motherBoardBindingSource.DataSource = typeof(db.Classes.MotherBoard);
+            // 
+            // idDataGridViewTextBoxColumn1
+            // 
+            this.idDataGridViewTextBoxColumn1.DataPropertyName = "id";
+            this.idDataGridViewTextBoxColumn1.HeaderText = "id";
+            this.idDataGridViewTextBoxColumn1.Name = "idDataGridViewTextBoxColumn1";
+            this.idDataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // frequencyDataGridViewTextBoxColumn
+            // 
+            this.frequencyDataGridViewTextBoxColumn.DataPropertyName = "frequency";
+            this.frequencyDataGridViewTextBoxColumn.HeaderText = "Тактовая частота";
+            this.frequencyDataGridViewTextBoxColumn.Name = "frequencyDataGridViewTextBoxColumn";
+            this.frequencyDataGridViewTextBoxColumn.ReadOnly = true;
+            this.frequencyDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            // 
+            // powerDataGridViewTextBoxColumn
+            // 
+            this.powerDataGridViewTextBoxColumn.DataPropertyName = "power";
+            this.powerDataGridViewTextBoxColumn.HeaderText = "Энергопотребление";
+            this.powerDataGridViewTextBoxColumn.Name = "powerDataGridViewTextBoxColumn";
+            this.powerDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // socketDataGridViewTextBoxColumn1
+            // 
+            this.socketDataGridViewTextBoxColumn1.DataPropertyName = "socket";
+            this.socketDataGridViewTextBoxColumn1.HeaderText = "Сокет";
+            this.socketDataGridViewTextBoxColumn1.Name = "socketDataGridViewTextBoxColumn1";
+            this.socketDataGridViewTextBoxColumn1.ReadOnly = true;
+            this.socketDataGridViewTextBoxColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            // 
+            // archetypeDataGridViewTextBoxColumn
+            // 
+            this.archetypeDataGridViewTextBoxColumn.DataPropertyName = "archetype";
+            this.archetypeDataGridViewTextBoxColumn.HeaderText = "Архитектура";
+            this.archetypeDataGridViewTextBoxColumn.Name = "archetypeDataGridViewTextBoxColumn";
+            this.archetypeDataGridViewTextBoxColumn.ReadOnly = true;
+            this.archetypeDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            // 
+            // titleDataGridViewTextBoxColumn1
+            // 
+            this.titleDataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.titleDataGridViewTextBoxColumn1.DataPropertyName = "title";
+            this.titleDataGridViewTextBoxColumn1.HeaderText = "Название";
+            this.titleDataGridViewTextBoxColumn1.Name = "titleDataGridViewTextBoxColumn1";
+            this.titleDataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // manufacturerDataGridViewTextBoxColumn1
+            // 
+            this.manufacturerDataGridViewTextBoxColumn1.DataPropertyName = "manufacturer";
+            this.manufacturerDataGridViewTextBoxColumn1.HeaderText = "Производитель";
+            this.manufacturerDataGridViewTextBoxColumn1.Name = "manufacturerDataGridViewTextBoxColumn1";
+            this.manufacturerDataGridViewTextBoxColumn1.ReadOnly = true;
+            this.manufacturerDataGridViewTextBoxColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            // 
+            // cPUBindingSource
+            // 
+            this.cPUBindingSource.DataSource = typeof(db.Classes.CPU);
+            // 
+            // idDataGridViewTextBoxColumn2
+            // 
+            this.idDataGridViewTextBoxColumn2.DataPropertyName = "id";
+            this.idDataGridViewTextBoxColumn2.HeaderText = "id";
+            this.idDataGridViewTextBoxColumn2.Name = "idDataGridViewTextBoxColumn2";
+            this.idDataGridViewTextBoxColumn2.ReadOnly = true;
+            // 
+            // gCPUDataGridViewTextBoxColumn
+            // 
+            this.gCPUDataGridViewTextBoxColumn.DataPropertyName = "GCPU";
+            this.gCPUDataGridViewTextBoxColumn.HeaderText = "Графический CPU";
+            this.gCPUDataGridViewTextBoxColumn.Name = "gCPUDataGridViewTextBoxColumn";
+            this.gCPUDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // volumeMemoryDataGridViewTextBoxColumn
+            // 
+            this.volumeMemoryDataGridViewTextBoxColumn.DataPropertyName = "volumeMemory";
+            this.volumeMemoryDataGridViewTextBoxColumn.HeaderText = "Объем памяти";
+            this.volumeMemoryDataGridViewTextBoxColumn.Name = "volumeMemoryDataGridViewTextBoxColumn";
+            this.volumeMemoryDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // typeMemoryDataGridViewTextBoxColumn
+            // 
+            this.typeMemoryDataGridViewTextBoxColumn.DataPropertyName = "typeMemory";
+            this.typeMemoryDataGridViewTextBoxColumn.HeaderText = "Тип памяти";
+            this.typeMemoryDataGridViewTextBoxColumn.Name = "typeMemoryDataGridViewTextBoxColumn";
+            this.typeMemoryDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // frequencyMemoryDataGridViewTextBoxColumn
+            // 
+            this.frequencyMemoryDataGridViewTextBoxColumn.DataPropertyName = "frequencyMemory";
+            this.frequencyMemoryDataGridViewTextBoxColumn.HeaderText = "Частота памяти";
+            this.frequencyMemoryDataGridViewTextBoxColumn.Name = "frequencyMemoryDataGridViewTextBoxColumn";
+            this.frequencyMemoryDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // powerDataGridViewTextBoxColumn1
+            // 
+            this.powerDataGridViewTextBoxColumn1.DataPropertyName = "power";
+            this.powerDataGridViewTextBoxColumn1.HeaderText = "Мощность";
+            this.powerDataGridViewTextBoxColumn1.Name = "powerDataGridViewTextBoxColumn1";
+            this.powerDataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // titleDataGridViewTextBoxColumn2
+            // 
+            this.titleDataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.titleDataGridViewTextBoxColumn2.DataPropertyName = "title";
+            this.titleDataGridViewTextBoxColumn2.HeaderText = "Название";
+            this.titleDataGridViewTextBoxColumn2.Name = "titleDataGridViewTextBoxColumn2";
+            this.titleDataGridViewTextBoxColumn2.ReadOnly = true;
+            // 
+            // manufacturerDataGridViewTextBoxColumn2
+            // 
+            this.manufacturerDataGridViewTextBoxColumn2.DataPropertyName = "manufacturer";
+            this.manufacturerDataGridViewTextBoxColumn2.HeaderText = "Производитель";
+            this.manufacturerDataGridViewTextBoxColumn2.Name = "manufacturerDataGridViewTextBoxColumn2";
+            this.manufacturerDataGridViewTextBoxColumn2.ReadOnly = true;
+            // 
+            // videoCardBindingSource
+            // 
+            this.videoCardBindingSource.DataSource = typeof(db.Classes.VideoCard);
+            // 
+            // idDataGridViewTextBoxColumn3
+            // 
+            this.idDataGridViewTextBoxColumn3.DataPropertyName = "id";
+            this.idDataGridViewTextBoxColumn3.HeaderText = "id";
+            this.idDataGridViewTextBoxColumn3.Name = "idDataGridViewTextBoxColumn3";
+            this.idDataGridViewTextBoxColumn3.ReadOnly = true;
+            // 
+            // powerDataGridViewTextBoxColumn2
+            // 
+            this.powerDataGridViewTextBoxColumn2.DataPropertyName = "power";
+            this.powerDataGridViewTextBoxColumn2.HeaderText = "Мощность";
+            this.powerDataGridViewTextBoxColumn2.Name = "powerDataGridViewTextBoxColumn2";
+            this.powerDataGridViewTextBoxColumn2.ReadOnly = true;
+            // 
+            // titleDataGridViewTextBoxColumn3
+            // 
+            this.titleDataGridViewTextBoxColumn3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.titleDataGridViewTextBoxColumn3.DataPropertyName = "title";
+            this.titleDataGridViewTextBoxColumn3.HeaderText = "Название";
+            this.titleDataGridViewTextBoxColumn3.Name = "titleDataGridViewTextBoxColumn3";
+            this.titleDataGridViewTextBoxColumn3.ReadOnly = true;
+            // 
+            // manufacturerDataGridViewTextBoxColumn3
+            // 
+            this.manufacturerDataGridViewTextBoxColumn3.DataPropertyName = "manufacturer";
+            this.manufacturerDataGridViewTextBoxColumn3.HeaderText = "Производитель";
+            this.manufacturerDataGridViewTextBoxColumn3.Name = "manufacturerDataGridViewTextBoxColumn3";
+            this.manufacturerDataGridViewTextBoxColumn3.ReadOnly = true;
+            // 
+            // powerBlockBindingSource
+            // 
+            this.powerBlockBindingSource.DataSource = typeof(db.Classes.PowerBlock);
+            // 
+            // idDataGridViewTextBoxColumn4
+            // 
+            this.idDataGridViewTextBoxColumn4.DataPropertyName = "id";
+            this.idDataGridViewTextBoxColumn4.HeaderText = "id";
+            this.idDataGridViewTextBoxColumn4.Name = "idDataGridViewTextBoxColumn4";
+            this.idDataGridViewTextBoxColumn4.ReadOnly = true;
+            // 
+            // voluneDataGridViewTextBoxColumn
+            // 
+            this.voluneDataGridViewTextBoxColumn.DataPropertyName = "volune";
+            this.voluneDataGridViewTextBoxColumn.HeaderText = "Объем";
+            this.voluneDataGridViewTextBoxColumn.Name = "voluneDataGridViewTextBoxColumn";
+            this.voluneDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // typeDataGridViewTextBoxColumn
+            // 
+            this.typeDataGridViewTextBoxColumn.DataPropertyName = "type";
+            this.typeDataGridViewTextBoxColumn.HeaderText = "Тип памяти";
+            this.typeDataGridViewTextBoxColumn.Name = "typeDataGridViewTextBoxColumn";
+            this.typeDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // speedOfWriteDataGridViewTextBoxColumn
+            // 
+            this.speedOfWriteDataGridViewTextBoxColumn.DataPropertyName = "speedOfWrite";
+            this.speedOfWriteDataGridViewTextBoxColumn.HeaderText = "Скорость записи";
+            this.speedOfWriteDataGridViewTextBoxColumn.Name = "speedOfWriteDataGridViewTextBoxColumn";
+            this.speedOfWriteDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // speedOfReadDataGridViewTextBoxColumn
+            // 
+            this.speedOfReadDataGridViewTextBoxColumn.DataPropertyName = "speedOfRead";
+            this.speedOfReadDataGridViewTextBoxColumn.HeaderText = "Скорость чтения";
+            this.speedOfReadDataGridViewTextBoxColumn.Name = "speedOfReadDataGridViewTextBoxColumn";
+            this.speedOfReadDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // titleDataGridViewTextBoxColumn4
+            // 
+            this.titleDataGridViewTextBoxColumn4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.titleDataGridViewTextBoxColumn4.DataPropertyName = "title";
+            this.titleDataGridViewTextBoxColumn4.HeaderText = "Название";
+            this.titleDataGridViewTextBoxColumn4.Name = "titleDataGridViewTextBoxColumn4";
+            this.titleDataGridViewTextBoxColumn4.ReadOnly = true;
+            // 
+            // manufacturerDataGridViewTextBoxColumn4
+            // 
+            this.manufacturerDataGridViewTextBoxColumn4.DataPropertyName = "manufacturer";
+            this.manufacturerDataGridViewTextBoxColumn4.HeaderText = "Производитель";
+            this.manufacturerDataGridViewTextBoxColumn4.Name = "manufacturerDataGridViewTextBoxColumn4";
+            this.manufacturerDataGridViewTextBoxColumn4.ReadOnly = true;
+            // 
+            // storageBindingSource
+            // 
+            this.storageBindingSource.DataSource = typeof(db.Classes.Storage);
+            // 
             // idDataGridViewTextBoxColumn5
             // 
             this.idDataGridViewTextBoxColumn5.DataPropertyName = "id";
@@ -1628,27 +1686,32 @@
             this.manufacturerDataGridViewTextBoxColumn5.Name = "manufacturerDataGridViewTextBoxColumn5";
             this.manufacturerDataGridViewTextBoxColumn5.ReadOnly = true;
             // 
-            // ramDelete
-            // 
-            this.ramDelete.HeaderText = "Удаление";
-            this.ramDelete.Name = "ramDelete";
-            this.ramDelete.ReadOnly = true;
-            this.ramDelete.Text = "Удаление";
-            this.ramDelete.UseColumnTextForButtonValue = true;
-            this.ramDelete.Visible = false;
-            // 
             // rAMBindingSource
             // 
             this.rAMBindingSource.DataSource = typeof(db.Classes.RAM);
             // 
-            // rtxtMotherBoardSearch
+            // nudVideoCardSearch
             // 
-            this.rtxtMotherBoardSearch.Location = new System.Drawing.Point(1056, 73);
-            this.rtxtMotherBoardSearch.Name = "rtxtMotherBoardSearch";
-            this.rtxtMotherBoardSearch.ReadOnly = true;
-            this.rtxtMotherBoardSearch.Size = new System.Drawing.Size(171, 163);
-            this.rtxtMotherBoardSearch.TabIndex = 3;
-            this.rtxtMotherBoardSearch.Text = "";
+            this.nudVideoCardSearch.Location = new System.Drawing.Point(36, 38);
+            this.nudVideoCardSearch.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            this.nudVideoCardSearch.Minimum = new decimal(new int[] {
+            100,
+            0,
+            0,
+            0});
+            this.nudVideoCardSearch.Name = "nudVideoCardSearch";
+            this.nudVideoCardSearch.Size = new System.Drawing.Size(168, 20);
+            this.nudVideoCardSearch.TabIndex = 0;
+            this.nudVideoCardSearch.Value = new decimal(new int[] {
+            100,
+            0,
+            0,
+            0});
+            this.nudVideoCardSearch.ValueChanged += new System.EventHandler(this.nudVideoCardSearch_ValueChanged);
             // 
             // Form1
             // 
@@ -1664,28 +1727,32 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMotherBoard)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.motherBoardBindingSource)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudCpuPower)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCPU)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cPUBindingSource)).EndInit();
             this.tabPage3.ResumeLayout(false);
-            this.tabPage3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVideoCard)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.videoCardBindingSource)).EndInit();
             this.tabPage4.ResumeLayout(false);
             this.tabPage4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPowerBlock)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.powerBlockBindingSource)).EndInit();
             this.tabPage5.ResumeLayout(false);
             this.tabPage5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvStorage)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.storageBindingSource)).EndInit();
             this.tabPage6.ResumeLayout(false);
             this.tabPage6.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRam)).EndInit();
+            this.tabControl2.ResumeLayout(false);
+            this.tabPage7.ResumeLayout(false);
+            this.tabPage7.PerformLayout();
+            this.tabPage8.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.motherBoardBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cPUBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.videoCardBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.powerBlockBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.storageBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.rAMBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudVideoCardSearch)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1833,6 +1900,10 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn manufacturerDataGridViewTextBoxColumn5;
         private System.Windows.Forms.DataGridViewButtonColumn ramDelete;
         private System.Windows.Forms.RichTextBox rtxtMotherBoardSearch;
+        private System.Windows.Forms.TabControl tabControl2;
+        private System.Windows.Forms.TabPage tabPage7;
+        private System.Windows.Forms.TabPage tabPage8;
+        private System.Windows.Forms.NumericUpDown nudVideoCardSearch;
     }
 }
 
